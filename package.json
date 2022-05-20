@@ -69,5 +69,13 @@
       "stylelint --quiet --fix \"**/*.(scss|sass)\"",
       "prettier --write"
     ]
+  },
+  "standard-version": {
+    "packageFiles": [],
+    "bumpFiles": [],
+    "skip": {
+      "changelog": true,
+      "commit": true
+    }
   }
 }
