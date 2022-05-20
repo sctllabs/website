@@ -4,6 +4,9 @@ const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    outputStandalone: true,
+  },
   webpack: (config, context) => {
     config.module.rules.push({
       test: /\.svg$/i,
