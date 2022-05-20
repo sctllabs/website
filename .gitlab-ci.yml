@@ -1,8 +1,8 @@
 include:
-- template: "Workflows/MergeRequest-Pipelines.gitlab-ci.yml"
-- project: 'devops/gitlab-ci'
-  ref: main
-  file: '/workflows/devs/nextjs-app.yml'
+  - template: 'Workflows/MergeRequest-Pipelines.gitlab-ci.yml'
+  - project: 'devops/gitlab-ci'
+    ref: main
+    file: '/workflows/devs/nextjs-app.yml'
 
 build-and-push:docker:
   extends: .docker:build-and-push
@@ -25,3 +25,5 @@ dev:stop:
 
 prod:deploy:
   extends: .helm:deploy:prod
+  environment:
+    url: sctl.xyz
