@@ -1,0 +1,24 @@
+{
+  "extends": ["next", "next/core-web-vitals", "airbnb-typescript-prettier"],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-props-no-spreading": [
+      0,
+      {
+        "html": "ignore",
+        "custom": "ignore"
+      }
+    ]
+  }
+}
