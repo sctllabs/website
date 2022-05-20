@@ -1,0 +1,32 @@
+@use 'fonts';
+@use 'mixins';
+
+%heading-splash-page-1 {
+  @include mixins.typography(72px, $font-weight: 700);
+
+  line-height: 100px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+%heading-splash-page-2 {
+  @include mixins.typography(48px, $font-weight: 500);
+
+  line-height: 60px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+%body-splash-page-1 {
+  @include mixins.typography(24px, $font-weight: 500);
+
+  line-height: 36px;
+  letter-spacing: 0.02em;
+}
+
+%body-splash-page-2 {
+  @include mixins.typography(20px, $font-weight: 500);
+
+  line-height: 28px;
+  letter-spacing: 0.02em;
+}
