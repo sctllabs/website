@@ -10,9 +10,9 @@
 }
 
 @mixin heading-splash-page-2 {
-  @include mixins.typography(48px, $font-weight: 500);
+  @include mixins.typography(40px, $font-weight: 500);
 
-  line-height: 60px;
+  line-height: 52px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -25,9 +25,9 @@
 }
 
 @mixin body-splash-page-2 {
-  @include mixins.typography(20px, $font-weight: 500);
+  @include mixins.typography(16px, $font-weight: 500);
 
-  line-height: 28px;
+  line-height: 20px;
   letter-spacing: 0.02em;
 }
 
