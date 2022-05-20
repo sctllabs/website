@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-prettier"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order",
+    "stylelint-prettier"
+  ],
+  "rules": {
+    "prettier/prettier": true,
+    "selector-class-pattern": "^[A-Za-z0-9_-]+$",
+    "selector-max-id": 10,
+    "max-nesting-depth": 5,
+    "order/properties-alphabetical-order": "none",
+    "selector-no-qualifying-type": [
+      false,
+      {
+        "ignore": [
+          "attribute"
+        ]
+      }
+    ]
+  }
+}
