@@ -1,7 +1,7 @@
 @use 'fonts';
 @use 'mixins';
 
-%heading-splash-page-1 {
+@mixin heading-splash-page-1 {
   @include mixins.typography(72px, $font-weight: 700);
 
   line-height: 100px;
@@ -9,7 +9,7 @@
   text-transform: uppercase;
 }
 
-%heading-splash-page-2 {
+@mixin heading-splash-page-2 {
   @include mixins.typography(48px, $font-weight: 500);
 
   line-height: 60px;
@@ -17,16 +17,32 @@
   text-transform: uppercase;
 }
 
-%body-splash-page-1 {
+@mixin body-splash-page-1 {
   @include mixins.typography(24px, $font-weight: 500);
 
   line-height: 36px;
   letter-spacing: 0.02em;
 }
 
-%body-splash-page-2 {
+@mixin body-splash-page-2 {
   @include mixins.typography(20px, $font-weight: 500);
 
   line-height: 28px;
   letter-spacing: 0.02em;
+}
+
+%heading-splash-page-1 {
+  @include heading-splash-page-1;
+}
+
+%heading-splash-page-2 {
+  @include heading-splash-page-2;
+}
+
+%body-splash-page-1 {
+  @include body-splash-page-1;
+}
+
+%body-splash-page-2 {
+  @include body-splash-page-2;
 }
