@@ -1,0 +1,27 @@
+include:
+- template: "Workflows/MergeRequest-Pipelines.gitlab-ci.yml"
+- project: 'devops/gitlab-ci'
+  ref: main
+  file: '/workflows/devs/nextjs-app.yml'
+
+build-and-push:docker:
+  extends: .docker:build-and-push
+
+dev:deploy:
+  extends: .helm:deploy:dev
+  environment:
+    on_stop: dev:stop
+
+dev:stop:
+  extends: .helm:stop:dev
+
+# stage:deploy:
+#   extends: .helm:deploy:stage
+#   environment:
+#     on_stop: stage:stop
+
+# stage:stop:
+#   extends: .helm:stop:stage
+
+prod:deploy:
+  extends: .helm:deploy:prod
