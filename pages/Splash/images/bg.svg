@@ -123,10 +123,10 @@
       <stop offset=".813" stop-color="#E43EFF"/>
       <stop offset=".984" stop-color="#FF3E3E"/>
     </linearGradient>
-    <filter id="a" width="1132.79" height="1132.78" x="0" y=".87" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+    <!-- <filter id="a" width="1132.79" height="1132.78" x="0" y=".87" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
       <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
       <feGaussianBlur result="effect1_foregroundBlur_542_77484" stdDeviation="6"/>
-    </filter>
+    </filter> -->
   </defs>
 </svg>
