@@ -20,7 +20,7 @@ const Splash: NextPage = () => {
             <Lottie
               options={{
                 autoplay: true,
-                loop: false,
+                loop: true,
                 animationData: logoAnimationData
               }}
             />
