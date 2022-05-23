@@ -1,0 +1,71 @@
+@use 'styles/typography' as *;
+@use 'styles/mixins' as *;
+
+.root {
+  min-height: 100vh;
+  background-image: url('./images/bg.svg');
+  background-size: auto 96%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include small-tablet {
+    background-size: auto 112%;
+  }
+
+  @include desktop {
+    background-size: auto 140%;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  @extend %heading-splash-page-2;
+
+  text-align: center;
+  margin: 0;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '...';
+  }
+
+  @include small-tablet {
+    @include heading-splash-page-1;
+  }
+}
+
+.logo {
+  width: 168px;
+  height: 168px;
+  margin: 16px 0;
+
+  @include small-tablet {
+    width: 240px;
+    height: 240px;
+    margin: 23px 0;
+  }
+}
+
+.description {
+  @extend %body-splash-page-2;
+
+  text-align: center;
+  margin: 0;
+  max-width: 290px;
+
+  @include small-tablet {
+    @include body-splash-page-1;
+    max-width: 498px;
+  }
+}
