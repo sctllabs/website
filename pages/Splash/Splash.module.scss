@@ -2,15 +2,14 @@
 @use 'styles/mixins' as *;
 
 .root {
-  min-height: 100vh;
-  background-image: url('./images/bg.svg');
-  background-size: auto 96%;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  display: flex;
   align-items: center;
+  background-image: url('./images/bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 96%;
+  display: flex;
   justify-content: center;
+  min-height: 100vh;
 
   @include small-tablet {
     background-size: auto 112%;
@@ -22,9 +21,9 @@
 }
 
 .content {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
@@ -32,31 +31,31 @@
   @extend %heading-2;
 
   font-size: 5vh;
-  text-align: center;
   margin: 0;
   position: relative;
-
-  &::after {
-    position: absolute;
-    content: '...';
-  }
+  text-align: center;
 
   @include small-tablet {
     @include heading-1;
 
     font-size: 7vh;
   }
+
+  &::after {
+    content: '...';
+    position: absolute;
+  }
 }
 
 .logo {
-  width: 24vh;
   height: 24vh;
   margin: 2.5vh 0;
+  width: 24vh;
 
   @include small-tablet {
-    width: 25vh;
     height: 25vh;
     margin: 2.4vh 0;
+    width: 25vh;
   }
 }
 
@@ -64,9 +63,9 @@
   @extend %body-1;
 
   font-size: 2.5vh;
-  text-align: center;
   margin: 0;
   max-width: 14em;
+  text-align: center;
 
   @include small-tablet {
     @include body-1;

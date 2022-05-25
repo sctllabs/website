@@ -3,7 +3,8 @@
 :root {
   --theme-main-bg: #{colors.$white};
   --theme-text-primary: #{colors.$font-primary};
-  --theme-button-primary-bg: linear-gradient(90deg,
+  --theme-button-primary-bg: linear-gradient(
+    90deg,
     #{colors.$purple-dark} 0%,
     #{colors.$purple-light} 100%
   );

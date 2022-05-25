@@ -7,18 +7,19 @@
   align-items: center;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
   display: flex;
   height: 40px;
   justify-content: center;
   padding: 12px 58px;
-  cursor: pointer;
 }
 
 .primary {
   background: var(--theme-button-primary-bg);
   color: var(--theme-button-primary-color);
 
-  &:hover,&:focus {
+  &:hover,
+  &:focus {
     box-shadow: -4px 4px 14px var(--theme-button-primary-shadow);
   }
 

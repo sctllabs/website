@@ -2,89 +2,112 @@
 @use 'styles/colors';
 @use 'styles/mixins' as *;
 
-
 .header {
-  position: fixed;
-  top: 0;
   height: 58px;
   left: 0;
+  position: fixed;
+  top: 0;
+  transition: background-color ease 0.3s;
+  transition-delay: 0.1s;
   width: 100%;
   z-index: 3;
-  transition: background-color ease .3s;
-  transition-delay: .1s;
-
-  &.active {
-    background-color: colors.$white;
-    transition: background-color ease .3s;
-    transition-delay: .1s;
-
-    .headerMenu {
-      top: 100%;
-      transition: top ease .5s;
-      box-shadow: 0 26px 35px -28px rgba(168, 143, 251, 0.3);
-    }
-  }
 
   @include large-tablet {
     height: 80px;
   }
+
+  &.active {
+    background-color: colors.$white;
+    transition: background-color ease 0.3s;
+    transition-delay: 0.1s;
+
+    .headerMenu {
+      box-shadow: 0 26px 35px -28px rgb(168 143 251 / 30%);
+      top: 100%;
+      transition: top ease 0.5s;
+    }
+  }
 }
+
 .headerContainer {
   @include container;
 
-  padding-top: 12px;
-  padding-bottom: 12px;
-  display: flex;align-items: center;
+  align-items: center;
+  display: flex;
   justify-content: space-between;
+  padding-bottom: 12px;
+  padding-top: 12px;
   z-index: 2;
 
   @include large-tablet {
-    padding-top: 18px;
     padding-bottom: 18px;
+    padding-top: 18px;
   }
 }
 
 .logo {
   display: block;
   max-height: 34px;
-  img {
-    height: 100%;
-    width: auto;
-    display: block;
-  }
 
   @include large-tablet {
     max-height: 45px;
   }
+
+  img {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
 }
 
 .menuIcon {
-  position: relative;
-  width: 26px;
   height: 24px;
+  position: relative;
   transition-duration: 0.5s;
+  width: 26px;
+
+  @include large-tablet {
+    height: 32px;
+    width: 36px;
+
+    .icon {
+      &::before,
+      &::after {
+        width: 30px;
+      }
+
+      &::before {
+        top: 10px;
+      }
+
+      &::after {
+        bottom: 10px;
+      }
+    }
+  }
 
   .icon {
-    transition-duration: 0.5s;
-    position: absolute;
     height: 100%;
-    width: 100%;
+    position: absolute;
     top: 0;
+    transition-duration: 0.5s;
+    width: 100%;
 
-    &:before, &:after {
-      transition-duration: 0.5s;
-      position: absolute;
-      width: 24px;
-      height: 2px;
+    &::before,
+    &::after {
       background-color: colors.$black;
-      content: "";
+      content: '';
+      height: 2px;
+      position: absolute;
+      transition-duration: 0.5s;
+      width: 24px;
     }
 
-    &:before {
+    &::before {
       top: 6px;
     }
 
-    &:after {
+    &::after {
       bottom: 6px;
     }
   }
@@ -96,94 +119,81 @@
   &.open .icon {
     transition-duration: 0.5s;
 
-    &:before {
+    &::before {
       transform: rotateZ(135deg) translate(1px, -6px);
     }
 
-    &:after {
+    &::after {
       transform: rotateZ(-135deg) translate(1px, 6px);
-    }
-  }
-
-  @include large-tablet {
-    width: 36px;
-    height: 32px;
-
-    .icon {
-      &:before, &:after {
-        width: 30px;
-      }
-
-      &:before {
-        top: 10px;
-      }
-
-      &:after {
-        bottom: 10px;
-      }
     }
   }
 }
 
 .headerMenu {
-  position: absolute;
-  width: 100%;
-  top: -1000px;
-  left: 0;
   background-color: colors.$white;
-  transition: top ease-in .5s;
+  left: 0;
+  position: absolute;
+  top: -1000px;
+  transition: top ease-in 0.5s;
+  width: 100%;
 }
 
 .menuContainer {
   @include container;
 
-  padding-top: 40px;
   padding-bottom: 10px;
+  padding-top: 40px;
   z-index: 1;
 
   @include large-tablet {
-    padding-top: 68px;
     padding-bottom: 86px;
+    padding-top: 68px;
   }
 }
 
 .menuList {
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
 
   @include large-tablet {
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
   }
 }
+
 .menuItem {
-  position: relative;
-  padding-right: 30px;
   margin-bottom: 42px;
+  padding-right: 30px;
+  position: relative;
+
+  @include large-tablet {
+    margin: 0;
+    padding-right: 0;
+  }
 
   a {
     @extend %title-3;
 
-    text-decoration: none;
     text-align: right;
+    text-decoration: none;
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
+  &::after {
+    background-color: colors.$black;
     border-radius: 50%;
+    content: '';
+    height: 6px;
+    position: absolute;
     right: 0;
     top: 50%;
-    transform: translate(-50%,-50%);
-    background-color: colors.$black;
+    transform: translate(-50%, -50%);
+    width: 6px;
 
     @include large-tablet {
       bottom: -4px;
@@ -191,10 +201,5 @@
       top: initial;
       transform: translate(-50%, 100%);
     }
-  }
-
-  @include large-tablet {
-    padding-right: 0;
-    margin: 0;
   }
 }
