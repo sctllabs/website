@@ -1,48 +1,103 @@
 @use 'fonts';
 @use 'mixins';
 
-@mixin heading-splash-page-1 {
-  @include mixins.typography(72px, $font-weight: 700);
+@mixin heading-1 {
+  @include mixins.typography(54px, $font-weight: 500);
 
-  line-height: 100px;
+  line-height: 74px;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
 }
 
-@mixin heading-splash-page-2 {
-  @include mixins.typography(40px, $font-weight: 500);
+@mixin heading-2 {
+  @include mixins.typography(48px, $font-weight: 500);
 
-  line-height: 52px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  line-height: 62px;
 }
 
-@mixin body-splash-page-1 {
+@mixin title-1 {
+  @include mixins.typography(32px, $font-weight: 600);
+
+  line-height: 38px;
+}
+
+@mixin title-2 {
+  @include mixins.typography(24px, $font-weight: 600);
+
+  line-height: 32px;
+}
+
+@mixin title-3 {
+  @include mixins.typography(20px, $font-weight: 600);
+
+  line-height: 28px;
+}
+
+@mixin paragraph-1 {
+  @include mixins.typography(26px, $font-weight: 500);
+
+  line-height: 34px;
+}
+
+@mixin body-1 {
   @include mixins.typography(24px, $font-weight: 500);
 
   line-height: 36px;
-  letter-spacing: 0.02em;
 }
 
-@mixin body-splash-page-2 {
-  @include mixins.typography(16px, $font-weight: 500);
+@mixin caption-1 {
+  @include mixins.typography(14px, $font-weight: 400);
 
   line-height: 20px;
-  letter-spacing: 0.02em;
 }
 
-%heading-splash-page-1 {
-  @include heading-splash-page-1;
+@mixin caption-2 {
+  @include mixins.typography(12px, $font-weight: 500);
+
+  line-height: 20px;
 }
 
-%heading-splash-page-2 {
-  @include heading-splash-page-2;
+@mixin button-1 {
+  @include mixins.typography(14px, $font-weight: 600);
+
+  line-height: 18px;
 }
 
-%body-splash-page-1 {
-  @include body-splash-page-1;
+%heading-1 {
+  @include heading-1;
 }
 
-%body-splash-page-2 {
-  @include body-splash-page-2;
+%heading-2 {
+  @include heading-2;
+}
+
+%title-1 {
+  @include title-1;
+}
+
+%title-2 {
+  @include title-2;
+}
+
+%title-3 {
+  @include title-3;
+}
+
+%paragraph-1 {
+  @include paragraph-1;
+}
+
+%body-1 {
+  @include body-1;
+}
+
+%caption-1 {
+  @include caption-1;
+}
+
+%caption-2 {
+  @include caption-1;
+}
+
+%button-1 {
+  @include button-1;
 }

@@ -29,7 +29,7 @@
 }
 
 .title {
-  @extend %heading-splash-page-2;
+  @extend %heading-2;
 
   text-align: center;
   margin: 0;
@@ -41,7 +41,7 @@
   }
 
   @include small-tablet {
-    @include heading-splash-page-1;
+    @include heading-1;
   }
 }
 
@@ -58,14 +58,14 @@
 }
 
 .description {
-  @extend %body-splash-page-2;
+  @extend %body-1;
 
   text-align: center;
   margin: 0;
   max-width: 290px;
 
   @include small-tablet {
-    @include body-splash-page-1;
+    @include body-1;
     max-width: 498px;
   }
 }
