@@ -31,6 +31,7 @@
 .title {
   @extend %heading-2;
 
+  font-size: 5vh;
   text-align: center;
   margin: 0;
   position: relative;
@@ -42,30 +43,35 @@
 
   @include small-tablet {
     @include heading-1;
+
+    font-size: 7vh;
   }
 }
 
 .logo {
-  width: 168px;
-  height: 168px;
-  margin: 16px 0;
+  width: 24vh;
+  height: 24vh;
+  margin: 2.5vh 0;
 
   @include small-tablet {
-    width: 240px;
-    height: 240px;
-    margin: 23px 0;
+    width: 25vh;
+    height: 25vh;
+    margin: 2.4vh 0;
   }
 }
 
 .description {
   @extend %body-1;
 
+  font-size: 2.5vh;
   text-align: center;
   margin: 0;
-  max-width: 290px;
+  max-width: 14em;
 
   @include small-tablet {
     @include body-1;
-    max-width: 498px;
+
+    font-size: 2.5vh;
+    max-width: 20em;
   }
 }

@@ -26,4 +26,4 @@ dev:stop:
 prod:deploy:
   extends: .helm:deploy:prod
   environment:
-    url: sctl.xyz
+    url: www.sctl.xyz
