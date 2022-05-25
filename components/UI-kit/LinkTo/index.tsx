@@ -14,7 +14,7 @@ interface LinkToProps extends Omit<LinkProps, 'href'> {
 export default function LinkTo({ to: href, ...props }: LinkToProps) {
   const { pathname } = useRouter();
 
-  const customTo = `/${href || pathname}`;
+  const customTo = href || pathname;
 
   return (
     <Link href={customTo}>
