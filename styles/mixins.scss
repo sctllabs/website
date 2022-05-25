@@ -64,3 +64,35 @@
     @content;
   }
 }
+
+
+// Container
+
+@mixin container {
+  --global-padding: 140px;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: #{breakpoints.$screen-lg}px;
+  padding-left: var(--global-padding);
+  padding-right: var(--global-padding);
+  position: relative;
+  width: 100%;
+  z-index: 2;
+
+  @include mobile-only {
+    --global-padding: 24px;
+  }
+
+  @include small-tablet {
+    --global-padding: 44px;
+  }
+
+  @include large-tablet {
+    --global-padding: 72px;
+  }
+
+  @include desktop {
+    --global-padding: 140px
+  }
+}

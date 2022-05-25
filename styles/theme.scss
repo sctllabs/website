@@ -3,10 +3,10 @@
 :root {
   --theme-main-bg: #{colors.$white};
   --theme-text-primary: #{colors.$font-primary};
-  --theme-button-primary-bg: radial-gradient(
-    98.44% 319.95% at 88.09% -52.38%,
-    colors.$purple-light 0%,
-    colors.$purple-dark 100%
+  --theme-button-primary-bg: linear-gradient(90deg,
+    #{colors.$purple-dark} 0%,
+    #{colors.$purple-light} 100%
   );
   --theme-button-primary-color: #{colors.$white};
+  --theme-button-primary-shadow: #{colors.$primary-btn-box-shadow};
 }
