@@ -1,0 +1,149 @@
+@use 'styles/mixins' as *;
+@use 'styles/colors';
+@use 'styles/typography';
+
+.footer {
+  background-color: colors.$black;
+  padding: 56px 0 36px;
+}
+
+.container {
+  @include container;
+}
+
+.footerTop {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include large-tablet {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  margin: 25px 0 50px;
+}
+
+.social {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 70px 0;
+
+  @include large-tablet {
+    margin: 0;
+  }
+}
+
+.socialItem {
+  margin-left: 40px;
+
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.socialIcon {
+  color: colors.$white;
+  height: 24px;
+  width: 24px;
+}
+
+.menuList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  width: 100%;
+
+  @include small-tablet {
+    justify-content: flex-start;
+  }
+
+  @include large-tablet {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    justify-content: flex-end;
+  }
+}
+
+.menuItem {
+  margin: 0 0 24px;
+
+  @include mobile-only {
+    width: 50%;
+  }
+
+  @include small-tablet {
+    width: 35%;
+  }
+
+  @include large-tablet {
+    margin: 0;
+    width: auto;
+  }
+
+  @include desktop {
+    margin-left: 40px;
+  }
+
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.linkText {
+  color: colors.$white;
+}
+
+.footerBottom {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  @include mobile-only {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+}
+
+.copyright {
+  color: colors.$white;
+
+  @include mobile-only {
+    margin-top: 20px;
+  }
+}
+
+.bottomLinks {
+  display: flex;
+  list-style: none;
+}
+
+.bottomLinkItem {
+  &:last-child {
+    margin-left: 34px;
+  }
+}
+
+.bottomLinkText {
+  @extend %caption-2;
+
+  color: colors.$white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

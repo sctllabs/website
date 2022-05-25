@@ -5,6 +5,7 @@ import { Typography } from '../../components/UI-kit/Typography';
 import { Icon } from '../../components/UI-kit/Icon';
 import Button from '../../components/UI-kit/Button';
 import { Header } from '../../components/Header';
+import { Footer } from '../../components/Footer';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
 
         <Button variant="primary">asdasd</Button>
       </div>
+      <Footer />
     </div>
   );
 };

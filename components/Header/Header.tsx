@@ -17,7 +17,7 @@ const Header = () => {
     >
       <div className={styles.headerContainer}>
         <LinkTo className={styles.logo} to="/">
-          <Image src={logo} alt="" />
+          <Image src={logo} alt="Sociatel" />
         </LinkTo>
         <div
           className={classNames(styles.menuIcon, {
