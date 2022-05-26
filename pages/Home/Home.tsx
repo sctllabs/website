@@ -8,7 +8,13 @@ import { Icon } from '../../components/UI-kit/Icon';
 import Button from '../../components/UI-kit/Button';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
-import { about, features, governance, polkadot, team } from './constants';
+import {
+  about,
+  features,
+  governance,
+  polkadot,
+  team
+} from '../../constants/landing-page';
 import infographic from '../../public/images/infographic.png';
 
 const Home = () => {
