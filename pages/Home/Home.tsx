@@ -92,7 +92,7 @@ const Home = () => {
                 styles.sectionDescription
               )}
             >
-              {governance.text1}
+              {governance.description1}
             </Typography>
             <div className={styles.governanceList}>
               {governance.items.map(item => (
@@ -116,7 +116,7 @@ const Home = () => {
                 styles.sectionDescription
               )}
             >
-              {governance.text2}
+              {governance.description2}
             </Typography>
           </div>
         </section>

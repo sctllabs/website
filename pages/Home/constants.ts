@@ -1,4 +1,16 @@
-export const about = {
+import { IconNamesType } from '../../components/UI-kit/Icon';
+
+interface SectionWithIconType {
+  title: string;
+  description1: string;
+  description2: string;
+  items: {
+    icon: IconNamesType;
+    title: string;
+  }[];
+}
+
+export const about: SectionWithIconType = {
   title: 'A Fit For Every Industry',
   description1:
     'A DAO creation & management platform that empowers communities to create, manage and collaborate in a trustless environment, removing the friction of using multiple siloed DAO tooling products.',
@@ -54,11 +66,11 @@ export const features = {
   ]
 };
 
-export const governance = {
+export const governance: SectionWithIconType = {
   title: 'Governance',
-  text1:
+  description1:
     'There is no one-size-fits-all governance model. Societal offers the following standardized models for DAO creators, plus the flexibility to create your own utilizing the custom governance builder.',
-  text2:
+  description2:
     'Our plan is to pioneer novel governance models, and support individual DAOs using the platform to customize, implement, and share their own unique solutions.',
   items: [
     {
