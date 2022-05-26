@@ -78,8 +78,18 @@
 .about {
   @include container;
 
-  padding-top: 140px;
-  padding-bottom: 70px;
+  padding-bottom: 50px;
+  padding-top: 80px;
+
+  @include small-tablet {
+    padding-bottom: 70px;
+    padding-top: 110px;
+  }
+
+  @include large-tablet {
+    padding-bottom: 70px;
+    padding-top: 140px;
+  }
 
   .aboutText {
     margin-bottom: 24px;
@@ -154,8 +164,18 @@
 .features {
   @include container;
 
-  padding-bottom: 140px;
-  padding-top: 140px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+
+  @include small-tablet {
+    padding-bottom: 110px;
+    padding-top: 110px;
+  }
+
+  @include large-tablet {
+    padding-bottom: 140px;
+    padding-top: 140px;
+  }
 
   .featuresContent {
     display: flex;
@@ -226,12 +246,27 @@
 .governance {
   @include container;
 
-  padding-bottom: 140px;
-  padding-top: 140px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+
+  @include small-tablet {
+    padding-bottom: 110px;
+    padding-top: 110px;
+  }
+
+  @include large-tablet {
+    padding-bottom: 140px;
+    padding-top: 140px;
+  }
 
   .governanceWrapper {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include desktop {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
   }
 
   .governanceList {
@@ -246,23 +281,52 @@
     display: flex;
     align-items: center;
     margin-bottom: 40px;
-    width: 50%;
+    width: 100%;
     padding-right: 10px;
+
+    @include large-tablet {
+      width: 50%;
+    }
   }
 
   .governanceIcon {
-    padding: 25px;
+    padding: 18px;
     box-shadow: -26px 25px 31px rgba(102, 78, 200, 0.12);
     border-radius: 16px;
 
     svg {
-      width: 70px;
-      height: 70px;
+      width: 52px;
+      height: 52px;
+    }
+
+    @include mobile-only {
+      box-shadow: -16px 16px 31px rgba(102, 78, 200, 0.12);
+      padding: 12px;
+
+      svg {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    @include desktop {
+      padding: 25px;
+
+      svg {
+        width: 70px;
+        height: 70px;
+      }
     }
   }
 
   .governanceListText {
     margin-left: 12px;
+
+    @include mobile-only {
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+    }
   }
 }
 
@@ -271,50 +335,101 @@
   background-image: url("./images/polkadot-bg.svg");
   background-repeat: no-repeat;
   background-position: bottom left;
-  background-size: 100%;
+  background-size: 160%;
+
+  @include large-tablet {
+    background-size: auto;
+  }
 
   .content {
     @include container;
 
-    padding-bottom: 260px;
-    padding-top: 140px;
+    padding-bottom: 170px;
+    padding-top: 80px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+
+    @include small-tablet {
+      padding-top: 110px;
+    }
+
+    @include large-tablet {
+      padding-bottom: 260px;
+      padding-top: 140px;
+      flex-direction: row;
+    }
+
   }
 
   .text {
-    max-width: 650px;
-    width: 70%;
-    margin-right: 48px;
+    width: 100%;
+    margin-bottom: 65px;
+
+    @include large-tablet {
+      width: 70%;
+      margin-right: 48px;
+      margin-bottom: 0;
+      max-width: 650px;
+    }
   }
 
   .polkadotTitle {
-    text-align: left;
+
+    @include large-tablet {
+      text-align: left;
+    }
   }
 }
 
 .team {
   @include container;
 
-  padding-bottom: 140px;
-  padding-top: 140px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+
+  @include small-tablet {
+    padding-bottom: 110px;
+    padding-top: 110px;
+  }
+
+  @include large-tablet {
+    padding-bottom: 140px;
+    padding-top: 140px;
+  }
 
   .teamList {
     display: flex;
-    justify-content: space-between;
-    margin: 0 -20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+
+    @include desktop {
+      margin: 0 -20px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
   }
 
   .teamCard {
-    margin: 0 20px;
+    margin: 20px 20px;
     padding: 25px;
     text-align: center;
     box-shadow: 0 0 21px rgba(226, 226, 226, 0.25),0 10px 13px -7px rgb(168 143 251 / 30%);
     border-radius: 16px;
+    max-width: 260px;
 
     &:hover {
       box-shadow: 0 0 30px rgba(168, 143, 251, 0.3);
+    }
+
+
+    @include large-tablet {
+      margin: 0 36px 72px;
+    }
+    @include desktop {
+      margin: 0 20px;
     }
   }
   .itemImage {
@@ -355,8 +470,18 @@
 .cta {
   @include container;
 
-  padding-bottom: 140px;
-  padding-top: 140px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+
+  @include small-tablet {
+    padding-bottom: 110px;
+    padding-top: 110px;
+  }
+
+  @include large-tablet {
+    padding-bottom: 140px;
+    padding-top: 140px;
+  }
 
   .ctaTitle {
     margin-bottom: 50px;

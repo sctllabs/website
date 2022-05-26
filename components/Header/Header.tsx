@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import Image from 'next/image';
 
@@ -9,10 +9,21 @@ import { menuList } from '../../constants/menu';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [fixedHeader, setFixedHeader] = useState(false);
+
+  const updateScrollPosition = () => {
+    setFixedHeader(window.pageYOffset > 400);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', updateScrollPosition);
+  });
+
   return (
     <div
       className={classNames(styles.header, {
-        [styles.active]: open
+        [styles.active]: open,
+        [styles.fixed]: fixedHeader
       })}
     >
       <div className={styles.headerContainer}>
