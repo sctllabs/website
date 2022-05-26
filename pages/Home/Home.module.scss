@@ -1,5 +1,374 @@
 @use 'styles/mixins' as *;
+@use 'styles/colors';
+
+
+.layout {
+  overflow-x: hidden;
+
+  .sectionTitle {
+    margin-bottom: 72px;
+
+    @include small-tablet-only {
+      font-size: 42px;
+      line-height: 52px;
+      margin-bottom: 56px;
+    }
+
+    @include mobile-only {
+      font-size: 34px;
+      line-height: 44px;
+      margin-bottom: 56px;
+    }
+  }
+
+  .sectionDescription {
+
+    @include small-tablet-only {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include mobile-only {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
 
 .container {
   @include container;
+}
+
+
+
+.banner {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./images/banner-bg.svg");
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bannerText {
+    text-align: center;
+    max-width: 584px;
+    padding: 0 24px;
+
+    .bannerTitle {
+      margin-bottom: 40px;
+      text-transform: uppercase;
+
+      @include mobile-only {
+        font-size: 42px;
+        letter-spacing: .12em;
+        margin-bottom: 14px;
+      }
+    }
+
+    .bannerDescription {
+      @include mobile-only {
+        font-size: 22px;
+        letter-spacing: .02em;
+      }
+    }
+  }
+}
+
+.about {
+  @include container;
+
+  padding-top: 140px;
+  padding-bottom: 70px;
+
+  .aboutText {
+    margin-bottom: 24px;
+
+    @include desktop {
+      margin-bottom: 32px;
+    }
+  }
+
+  .aboutCardList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 72px;
+
+    @include small-tablet-only {
+      margin-top: 56px;
+    }
+
+    @include mobile-only {
+      margin-top: 24px;
+    }
+  }
+
+  .aboutCard {
+    width: 45%;
+    max-width: 300px;
+    padding: 45px 10px 35px;
+    box-shadow: 0 0 21px rgba(226, 226, 226, 0.25),0 10px 13px -7px rgb(168 143 251 / 30%);
+    border-radius: 16px;
+    margin-bottom: 70px;
+    text-align: center;
+
+    &:hover {
+      box-shadow: 0 0 30px rgba(168, 143, 251, 0.3);
+    }
+
+    @include large-tablet {
+      width: 30%;
+    }
+
+    @include small-tablet-only {
+      margin-bottom: 40px;
+    }
+
+    @include mobile-only {
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .aboutCardTitle {
+    @include mobile-only {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .cardIcon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+
+    @include mobile-only {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.features {
+  @include container;
+
+  padding-bottom: 140px;
+  padding-top: 140px;
+
+  .featuresContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  .featuresList {
+    width: 100%;
+
+    @include desktop {
+      max-width: 620px;
+      width: 55%;
+    }
+  }
+
+  .featuresListItem {
+    margin-bottom: 56px;
+
+    @include mobile-only {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet-only {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .itemTitle {
+    margin-bottom: 16px;
+
+    @include large-tablet {
+      margin-bottom: 24px;
+    }
+
+    @include mobile-only {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    @include small-tablet-only {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  .itemText {
+    @include mobile-only {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include small-tablet-only {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+
+.governance {
+  @include container;
+
+  padding-bottom: 140px;
+  padding-top: 140px;
+
+  .governanceWrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .governanceList {
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .governanceListItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 50%;
+    padding-right: 10px;
+  }
+
+  .governanceIcon {
+    padding: 25px;
+    box-shadow: -26px 25px 31px rgba(102, 78, 200, 0.12);
+    border-radius: 16px;
+
+    svg {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  .governanceListText {
+    margin-left: 12px;
+  }
+}
+
+.polkadot {
+
+  background-image: url("./images/polkadot-bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 100%;
+
+  .content {
+    @include container;
+
+    padding-bottom: 260px;
+    padding-top: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .text {
+    max-width: 650px;
+    width: 70%;
+    margin-right: 48px;
+  }
+
+  .polkadotTitle {
+    text-align: left;
+  }
+}
+
+.team {
+  @include container;
+
+  padding-bottom: 140px;
+  padding-top: 140px;
+
+  .teamList {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -20px;
+  }
+
+  .teamCard {
+    margin: 0 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 21px rgba(226, 226, 226, 0.25),0 10px 13px -7px rgb(168 143 251 / 30%);
+    border-radius: 16px;
+
+    &:hover {
+      box-shadow: 0 0 30px rgba(168, 143, 251, 0.3);
+    }
+  }
+  .itemImage {
+    border: 1px solid colors.$grey-3;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 0 auto 14px;
+  }
+
+  .teamCardTitle {
+    margin-bottom: 12px;
+  }
+
+  .teamCardText {
+    margin-bottom: 15px;
+  }
+
+  .cardLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    svg {
+      color: colors.$black;
+      width: 18px;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.cta {
+  @include container;
+
+  padding-bottom: 140px;
+  padding-top: 140px;
+
+  .ctaTitle {
+    margin-bottom: 50px;
+    text-align: left;
+  }
+
+  .ctaText {
+    margin-bottom: 50px;
+  }
+
+  .ctaBtn {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }

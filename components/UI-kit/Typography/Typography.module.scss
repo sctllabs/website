@@ -26,6 +26,10 @@
   @extend %body-1;
 }
 
+.body2 {
+  @extend %body-2;
+}
+
 .paragraph1 {
   @extend %paragraph-1;
 }

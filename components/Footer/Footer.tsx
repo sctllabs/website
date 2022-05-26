@@ -30,7 +30,7 @@ const Footer = () => {
         <div className={styles.menu}>
           <ul className={styles.menuList}>
             {menuList.map(social => (
-              <li className={styles.menuItem}>
+              <li className={styles.menuItem} key={social.id}>
                 <LinkTo to={`#${social.id}`} className={styles.link}>
                   <Typography
                     variant="title3"

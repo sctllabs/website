@@ -22,19 +22,19 @@
 }
 
 @mixin small-tablet-only {
-  @media (min-width: #{breakpoints.$screen-xs}) and (max-width: #{breakpoints.$screen-sm - 1}px) {
+  @media (min-width: #{breakpoints.$screen-xs}px) and (max-width: #{breakpoints.$screen-sm - 1}px) {
     @content;
   }
 }
 
 @mixin large-tablet-only {
-  @media (min-width: #{breakpoints.$screen-sm}) and (max-width: #{breakpoints.$screen-md - 1}px) {
+  @media (min-width: #{breakpoints.$screen-sm}px) and (max-width: #{breakpoints.$screen-md - 1}px) {
     @content;
   }
 }
 
 @mixin tablet-only {
-  @media (min-width: #{breakpoints.$screen-xs}) and (max-width: #{breakpoints.$screen-md - 1}px) {
+  @media (min-width: #{breakpoints.$screen-xs}px) and (max-width: #{breakpoints.$screen-md - 1}px) {
     @content;
   }
 }

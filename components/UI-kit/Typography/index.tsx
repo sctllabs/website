@@ -11,6 +11,7 @@ type TypographyVariants =
   | 'title3'
   | 'paragraph1'
   | 'body1'
+  | 'body2'
   | 'caption1'
   | 'caption2';
 
@@ -28,6 +29,7 @@ const elementsByVariants: Record<TypographyVariants, ElementType> = {
   title3: 'h5',
   paragraph1: 'p',
   body1: 'div',
+  body2: 'div',
   caption1: 'span',
   caption2: 'span'
 };

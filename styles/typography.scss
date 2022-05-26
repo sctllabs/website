@@ -45,6 +45,12 @@
   line-height: 36px;
 }
 
+@mixin body-2 {
+  @include mixins.typography(16px, $font-weight: 500);
+
+  line-height: 20px;
+}
+
 @mixin caption-1 {
   @include mixins.typography(14px, $font-weight: 400);
 
@@ -566,6 +572,10 @@
 
 %body-1 {
   @include body-1;
+}
+
+%body-2 {
+  @include body-2;
 }
 
 %caption-1 {

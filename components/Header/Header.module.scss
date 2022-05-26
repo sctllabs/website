@@ -66,26 +66,6 @@
   transition-duration: 0.5s;
   width: 26px;
 
-  @include large-tablet {
-    height: 32px;
-    width: 36px;
-
-    .icon {
-      &::before,
-      &::after {
-        width: 30px;
-      }
-
-      &::before {
-        top: 10px;
-      }
-
-      &::after {
-        bottom: 10px;
-      }
-    }
-  }
-
   .icon {
     height: 100%;
     position: absolute;
@@ -109,6 +89,26 @@
 
     &::after {
       bottom: 6px;
+    }
+  }
+
+  @include large-tablet {
+    height: 32px;
+    width: 36px;
+
+    .icon {
+      &::before,
+      &::after {
+        width: 30px;
+      }
+
+      &::before {
+        top: 10px;
+      }
+
+      &::after {
+        bottom: 10px;
+      }
     }
   }
 
