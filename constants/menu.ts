@@ -1,4 +1,4 @@
-import { IconNamesType } from "../components/UI-kit/Icon";
+import { IconNamesType } from '../components/UI-kit/Icon';
 
 interface SocialListType {
   id: IconNamesType;
