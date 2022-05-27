@@ -1,3 +1,5 @@
+# Include Common Template
+
 include:
 - project: 'devops/gitlab-ci'
   ref: main
