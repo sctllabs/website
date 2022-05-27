@@ -17,7 +17,8 @@ const nextConfig = {
           options: {
             extract: true,
             outputPath: 'static/',
-            publicPath: 'static/'
+            publicPath: 'static/',
+            esModule: false
           }
         }
       ]
