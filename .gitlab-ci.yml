@@ -1,10 +1,9 @@
 include:
-- template: "Workflows/MergeRequest-Pipelines.gitlab-ci.yml"
 - project: 'devops/gitlab-ci'
   ref: main
   file: '/workflows/devs/nextjs-app.yml'
 
-build-and-push:docker:
+docker:build-and-push:
   extends: .docker:build-and-push
 
 dev:deploy:
