@@ -1,0 +1,140 @@
+@use 'mixins' as *;
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin animation-hero-circles($duration, $count, $disable-on-mobile: true) {
+  $start-index: 0;
+  $last-index: $count;
+  $effect-duration: $duration / $count;
+  $selector: 'circle';
+
+  @for $i from $start-index through $last-index {
+    $y: (($i % 2) + 1);
+    $x: (($i % 5) + 1);
+
+    @keyframes float#{$i} {
+      0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translate(0px, 0px);
+      }
+      50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+
+        @if $i % 3 == 0 {
+          transform: translateY(-#{$y * 12}px);
+        } @else {
+          transform: translateX(#{$x * 8}px);
+        }
+      }
+      100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translate(0px, 0px);
+      }
+    }
+
+    #{$selector}:nth-child(#{$i}) {
+      @if $i % 3 == 0 {
+        animation: float#{$i} #{$y * 4}s linear infinite;
+      } @else {
+        animation: float#{$i} #{$x * 5}s linear infinite;
+      }
+
+      @if $disable-on-mobile == true {
+        @include mobile-only {
+          animation: none !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin animation-hero-rects($duration, $count, $disable-on-mobile: true) {
+  $start-index: 0;
+  $last-index: $count;
+  $effect-duration: $duration / $count;
+  $selector: 'rect';
+
+  @keyframes blink {
+    0% {
+      stroke: url(#paint2_linear_594_8655);
+      stroke-width: 2px;
+    }
+    #{100 / $duration * $effect-duration}% {
+      stroke: url(#paint2_linear_594_8655);
+      stroke-width: 2px;
+    }
+    #{(100 / $duration * $effect-duration) + 0.001}% {
+      stroke: black;
+      stroke-width: 0.5px;
+    }
+    100% {
+      stroke: black;
+      stroke-width: 0.5px;
+    }
+  }
+
+  #{$selector} {
+    animation: blink #{$duration}s linear infinite;
+
+    @if $disable-on-mobile == true {
+      @include mobile-only {
+        animation: none !important;
+      }
+    }
+  }
+
+  @for $i from $start-index through $last-index {
+    #{$selector}:nth-child(#{$i}) {
+      animation-delay: #{($i - 1) * ($duration / $count)}s;
+    }
+  }
+}
+
+@mixin animation-lines($duration, $count, $disable-on-mobile: true) {
+  $start-index: 0;
+  $last-index: $count;
+  $effect-duration: $duration / $count;
+  $selector: 'path';
+
+  @keyframes blink-line {
+    0% {
+      stroke: url(#paint2_linear_594_8588);
+      stroke-width: 2px;
+    }
+    #{100 / $duration * $effect-duration}% {
+      stroke: url(#paint2_linear_594_8588);
+      stroke-width: 2px;
+    }
+    #{(100 / $duration * $effect-duration) + 0.001}% {
+      stroke: black;
+      stroke-width: 0.5px;
+    }
+    100% {
+      stroke: black;
+      stroke-width: 0.5px;
+    }
+  }
+
+  #{$selector} {
+    animation: blink-line #{$duration}s linear infinite;
+
+    @if $disable-on-mobile == true {
+      @include mobile-only {
+        animation: none !important;
+      }
+    }
+  }
+
+  @for $i from $start-index through $last-index {
+    #{$selector}:nth-child(#{$i}) {
+      animation-delay: #{($i - 1) * ($duration / $count)}s;
+    }
+  }
+}

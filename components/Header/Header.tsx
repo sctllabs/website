@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import Image from 'next/image';
+import Lottie from 'react-lottie';
+
+import { Typography } from 'components/UI-kit/Typography';
+import LinkTo from 'components/UI-kit/LinkTo';
+import { menuList } from 'constants/menu';
+
+import logoAnimationData from 'animation/logo-header.json';
 
 import styles from './Header.module.scss';
-import LinkTo from '../UI-kit/LinkTo';
-import logo from '../../public/images/logo.png';
-import { menuList } from '../../constants/menu';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -28,7 +31,13 @@ const Header = () => {
     >
       <div className={styles.headerContainer}>
         <LinkTo className={styles.logo} to="/">
-          <Image src={logo} alt="Sociatel" />
+          <Lottie
+            options={{
+              autoplay: false,
+              loop: true,
+              animationData: logoAnimationData
+            }}
+          />
         </LinkTo>
         <div
           className={classNames(styles.menuIcon, {
@@ -47,8 +56,18 @@ const Header = () => {
           <ul className={styles.menuList}>
             {menuList.map(menu => (
               <li key={menu.id} className={styles.menuItem}>
-                <LinkTo to={`#${menu.id}`} onClick={() => setOpen(false)}>
-                  {menu.name}
+                <LinkTo
+                  className={styles.menuItemLink}
+                  to={`#${menu.id}`}
+                  onClick={() => setOpen(false)}
+                >
+                  <Typography
+                    className={styles.menuItemText}
+                    variant="title3"
+                    data-text={menu.name}
+                  >
+                    {menu.name}
+                  </Typography>
                 </LinkTo>
               </li>
             ))}

@@ -2,20 +2,23 @@ import React from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
 
-import styles from './Home.module.scss';
-import { Typography } from '../../components/UI-kit/Typography';
-import { Icon } from '../../components/UI-kit/Icon';
-import Button from '../../components/UI-kit/Button';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
+import { Typography } from 'components/UI-kit/Typography';
+import { Icon } from 'components/UI-kit/Icon';
+import Button from 'components/UI-kit/Button';
+import { Header } from 'components/Header';
+import { Footer } from 'components/Footer';
+import { Infographic } from 'components/Infographic';
 import {
   about,
   features,
   governance,
   polkadot,
   team
-} from '../../constants/landing-page';
-import infographic from '../../public/images/infographic.png';
+} from 'constants/landing-page';
+import { ReactComponent as BannerBg } from 'public/images/banner-bg.svg';
+import { ReactComponent as ShapeBgSvg } from 'public/images/shape-bg.svg';
+
+import styles from './Home.module.scss';
 
 const Home = () => {
   return (
@@ -24,6 +27,7 @@ const Home = () => {
 
       <div className={styles.content}>
         <section className={styles.banner}>
+          <BannerBg className={styles.bannerBg} />
           <div className={styles.bannerText}>
             <Typography variant="h1" className={styles.sectionTitle} glitch>
               Organizations
@@ -151,9 +155,10 @@ const Home = () => {
               </Typography>
             </div>
             <div className={styles.infographic}>
-              <Image src={infographic} alt="Polkadot" />
+              <Infographic />
             </div>
           </div>
+          <ShapeBgSvg className={styles.polkadotBg} />
         </section>
 
         <section id="team" className={styles.team}>
@@ -164,7 +169,7 @@ const Home = () => {
             {team.items.map(item => (
               <div className={styles.teamCard} key={item.title}>
                 <div className={styles.itemImage}>
-                  {/* <img src="" alt="" /> */}
+                  <Image src={item.img} alt={item.title} />
                 </div>
                 <Typography variant="title2" className={styles.teamCardTitle}>
                   {item.title}
@@ -187,24 +192,25 @@ const Home = () => {
         </section>
 
         <section className={styles.cta}>
-          <Typography
-            variant="h2"
-            className={classNames(styles.ctaTitle, styles.sectionTitle)}
-            glitch
-          >
-            Lorem ipsum dolor sit
-          </Typography>
-          <Typography
-            variant="body1"
-            className={classNames(styles.ctaText, styles.sectionDescription)}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis, lectus magna fringilla urna,
-            porttitor rhoncus dolor purus non
-          </Typography>
-          <Button variant="primary" className={styles.ctaBtn}>
-            CTA
-          </Button>
+          <div className={styles.ctaContainer}>
+            <Typography
+              variant="h2"
+              className={classNames(styles.ctaTitle, styles.sectionTitle)}
+              glitch
+            >
+              Connect with Societal
+            </Typography>
+            <Typography
+              variant="body1"
+              className={classNames(styles.ctaText, styles.sectionDescription)}
+            >
+              Sign up for updates about the project launch and ecosystem
+            </Typography>
+            <Button variant="primary" className={styles.ctaBtn}>
+              Join the list
+            </Button>
+          </div>
+          <ShapeBgSvg className={styles.ctaBg} />
         </section>
       </div>
 

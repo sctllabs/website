@@ -1,12 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
+import Lottie from 'react-lottie';
+
+import LinkTo from 'components/UI-kit/LinkTo';
+import { Icon } from 'components/UI-kit/Icon';
+import { Typography } from 'components/UI-kit/Typography';
+import { menuList, socialList } from 'constants/menu';
+
+import logoAnimationData from 'animation/logo-footer.json';
 
 import styles from './Footer.module.scss';
-import logo from '../../public/images/logo-white.png';
-import LinkTo from '../UI-kit/LinkTo';
-import { menuList, socialList } from '../../constants/menu';
-import { Icon } from '../UI-kit/Icon';
-import { Typography } from '../UI-kit/Typography';
 import footerBottomLinks from './constants';
 
 const Footer = () => {
@@ -15,7 +17,13 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.footerTop}>
           <LinkTo className={styles.logo} to="/">
-            <Image src={logo} alt="Sociatel" />
+            <Lottie
+              options={{
+                autoplay: false,
+                loop: true,
+                animationData: logoAnimationData
+              }}
+            />
           </LinkTo>
           <ul className={styles.social}>
             {socialList.map(social => (

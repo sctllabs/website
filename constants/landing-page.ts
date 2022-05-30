@@ -1,4 +1,9 @@
-import { IconNamesType } from '../components/UI-kit/Icon';
+import { IconNamesType } from 'components/UI-kit/Icon';
+
+import photoTylerGellatly from 'public/images/team/tyler-gellatly.png';
+import photogReameFox from 'public/images/team/greame-fox.png';
+import photoKiimFournier from 'public/images/team/kiim-fournier.png';
+import photoMaxKudinov from 'public/images/team/max-kudinov.png';
 
 interface SectionWithIconType {
   title: string;
@@ -110,26 +115,26 @@ export const team = {
   items: [
     {
       title: 'Tyler Gellatly',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-      img: '',
+      text: 'Co-Founder',
+      img: photoTylerGellatly,
       twitter: 'https://twitter.com'
     },
     {
       title: 'Greame Fox',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-      img: '',
+      text: 'Co-Founder',
+      img: photogReameFox,
       twitter: 'https://twitter.com'
     },
     {
       title: 'Kiim Fournier',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-      img: '',
+      text: 'Co-Founder',
+      img: photoKiimFournier,
       twitter: 'https://twitter.com'
     },
     {
       title: 'Max Kudinov',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-      img: '',
+      text: 'Technical Advisor',
+      img: photoMaxKudinov,
       twitter: 'https://twitter.com'
     }
   ]

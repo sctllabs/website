@@ -9,6 +9,7 @@ import github from './github.svg';
 import guilds from './guilds.svg';
 import identityVoting from './identity-voting.svg';
 import investment from './investment.svg';
+import medium from './medium.svg';
 import member from './member.svg';
 import nftVoting from './nft-voting.svg';
 import notFound from './not-found.svg';
@@ -29,6 +30,7 @@ const icons = {
   guilds,
   'identity-voting': identityVoting,
   investment,
+  medium,
   member,
   'nft-voting': nftVoting,
   'not-found': notFound,

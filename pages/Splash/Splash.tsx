@@ -2,9 +2,9 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Lottie from 'react-lottie';
-import styles from './Splash.module.scss';
 
-import logoAnimationData from './animation/logo.json';
+import logoAnimationData from 'animation/logo.json';
+import styles from './Splash.module.scss';
 
 const Splash: NextPage = () => {
   return (
@@ -19,7 +19,7 @@ const Splash: NextPage = () => {
           <div className={styles.logo}>
             <Lottie
               options={{
-                autoplay: true,
+                autoplay: false,
                 loop: true,
                 animationData: logoAnimationData
               }}
