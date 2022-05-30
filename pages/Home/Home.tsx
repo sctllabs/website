@@ -16,6 +16,7 @@ import {
   team
 } from '../../constants/landing-page';
 import infographic from '../../public/images/infographic.png';
+import Slider from '../../components/Slider';
 
 const Home = () => {
   return (
@@ -83,6 +84,7 @@ const Home = () => {
                 </div>
               ))}
             </div>
+            <Slider />
           </div>
         </section>
 
