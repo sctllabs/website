@@ -1,3 +1,3 @@
-import Splash from './Splash';
+import Home from './Home';
 
-export default Splash;
+export default Home;
