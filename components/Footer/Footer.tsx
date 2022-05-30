@@ -39,18 +39,35 @@ const Footer = () => {
           <ul className={styles.menuList}>
             {menuList.map(menuItem => (
               <li className={styles.menuItem} key={menuItem.id}>
-                <LinkTo
-                  to={menuItem.href || `#${menuItem.id}`}
-                  className={styles.link}
-                >
-                  <Typography
-                    variant="title3"
-                    className={styles.linkText}
-                    data-text={menuItem.name}
+                {menuItem.href ? (
+                  <a
+                    href={menuItem.href}
+                    target="_blank"
+                    className={styles.link}
+                    rel="noreferrer"
                   >
-                    {menuItem.name}
-                  </Typography>
-                </LinkTo>
+                    <Typography
+                      variant="title3"
+                      className={styles.linkText}
+                      data-text={menuItem.name}
+                    >
+                      {menuItem.name}
+                    </Typography>
+                  </a>
+                ) : (
+                  <LinkTo
+                    to={menuItem.href || `#${menuItem.id}`}
+                    className={styles.link}
+                  >
+                    <Typography
+                      variant="title3"
+                      className={styles.linkText}
+                      data-text={menuItem.name}
+                    >
+                      {menuItem.name}
+                    </Typography>
+                  </LinkTo>
+                )}
               </li>
             ))}
           </ul>

@@ -56,19 +56,37 @@ const Header = () => {
           <ul className={styles.menuList}>
             {menuList.map(menu => (
               <li key={menu.id} className={styles.menuItem}>
-                <LinkTo
-                  className={styles.menuItemLink}
-                  to={menu.href || `#${menu.id}`}
-                  onClick={() => setOpen(false)}
-                >
-                  <Typography
-                    className={styles.menuItemText}
-                    variant="title3"
-                    data-text={menu.name}
+                {menu.href ? (
+                  <a
+                    className={styles.menuItemLink}
+                    href={menu.href}
+                    target="_blank"
+                    onClick={() => setOpen(false)}
+                    rel="noreferrer"
                   >
-                    {menu.name}
-                  </Typography>
-                </LinkTo>
+                    <Typography
+                      className={styles.menuItemText}
+                      variant="title3"
+                      data-text={menu.name}
+                    >
+                      {menu.name}
+                    </Typography>
+                  </a>
+                ) : (
+                  <LinkTo
+                    className={styles.menuItemLink}
+                    to={`#${menu.id}`}
+                    onClick={() => setOpen(false)}
+                  >
+                    <Typography
+                      className={styles.menuItemText}
+                      variant="title3"
+                      data-text={menu.name}
+                    >
+                      {menu.name}
+                    </Typography>
+                  </LinkTo>
+                )}
               </li>
             ))}
           </ul>
