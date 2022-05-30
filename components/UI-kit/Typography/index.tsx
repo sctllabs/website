@@ -1,4 +1,11 @@
-import React, { ElementType, forwardRef, HTMLAttributes } from 'react';
+import React, {
+  ElementType,
+  forwardRef,
+  HTMLAttributes,
+  MutableRefObject,
+  useEffect,
+  useRef
+} from 'react';
 import classNames from 'classnames';
 
 import styles from './Typography.module.scss';
@@ -37,16 +44,49 @@ const elementsByVariants: Record<TypographyVariants, ElementType> = {
 export const Typography = forwardRef<HTMLElement, TypographyProps>(
   ({ as, children, variant, glitch, className, ...restProps }, ref) => {
     const Tag = as || elementsByVariants[variant];
+    const glitchRef = useRef<HTMLElement | null>(null);
+
+    // todo: move to separate component
+    useEffect(() => {
+      if (!glitch) {
+        return;
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('start-animation');
+          }
+        });
+      });
+
+      if (glitchRef.current) {
+        observer.observe(glitchRef.current);
+      }
+    }, [glitch, glitchRef]);
+
+    const handleRef = (node: HTMLElement) => {
+      glitchRef.current = node;
+
+      if (typeof ref === 'function') {
+        ref(node);
+      } else if (ref) {
+        const mutableRefObject = ref as MutableRefObject<HTMLElement>;
+        mutableRefObject.current = node;
+      }
+    };
 
     return glitch ? (
       <Tag
         className={classNames(styles[variant], styles.glitch, className)}
         data-text={children}
         {...restProps}
-        ref={ref}
+        ref={handleRef}
       >
         {children}
-        <span className={styles.gradient}>{children}</span>
+        <span ref={glitchRef} className={styles.gradient}>
+          {children}
+        </span>
       </Tag>
     ) : (
       <Tag
@@ -59,8 +99,3 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
     );
   }
 );
-
-Typography.defaultProps = {
-  as: undefined,
-  glitch: false
-};
