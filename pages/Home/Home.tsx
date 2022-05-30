@@ -9,6 +9,7 @@ import { Footer } from 'components/Footer';
 import { Infographic } from 'components/Infographic';
 import {
   about,
+  banner,
   features,
   governance,
   polkadot,
@@ -19,6 +20,7 @@ import { ReactComponent as ShapeBgSvg } from 'public/images/shape-bg.svg';
 import { SubsctibeSection } from 'components/SubsctibeSection';
 import styles from './Home.module.scss';
 import Slider from '../../components/Slider';
+import BannerTitle from '../../components/BannerTitle';
 
 const Home = () => {
   return (
@@ -29,9 +31,10 @@ const Home = () => {
         <section className={styles.banner}>
           <BannerBg className={styles.bannerBg} />
           <div className={styles.bannerText}>
-            <Typography variant="h1" className={styles.sectionTitle} glitch>
-              Organizations
-            </Typography>
+            <BannerTitle
+              titles={banner.titles}
+              className={styles.bannerTitle}
+            />
             <Typography
               variant="paragraph1"
               className={styles.bannerDescription}

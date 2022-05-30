@@ -1,22 +1,24 @@
-import { IconNamesType } from 'components/UI-kit/Icon';
-
 import photoTylerGellatly from 'public/images/team/tyler-gellatly.png';
 import photogReameFox from 'public/images/team/greame-fox.png';
 import photoKiimFournier from 'public/images/team/kiim-fournier.png';
 import photoMaxKudinov from 'public/images/team/max-kudinov.png';
 
-import {ReactComponent as Member} from 'public/images/icons/member.svg';
-import {ReactComponent as Identity} from 'public/images/icons/identity-voting.svg';
-import {ReactComponent as Voting} from 'public/images/icons/voting.svg';
-import {ReactComponent as Nft} from 'public/images/icons/nft-voting.svg';
-import {ReactComponent as Ownership} from 'public/images/icons/ownership-voting.svg';
-import {ReactComponent as General} from 'public/images/icons/general-voting.svg';
-import {ReactComponent as Social} from 'public/images/icons/social.svg';
-import {ReactComponent as Bulb} from 'public/images/icons/bulb.svg';
-import {ReactComponent as Defi} from 'public/images/icons/defi.svg';
-import {ReactComponent as Investment} from 'public/images/icons/investment.svg';
-import {ReactComponent as Projects} from 'public/images/icons/projects.svg';
-import {ReactComponent as Guilds} from 'public/images/icons/guilds.svg';
+import { ReactComponent as Member } from 'public/images/icons/member.svg';
+import { ReactComponent as Identity } from 'public/images/icons/identity-voting.svg';
+import { ReactComponent as Voting } from 'public/images/icons/voting.svg';
+import { ReactComponent as Nft } from 'public/images/icons/nft-voting.svg';
+import { ReactComponent as Ownership } from 'public/images/icons/ownership-voting.svg';
+import { ReactComponent as General } from 'public/images/icons/general-voting.svg';
+import { ReactComponent as Social } from 'public/images/icons/social.svg';
+import { ReactComponent as Bulb } from 'public/images/icons/bulb.svg';
+import { ReactComponent as Defi } from 'public/images/icons/defi.svg';
+import { ReactComponent as Investment } from 'public/images/icons/investment.svg';
+import { ReactComponent as Projects } from 'public/images/icons/projects.svg';
+import { ReactComponent as Guilds } from 'public/images/icons/guilds.svg';
+
+export const banner = {
+  titles: ['Organizations', 'Society', 'Work', 'Community', 'Reimagined']
+};
 
 export const about = {
   title: 'A Fit For Every Industry',
@@ -149,5 +151,5 @@ export const sliderItems = [
   'Zero Gas Fees',
   'Chain Agnostic',
   'Cross-DAO Marketplace',
-  'Built-in Governance',
-]
+  'Built-in Governance'
+];

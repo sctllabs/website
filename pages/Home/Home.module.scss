@@ -56,12 +56,14 @@
 .bannerTitle {
   margin-bottom: 40px;
   text-transform: uppercase;
+  transition: opacity ease-in-out 2s;
 
   @include mobile-only {
     font-size: 42px;
     letter-spacing: 0.12em;
     margin-bottom: 14px;
   }
+
 }
 
 .bannerDescription {
