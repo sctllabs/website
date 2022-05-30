@@ -3,7 +3,7 @@
 include:
 - project: 'devops/gitlab-ci'
   ref: main
-  file: '/workflows/devs/nextjs-app.yml'
+  file: '/workflows/devs/server-app.yml'
 
 docker:build-and-push:
   extends: .docker:build-and-push
