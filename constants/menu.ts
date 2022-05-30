@@ -1,9 +1,8 @@
-import { IconNamesType } from '../components/UI-kit/Icon';
-
-interface SocialListType {
-  id: IconNamesType;
-  link: string;
-}
+import { ReactComponent as Twitter } from 'public/images/icons/twitter.svg';
+import { ReactComponent as Discord } from 'public/images/icons/discord.svg';
+import { ReactComponent as Github } from 'public/images/icons/github.svg';
+import { ReactComponent as Medium } from 'public/images/icons/medium.svg';
+import { ReactComponent as Email } from 'public/images/icons/email.svg';
 
 export const menuList = [
   {
@@ -32,25 +31,25 @@ export const menuList = [
   }
 ];
 
-export const socialList: SocialListType[] = [
+export const socialList = [
   {
-    id: 'twitter',
+    icon: Twitter,
     link: 'https://twitter.com/societal_xyz'
   },
   {
-    id: 'discord',
+    icon: Discord,
     link: 'https://discord.gg/pU7TVvRVdh'
   },
   {
-    id: 'github',
+    icon: Github,
     link: 'https://github.com/sctllabs/website'
   },
   {
-    id: 'medium',
+    icon: Medium,
     link: 'https://medium.com/@societal.xyz'
   },
   {
-    id: 'email',
+    icon: Email,
     link: 'mailto:info@sctl.xyz'
   }
 ];

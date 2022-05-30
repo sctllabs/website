@@ -56,6 +56,16 @@
   color: colors.$white;
   height: 24px;
   width: 24px;
+
+  defs {
+    display: none;
+  }
+
+  &:hover {
+    defs {
+      display: initial;
+    }
+  }
 }
 
 .menuList {
