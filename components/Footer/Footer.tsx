@@ -37,17 +37,37 @@ const Footer = () => {
         </div>
         <div className={styles.menu}>
           <ul className={styles.menuList}>
-            {menuList.map(social => (
-              <li className={styles.menuItem} key={social.id}>
-                <LinkTo to={`#${social.id}`} className={styles.link}>
-                  <Typography
-                    variant="title3"
-                    className={styles.linkText}
-                    data-text={social.name}
+            {menuList.map(menuItem => (
+              <li className={styles.menuItem} key={menuItem.id}>
+                {menuItem.href ? (
+                  <a
+                    href={menuItem.href}
+                    target="_blank"
+                    className={styles.link}
+                    rel="noreferrer"
                   >
-                    {social.name}
-                  </Typography>
-                </LinkTo>
+                    <Typography
+                      variant="title3"
+                      className={styles.linkText}
+                      data-text={menuItem.name}
+                    >
+                      {menuItem.name}
+                    </Typography>
+                  </a>
+                ) : (
+                  <LinkTo
+                    to={menuItem.href || `#${menuItem.id}`}
+                    className={styles.link}
+                  >
+                    <Typography
+                      variant="title3"
+                      className={styles.linkText}
+                      data-text={menuItem.name}
+                    >
+                      {menuItem.name}
+                    </Typography>
+                  </LinkTo>
+                )}
               </li>
             ))}
           </ul>

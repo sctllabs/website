@@ -28,7 +28,8 @@ export const menuList = [
   },
   {
     id: 'docs',
-    name: 'Docs'
+    name: 'Docs',
+    href: 'https://docs.sctl.xyz/'
   }
 ];
 
