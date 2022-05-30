@@ -58,7 +58,7 @@ const Header = () => {
               <li key={menu.id} className={styles.menuItem}>
                 <LinkTo
                   className={styles.menuItemLink}
-                  to={`#${menu.id}`}
+                  to={menu.href || `#${menu.id}`}
                   onClick={() => setOpen(false)}
                 >
                   <Typography
