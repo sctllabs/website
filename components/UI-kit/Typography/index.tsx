@@ -46,6 +46,7 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
         ref={ref}
       >
         {children}
+        <span className={styles.gradient}>{children}</span>
       </Tag>
     ) : (
       <Tag
