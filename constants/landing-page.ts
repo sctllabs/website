@@ -134,3 +134,12 @@ export const team = {
     }
   ]
 };
+
+export const sliderItems = [
+  'Private Assets & Voting',
+  'Built-in MultiSig',
+  'Zero Gas Fees',
+  'Chain Agnostic',
+  'Cross-DAO Marketplace',
+  'Built-in Governance',
+]
