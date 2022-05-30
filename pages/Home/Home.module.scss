@@ -1,6 +1,6 @@
 @use 'styles/mixins' as *;
+@use 'styles/animations' as *;
 @use 'styles/colors';
-
 
 .layout {
   overflow-x: hidden;
@@ -22,7 +22,6 @@
   }
 
   .sectionDescription {
-
     @include small-tablet-only {
       font-size: 20px;
       line-height: 30px;
@@ -39,39 +38,52 @@
   @include container;
 }
 
-
-
 .banner {
   height: 100vh;
   width: 100%;
-  background-image: url("./images/banner-bg.svg");
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
 
-  .bannerText {
-    text-align: center;
-    max-width: 584px;
-    padding: 0 24px;
+.bannerText {
+  text-align: center;
+  max-width: 584px;
+  padding: 0 24px;
+}
 
-    .bannerTitle {
-      margin-bottom: 40px;
-      text-transform: uppercase;
+.bannerTitle {
+  margin-bottom: 40px;
+  text-transform: uppercase;
 
-      @include mobile-only {
-        font-size: 42px;
-        letter-spacing: .12em;
-        margin-bottom: 14px;
-      }
-    }
+  @include mobile-only {
+    font-size: 42px;
+    letter-spacing: 0.12em;
+    margin-bottom: 14px;
+  }
+}
 
-    .bannerDescription {
-      @include mobile-only {
-        font-size: 22px;
-        letter-spacing: .02em;
-      }
-    }
+.bannerDescription {
+  @include mobile-only {
+    font-size: 22px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.bannerBg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -53%);
+  height: 170vh;
+
+  :global(.banner-rects) {
+    @include animation-hero-rects(2.5, 16);
+  }
+
+  :global(.banner-circles) {
+    @include animation-hero-circles(10, 90);
   }
 }
 
@@ -118,7 +130,8 @@
     width: 45%;
     max-width: 300px;
     padding: 45px 10px 35px;
-    box-shadow: 0 0 21px rgba(226, 226, 226, 0.25),0 10px 13px -7px rgb(168 143 251 / 30%);
+    box-shadow: 0 0 21px rgba(226, 226, 226, 0.25),
+      0 10px 13px -7px rgb(168 143 251 / 30%);
     border-radius: 16px;
     margin-bottom: 70px;
     text-align: center;
@@ -242,7 +255,6 @@
   }
 }
 
-
 .governance {
   @include container;
 
@@ -331,11 +343,7 @@
 }
 
 .polkadot {
-
-  background-image: url("./images/polkadot-bg.svg");
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: 160%;
+  position: relative;
 
   @include large-tablet {
     background-size: auto;
@@ -360,7 +368,6 @@
       padding-top: 140px;
       flex-direction: row;
     }
-
   }
 
   .text {
@@ -376,10 +383,23 @@
   }
 
   .polkadotTitle {
-
     @include large-tablet {
       text-align: left;
     }
+  }
+}
+
+.polkadotBg {
+  position: absolute;
+  left: 0;
+  bottom: -10%;
+
+  @include large-tablet {
+    max-width: 90%;
+  }
+
+  :global(.shape-paths) {
+    @include animation-lines(7, 7);
   }
 }
 
@@ -416,14 +436,14 @@
     margin: 20px 20px;
     padding: 25px;
     text-align: center;
-    box-shadow: 0 0 21px rgba(226, 226, 226, 0.25),0 10px 13px -7px rgb(168 143 251 / 30%);
+    box-shadow: 0 0 21px rgba(226, 226, 226, 0.25),
+      0 10px 13px -7px rgb(168 143 251 / 30%);
     border-radius: 16px;
     max-width: 260px;
 
     &:hover {
       box-shadow: 0 0 30px rgba(168, 143, 251, 0.3);
     }
-
 
     @include large-tablet {
       margin: 0 36px 72px;
@@ -466,21 +486,23 @@
   }
 }
 
-
 .cta {
-  @include container;
-
-  padding-bottom: 80px;
+  position: relative;
+  padding-bottom: 220px;
   padding-top: 80px;
 
   @include small-tablet {
-    padding-bottom: 110px;
+    padding-bottom: 250px;
     padding-top: 110px;
   }
 
   @include large-tablet {
-    padding-bottom: 140px;
+    padding-bottom: 280px;
     padding-top: 140px;
+  }
+
+  .ctaContainer {
+    @include container;
   }
 
   .ctaTitle {
@@ -495,5 +517,17 @@
   .ctaBtn {
     padding-left: 100px;
     padding-right: 100px;
+  }
+
+  .ctaBg {
+    position: absolute;
+    bottom: -13%;
+    right: 0;
+    transform: scaleX(-1);
+
+    @include small-tablet {
+      bottom: 5%;
+      max-width: 90%;
+    }
   }
 }

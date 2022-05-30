@@ -35,22 +35,22 @@ export const menuList = [
 export const socialList: SocialListType[] = [
   {
     id: 'twitter',
-    link: 'https://google.com'
+    link: 'https://twitter.com/societal_xyz'
   },
   {
     id: 'discord',
-    link: 'https://google.com'
+    link: 'https://discord.gg/pU7TVvRVdh'
   },
   {
     id: 'github',
-    link: 'https://google.com'
+    link: 'https://github.com/sctllabs/website'
   },
   {
-    id: 'reddit',
-    link: 'https://google.com'
+    id: 'medium',
+    link: 'https://medium.com/@societal.xyz'
   },
   {
     id: 'email',
-    link: 'https://google.com'
+    link: 'mailto:info@sctl.xyz'
   }
 ];

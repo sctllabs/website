@@ -5,7 +5,7 @@ const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    outputStandalone: true,
+    outputStandalone: true
   },
   webpack: (config, context) => {
     config.module.rules.push({
@@ -50,7 +50,7 @@ const nextConfig = {
           }
         },
         {
-          loader: 'url-loader'
+          loader: 'file-loader'
         }
       ]
     });
