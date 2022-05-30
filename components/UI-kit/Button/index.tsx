@@ -5,7 +5,10 @@ import classNames from 'classnames';
 import styles from './Button.module.scss';
 
 export interface ButtonProps
-  extends Omit<React.HTMLProps<HTMLButtonElement>, 'type'> {
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   variant: 'primary' | 'secondary';
 }
 

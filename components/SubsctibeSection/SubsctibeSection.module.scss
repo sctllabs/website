@@ -1,0 +1,87 @@
+@use 'styles/mixins' as *;
+@use 'styles/animations' as *;
+@use 'styles/colors';
+
+.cta {
+  position: relative;
+  padding-bottom: 220px;
+  padding-top: 80px;
+
+  @include small-tablet {
+    padding-bottom: 250px;
+    padding-top: 110px;
+  }
+
+  @include large-tablet {
+    padding-bottom: 280px;
+    padding-top: 140px;
+  }
+}
+
+.ctaContainer {
+  @include container;
+}
+
+.ctaTitle {
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.ctaText {
+  margin-bottom: 50px;
+}
+
+.ctaBtn {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.ctaBg {
+  position: absolute;
+  bottom: -13%;
+  right: 0;
+  transform: scaleX(-1);
+
+  @include small-tablet {
+    bottom: 5%;
+    max-width: 90%;
+  }
+}
+
+.input {
+  width: 100%;
+  max-width: 256px;
+  height: 40px;
+  border: 1px solid #b8b8b8;
+  border-radius: 4px;
+  padding: 0 12px;
+  font-size: 14px;
+  outline-color: #a88ffb;
+
+  &:focus {
+    border-color: #a88ffb;
+  }
+
+  &::placeholder {
+    color: #b8b8b8;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.status {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: #ff512f;
+}
+
+.success {
+  color: #56ab2f;
+}
