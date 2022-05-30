@@ -83,7 +83,7 @@
   }
 
   :global(.banner-circles) {
-    @include animation-hero-circles(10, 90);
+    @include animation-circles(9, 90);
   }
 }
 
@@ -397,6 +397,10 @@
   :global(.shape-paths) {
     @include animation-lines(7, 7);
   }
+
+  :global(.shape-circles) {
+    @include animation-circles(9, 25);
+  }
 }
 
 .team {
@@ -524,6 +528,14 @@
     @include small-tablet {
       bottom: 5%;
       max-width: 90%;
+    }
+
+    :global(.shape-paths) {
+      @include animation-lines(7, 7);
+    }
+
+    :global(.shape-circles) {
+      @include animation-circles(9, 25);
     }
   }
 }
