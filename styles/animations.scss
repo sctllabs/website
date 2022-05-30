@@ -9,7 +9,7 @@
   }
 }
 
-@mixin animation-hero-circles($duration, $count, $disable-on-mobile: true) {
+@mixin animation-circles($duration, $count, $disable-on-mobile: true) {
   $start-index: 0;
   $last-index: $count;
   $effect-duration: $duration / $count;
@@ -105,11 +105,11 @@
 
   @keyframes blink-line {
     0% {
-      stroke: url(#paint2_linear_594_8588);
+      stroke: url(#paint0_linear_594_8588);
       stroke-width: 2px;
     }
     #{100 / $duration * $effect-duration}% {
-      stroke: url(#paint2_linear_594_8588);
+      stroke: url(#paint0_linear_594_8588);
       stroke-width: 2px;
     }
     #{(100 / $duration * $effect-duration) + 0.001}% {
