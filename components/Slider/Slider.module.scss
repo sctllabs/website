@@ -87,11 +87,21 @@
   z-index: 9;
   cursor: pointer;
 
+  & defs {
+    display: none;
+  }
+
   &Next{
     transform: translateX(70px);
   }
   &Prev{
     transform: translateX(-70px);
+  }
+
+  &:hover {
+    defs {
+      display: initial;
+    }
   }
 
   @include mobile-only {

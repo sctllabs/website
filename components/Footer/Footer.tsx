@@ -2,7 +2,6 @@ import React from 'react';
 import Lottie from 'react-lottie';
 
 import LinkTo from 'components/UI-kit/LinkTo';
-import { Icon } from 'components/UI-kit/Icon';
 import { Typography } from 'components/UI-kit/Typography';
 import { menuList, socialList } from 'constants/menu';
 
@@ -26,10 +25,10 @@ const Footer = () => {
             />
           </LinkTo>
           <ul className={styles.social}>
-            {socialList.map(social => (
-              <li className={styles.socialItem} key={social.id}>
-                <a href={social.link} target="_blank" rel="noreferrer">
-                  <Icon name={social.id} className={styles.socialIcon} />
+            {socialList.map(({ icon: SocialIcon, link }) => (
+              <li className={styles.socialItem} key={link}>
+                <a href={link} target="_blank" rel="noreferrer">
+                  <SocialIcon className={styles.socialIcon} />
                 </a>
               </li>
             ))}

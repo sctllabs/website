@@ -5,17 +5,20 @@ import photogReameFox from 'public/images/team/greame-fox.png';
 import photoKiimFournier from 'public/images/team/kiim-fournier.png';
 import photoMaxKudinov from 'public/images/team/max-kudinov.png';
 
-interface SectionWithIconType {
-  title: string;
-  description1: string;
-  description2: string;
-  items: {
-    icon: IconNamesType;
-    title: string;
-  }[];
-}
+import {ReactComponent as Member} from 'public/images/icons/member.svg';
+import {ReactComponent as Identity} from 'public/images/icons/identity-voting.svg';
+import {ReactComponent as Voting} from 'public/images/icons/voting.svg';
+import {ReactComponent as Nft} from 'public/images/icons/nft-voting.svg';
+import {ReactComponent as Ownership} from 'public/images/icons/ownership-voting.svg';
+import {ReactComponent as General} from 'public/images/icons/general-voting.svg';
+import {ReactComponent as Social} from 'public/images/icons/social.svg';
+import {ReactComponent as Bulb} from 'public/images/icons/bulb.svg';
+import {ReactComponent as Defi} from 'public/images/icons/defi.svg';
+import {ReactComponent as Investment} from 'public/images/icons/investment.svg';
+import {ReactComponent as Projects} from 'public/images/icons/projects.svg';
+import {ReactComponent as Guilds} from 'public/images/icons/guilds.svg';
 
-export const about: SectionWithIconType = {
+export const about = {
   title: 'A Fit For Every Industry',
   description1:
     'A DAO creation & management platform that empowers communities to create, manage and collaborate in a trustless environment, removing the friction of using multiple siloed DAO tooling products.',
@@ -23,27 +26,27 @@ export const about: SectionWithIconType = {
     'Societal is a highly specialized layer-1 blockchain that makes it possible for anyone to build their own DAO and benefit from a gas free, token agnostic environment.',
   items: [
     {
-      icon: 'bulb',
+      icon: Bulb,
       title: 'Creators'
     },
     {
-      icon: 'defi',
+      icon: Defi,
       title: 'DeFi'
     },
     {
-      icon: 'investment',
+      icon: Investment,
       title: 'Investment'
     },
     {
-      icon: 'social',
+      icon: Social,
       title: 'Social'
     },
     {
-      icon: 'projects',
+      icon: Projects,
       title: 'Projects'
     },
     {
-      icon: 'guilds',
+      icon: Guilds,
       title: 'Guilds'
     }
   ]
@@ -71,7 +74,7 @@ export const features = {
   ]
 };
 
-export const governance: SectionWithIconType = {
+export const governance = {
   title: 'Governance',
   description1:
     'There is no one-size-fits-all governance model. Societal offers the following standardized models for DAO creators, plus the flexibility to create your own utilizing the custom governance builder.',
@@ -79,27 +82,27 @@ export const governance: SectionWithIconType = {
     'Our plan is to pioneer novel governance models, and support individual DAOs using the platform to customize, implement, and share their own unique solutions.',
   items: [
     {
-      icon: 'member',
+      icon: Member,
       title: 'One Member, One Vote'
     },
     {
-      icon: 'identity-voting',
+      icon: Identity,
       title: 'Identity & Credential Weighted Voting'
     },
     {
-      icon: 'voting',
+      icon: Voting,
       title: 'Nominated Voting'
     },
     {
-      icon: 'nft-voting',
+      icon: Nft,
       title: 'NFT and Token Voting'
     },
     {
-      icon: 'ownership-voting',
+      icon: Ownership,
       title: 'Ownership Weighted Voting'
     },
     {
-      icon: 'general-voting',
+      icon: General,
       title: 'General Council and Technical Committee Voting'
     }
   ]

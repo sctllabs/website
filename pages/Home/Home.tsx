@@ -59,11 +59,11 @@ const Home = () => {
             {about.description2}
           </Typography>
           <ul className={styles.aboutCardList}>
-            {about.items.map(item => (
-              <li className={styles.aboutCard} key={item.icon}>
-                <Icon name={item.icon} className={styles.cardIcon} />
+            {about.items.map(({ icon: AboutIcon, title }) => (
+              <li className={styles.aboutCard} key={title}>
+                <AboutIcon className={styles.cardIcon} />
                 <Typography variant="title2" className={styles.aboutCardTitle}>
-                  {item.title}
+                  {title}
                 </Typography>
               </li>
             ))}
@@ -106,16 +106,16 @@ const Home = () => {
               {governance.description1}
             </Typography>
             <div className={styles.governanceList}>
-              {governance.items.map(item => (
-                <div className={styles.governanceListItem} key={item.icon}>
+              {governance.items.map(({ title, icon: GovernanceIcon }) => (
+                <div className={styles.governanceListItem} key={title}>
                   <div className={styles.governanceIcon}>
-                    <Icon name={item.icon} />
+                    <GovernanceIcon />
                   </div>
                   <Typography
                     variant="title2"
                     className={styles.governanceListText}
                   >
-                    {item.title}
+                    {title}
                   </Typography>
                 </div>
               ))}

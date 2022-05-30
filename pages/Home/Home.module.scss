@@ -136,10 +136,6 @@
     margin-bottom: 70px;
     text-align: center;
 
-    &:hover {
-      box-shadow: 0 0 30px rgba(168, 143, 251, 0.3);
-    }
-
     @include large-tablet {
       width: 30%;
     }

@@ -6,10 +6,12 @@ import { SwiperSlide, Swiper } from 'swiper/react';
 import { EffectCoverflow, Navigation, SwiperOptions } from 'swiper';
 import classNames from 'classnames';
 
+import { ReactComponent as ArrowRight } from 'public/images/icons/arrow-next.svg';
+import { ReactComponent as ArrowLeft } from 'public/images/icons/arrow-prev.svg';
+
 import styles from './Slider.module.scss';
 import { sliderItems } from '../../constants/landing-page';
 import { Typography } from '../UI-kit/Typography';
-import { Icon } from '../UI-kit/Icon';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -96,13 +98,13 @@ const Slider = () => {
         className={classNames(styles.arrow, styles.arrowPrev)}
         ref={prevRef}
       >
-        <Icon name="arrow-prev" />
+        <ArrowLeft />
       </span>
       <span
         className={classNames(styles.arrow, styles.arrowNext)}
         ref={nextRef}
       >
-        <Icon name="arrow-next" />
+        <ArrowRight />
       </span>
     </div>
   );
