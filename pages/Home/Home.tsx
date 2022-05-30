@@ -17,8 +17,8 @@ import {
 } from 'constants/landing-page';
 import { ReactComponent as BannerBg } from 'public/images/banner-bg.svg';
 import { ReactComponent as ShapeBgSvg } from 'public/images/shape-bg.svg';
-
 import styles from './Home.module.scss';
+import Slider from '../../components/Slider';
 
 const Home = () => {
   return (
@@ -87,6 +87,7 @@ const Home = () => {
                 </div>
               ))}
             </div>
+            <Slider />
           </div>
         </section>
 

@@ -19,7 +19,7 @@ const Splash: NextPage = () => {
           <div className={styles.logo}>
             <Lottie
               options={{
-                autoplay: false,
+                autoplay: true,
                 loop: true,
                 animationData: logoAnimationData
               }}

@@ -19,7 +19,7 @@ const Footer = () => {
           <LinkTo className={styles.logo} to="/">
             <Lottie
               options={{
-                autoplay: false,
+                autoplay: true,
                 loop: true,
                 animationData: logoAnimationData
               }}
