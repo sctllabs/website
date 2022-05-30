@@ -4,7 +4,6 @@ import classNames from 'classnames';
 
 import { Typography } from 'components/UI-kit/Typography';
 import { Icon } from 'components/UI-kit/Icon';
-import Button from 'components/UI-kit/Button';
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
 import { Infographic } from 'components/Infographic';
@@ -17,6 +16,7 @@ import {
 } from 'constants/landing-page';
 import { ReactComponent as BannerBg } from 'public/images/banner-bg.svg';
 import { ReactComponent as ShapeBgSvg } from 'public/images/shape-bg.svg';
+import { SubsctibeSection } from 'components/SubsctibeSection';
 import styles from './Home.module.scss';
 import Slider from '../../components/Slider';
 
@@ -192,27 +192,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className={styles.cta}>
-          <div className={styles.ctaContainer}>
-            <Typography
-              variant="h2"
-              className={classNames(styles.ctaTitle, styles.sectionTitle)}
-              glitch
-            >
-              Connect with Societal
-            </Typography>
-            <Typography
-              variant="body1"
-              className={classNames(styles.ctaText, styles.sectionDescription)}
-            >
-              Sign up for updates about the project launch and ecosystem
-            </Typography>
-            <Button variant="primary" className={styles.ctaBtn}>
-              Join the list
-            </Button>
-          </div>
-          <ShapeBgSvg className={styles.ctaBg} />
-        </section>
+        <SubsctibeSection />
       </div>
 
       <Footer />
