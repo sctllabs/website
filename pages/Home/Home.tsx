@@ -3,10 +3,12 @@ import Image from 'next/image';
 import classNames from 'classnames';
 
 import { Typography } from 'components/UI-kit/Typography';
-import { Icon } from 'components/UI-kit/Icon';
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
 import { Infographic } from 'components/Infographic';
+import Slider from 'components/Slider';
+import BannerTitle from 'components/BannerTitle';
+import { SubsctibeSection } from 'components/SubsctibeSection';
 import {
   about,
   banner,
@@ -17,10 +19,10 @@ import {
 } from 'constants/landing-page';
 import { ReactComponent as BannerBg } from 'public/images/banner-bg.svg';
 import { ReactComponent as ShapeBgSvg } from 'public/images/shape-bg.svg';
-import { SubsctibeSection } from 'components/SubsctibeSection';
+import { ReactComponent as TwitterSvg } from 'public/images/icons/twitter.svg';
+import { ReactComponent as LinkedInSvg } from 'public/images/icons/linkedin.svg';
+
 import styles from './Home.module.scss';
-import Slider from '../../components/Slider';
-import BannerTitle from '../../components/BannerTitle';
 
 const Home = () => {
   return (
@@ -181,15 +183,24 @@ const Home = () => {
                 <Typography variant="body2" className={styles.teamCardText}>
                   {item.text}
                 </Typography>
-                <a
-                  href={item.twitter}
-                  target="_blank"
-                  className={styles.cardLink}
-                  rel="noreferrer"
-                >
-                  <Icon name="twitter" className={styles.twitterLink} />
-                  <Typography variant="caption1">Twitter</Typography>
-                </a>
+                <div className={styles.temaSocialLinks}>
+                  <a
+                    href={item.twitter}
+                    target="_blank"
+                    className={styles.cardLink}
+                    rel="noreferrer"
+                  >
+                    <TwitterSvg className={styles.teamSocialIcon} />
+                  </a>
+                  <a
+                    href={item.linkedin}
+                    target="_blank"
+                    className={styles.cardLink}
+                    rel="noreferrer"
+                  >
+                    <LinkedInSvg className={styles.teamSocialIcon} />
+                  </a>
+                </div>
               </div>
             ))}
           </div>

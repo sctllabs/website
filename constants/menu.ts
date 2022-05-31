@@ -29,6 +29,11 @@ export const menuList = [
     id: 'docs',
     name: 'Docs',
     href: 'https://docs.sctl.xyz/'
+  },
+  {
+    id: 'whitepaper',
+    name: 'Whitepaper',
+    href: 'https://docsend.com/view/2gte2fd8wc4jp4rg'
   }
 ];
 
@@ -43,7 +48,7 @@ export const socialList = [
   },
   {
     icon: Github,
-    link: 'https://github.com/sctllabs/website'
+    link: 'https://github.com/sctllabs'
   },
   {
     icon: Medium,
