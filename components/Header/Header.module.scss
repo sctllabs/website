@@ -232,7 +232,7 @@
     transition: all 0.3s ease-in;
 
     background-size: 100%;
-    background-image: linear-gradient(
+    background: linear-gradient(
       270deg,
       #ff3f3f -1.98%,
       #feeb3c 20.51%,
@@ -248,12 +248,9 @@
     -moz-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-
-    filter: blur(1px);
   }
 
   &:hover::after {
-    top: 1px;
     left: -1px;
     opacity: 1;
   }
