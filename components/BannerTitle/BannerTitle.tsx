@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 import { Typography } from '../UI-kit/Typography';
+
+import styles from './BannerTitle.module.scss';
 
 interface BannerTitleProps {
   className?: string;
@@ -8,37 +10,49 @@ interface BannerTitleProps {
 }
 
 const BannerTitle = ({ titles, className }: BannerTitleProps) => {
-  const [fadeIn, setFadeIn] = useState(true);
   const [active, setActive] = useState(0);
+  const refEl = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
-    const interval = setTimeout(() => {
-      if (active < titles.length - 1) {
-        setActive(active + 1);
-        setFadeIn(true);
-      } else {
-        clearInterval(interval);
-      }
-    }, 10000);
+    const node = refEl.current;
 
-    const timeout = setTimeout(() => {
-      if (active < titles.length - 1) {
-        setFadeIn(false);
-      } else {
-        clearTimeout(timeout);
+    const handler = (e: any) => {
+      if (e.animationName.indexOf('glitch-anim-2') !== -1) {
+        setActive(prevActive => (prevActive + 1) % (titles.length - 1));
+        node?.classList.remove(styles.glitch);
+
+        setTimeout(() => {
+          node?.classList.add(styles.glitch);
+        }, 1500);
       }
-    }, 8000);
-  }, [active, titles]);
+    };
+
+    setTimeout(() => {
+      node?.classList.add(styles.glitch);
+    }, 1500);
+
+    node?.addEventListener('animationend', handler);
+
+    return () => {
+      node?.removeEventListener('animationend', handler);
+    };
+  }, [titles]);
 
   return (
-    <Typography
-      variant="h1"
-      className={classNames(className)}
-      data-text={titles[active]}
-      glitch
-      style={{ opacity: fadeIn ? 1 : 0 }}
-    >
-      {titles[active]}
+    <Typography variant="h1" className={classNames(className)}>
+      <span
+        className={classNames(styles.text)}
+        ref={refEl}
+        data-text={titles[active]}
+      >
+        {titles[active]}
+        <span className={styles.gradient}>{titles[active]}</span>
+      </span>
+      <br />
+      <span className={styles.text}>
+        Reimagined
+        <span className={styles.gradient}>Reimagined</span>
+      </span>
     </Typography>
   );
 };
