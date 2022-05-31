@@ -6,9 +6,9 @@ import { Typography } from 'components/UI-kit/Typography';
 import { menuList, socialList } from 'constants/menu';
 
 import logoAnimationData from 'animation/logo-footer.json';
+import footerBottomLinks from './constants';
 
 import styles from './Footer.module.scss';
-import footerBottomLinks from './constants';
 
 const Footer = () => {
   return (

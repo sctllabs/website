@@ -63,7 +63,6 @@
     letter-spacing: 0.12em;
     margin-bottom: 14px;
   }
-
 }
 
 .bannerDescription {
@@ -460,6 +459,7 @@
     height: 140px;
     border-radius: 50%;
     margin: 0 auto 14px;
+    overflow: hidden;
   }
 
   .teamCardTitle {
@@ -486,4 +486,14 @@
       text-decoration: underline;
     }
   }
+}
+
+.teamSocialIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.temaSocialLinks {
+  display: flex;
+  justify-content: center;
 }

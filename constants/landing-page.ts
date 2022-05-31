@@ -1,7 +1,7 @@
 import photoTylerGellatly from 'public/images/team/tyler-gellatly.png';
 import photogReameFox from 'public/images/team/greame-fox.png';
 import photoKiimFournier from 'public/images/team/kiim-fournier.png';
-import photoMaxKudinov from 'public/images/team/max-kudinov.png';
+import photoMaxKudinov from 'public/images/team/max-kudinov.webp';
 
 import { ReactComponent as Member } from 'public/images/icons/member.svg';
 import { ReactComponent as Identity } from 'public/images/icons/identity-voting.svg';
@@ -122,25 +122,29 @@ export const team = {
       title: 'Tyler Gellatly',
       text: 'Co-Founder',
       img: photoTylerGellatly,
-      twitter: 'https://twitter.com'
+      twitter: 'https://twitter.com/g3llatly',
+      linkedin: 'https://www.linkedin.com/in/tngell'
     },
     {
-      title: 'Greame Fox',
+      title: 'Graeme Fox',
       text: 'Co-Founder',
       img: photogReameFox,
-      twitter: 'https://twitter.com'
+      twitter: 'https://twitter.com/Graeme_Fox',
+      linkedin: 'https://www.linkedin.com/in/graemefox'
     },
     {
-      title: 'Kiim Fournier',
+      title: 'Kim Fournier',
       text: 'Co-Founder',
       img: photoKiimFournier,
-      twitter: 'https://twitter.com'
+      twitter: 'https://twitter.com/kimfour01',
+      linkedin: 'https://www.linkedin.com/in/kimjfournier'
     },
     {
       title: 'Max Kudinov',
       text: 'Technical Advisor',
       img: photoMaxKudinov,
-      twitter: 'https://twitter.com'
+      twitter: 'https://twitter.com',
+      linkedin: ''
     }
   ]
 };
