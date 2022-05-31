@@ -42,24 +42,24 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 12px;
-  padding-top: 12px;
+  padding-bottom: 6px;
+  padding-top: 6px;
   z-index: 2;
 
   @include large-tablet {
-    padding-bottom: 18px;
-    padding-top: 18px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 }
 
 .logo {
   display: block;
-  width: 132px;
+  width: 128px;
   height: 44px;
 
   @include large-tablet {
-    width: 100px;
-    height: 34px;
+    width: 180px;
+    height: 60px;
   }
 }
 
