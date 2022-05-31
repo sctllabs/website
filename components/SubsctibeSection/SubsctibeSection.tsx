@@ -1,32 +1,62 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { Typography } from 'components/UI-kit/Typography';
 import Button from 'components/UI-kit/Button';
 import { ReactComponent as ShapeBgSvg } from 'public/images/shape-bg.svg';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import jsonp from 'jsonp';
 
+import { Input } from 'components/UI-kit/Input';
 import styles from './SubsctibeSection.module.scss';
 
+import { POST_URL, STATUS_COLORS } from './constants';
+
+type SubsctiptionStatus = 'sending' | 'error' | 'success' | null;
+type ResponseData = { msg: string; result?: 'success' };
+
 const SubsctibeSection: React.FC = () => {
-  const handleSubmit = async (
-    e: React.SyntheticEvent,
-    subscribe: (data: any) => void
-  ) => {
+  const [status, setStatus] = useState<SubsctiptionStatus>(null);
+  const [message, setMessage] = useState<string>('');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setStatus('sending');
+    setMessage('...sending');
+
+    const form = e.currentTarget;
     const target = e.target as typeof e.target & {
       email: { value: string };
     };
 
-    const response = subscribe({
+    const url = POST_URL.replace('/post?', '/post-json?');
+    const params = new URLSearchParams({
       MERGE0: target.email.value
-    });
+    }).toString();
 
-    console.log('subscribe: ', target.email.value, response);
+    const handleResponse = (err: Error, data: ResponseData) => {
+      if (err) {
+        setStatus('error');
+        setMessage(err.toString());
+      } else if (data.result !== 'success') {
+        setStatus('error');
+        setMessage(data.msg);
+      } else {
+        setStatus('success');
+        setMessage(data.msg);
+
+        setTimeout(() => {
+          setStatus(null);
+          setMessage('');
+          form.reset();
+        }, 2000);
+      }
+    };
+
+    jsonp(`${url}&${params}`, { param: 'c' }, (err: unknown, data: unknown) =>
+      handleResponse(err as Error, data as ResponseData)
+    );
   };
-
-  const postUrl = `https://xyz.us14.list-manage.com/subscribe/post?u=566a906473fa0f190917e0e7&id=d26a8289a2`;
 
   return (
     <section className={styles.cta}>
@@ -44,42 +74,27 @@ const SubsctibeSection: React.FC = () => {
         >
           Sign up for updates about the project launch and ecosystem
         </Typography>
-        <MailchimpSubscribe
-          url={postUrl}
-          render={({ subscribe, status, message }) => (
-            <form onSubmit={e => handleSubmit(e, subscribe)}>
-              <div className={styles.row}>
-                <input
-                  id="subsctption-email"
-                  className={styles.input}
-                  type="email"
-                  name="email"
-                  placeholder="Enter email"
-                />
-              </div>
-              {status === 'sending' && (
-                <div className={classNames(styles.status, styles.sending)}>
-                  sending...
-                </div>
-              )}
-              {status === 'error' && (
-                <div
-                  className={classNames(styles.status, styles.error)}
-                  dangerouslySetInnerHTML={{ __html: message.toString() }}
-                />
-              )}
-              {status === 'success' && (
-                <div
-                  className={classNames(styles.status, styles.success)}
-                  dangerouslySetInnerHTML={{ __html: message }}
-                />
-              )}
-              <Button type="submit" variant="primary" className={styles.ctaBtn}>
-                Join the list
-              </Button>
-            </form>
-          )}
-        />
+        <form onSubmit={handleSubmit}>
+          <div className={styles.row}>
+            <Input
+              className={classNames(styles.input, styles.emailInput)}
+              type="email"
+              name="email"
+              required
+              placeholder="Enter your email address"
+              helperText={message}
+              helperTextColor={status ? STATUS_COLORS[status] : undefined}
+            />
+            <Button
+              type="submit"
+              variant="primary"
+              className={styles.ctaBtn}
+              disabled={status === 'sending'}
+            >
+              Join the list
+            </Button>
+          </div>
+        </form>
       </div>
       <ShapeBgSvg className={styles.ctaBg} />
     </section>

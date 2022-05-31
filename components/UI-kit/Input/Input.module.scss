@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+  outline: none;
+
+  &:not(:placeholder-shown):not(:focus):valid {
+    border-color: #a88ffb;
+  }
+
+  &:hover {
+    border-color: #664ec8;
+  }
+
+  &:focus {
+    border-color: #a88ffb;
+  }
+
+  &::placeholder {
+    color: #666666;
+  }
+}
