@@ -1,7 +1,7 @@
 import photoTylerGellatly from 'public/images/team/tyler-gellatly.png';
 import photogReameFox from 'public/images/team/greame-fox.png';
 import photoKiimFournier from 'public/images/team/kiim-fournier.png';
-import photoMaxKudinov from 'public/images/team/max-kudinov.png';
+import photoMaxKudinov from 'public/images/team/max-kudinov.gif';
 
 import { ReactComponent as Member } from 'public/images/icons/member.svg';
 import { ReactComponent as Identity } from 'public/images/icons/identity-voting.svg';
@@ -23,7 +23,7 @@ export const banner = {
 export const about = {
   title: 'A Fit For Every Industry',
   description1:
-    'A DAO creation & management platform that empowers communities to create, manage and collaborate in a trustless environment, removing the friction of using multiple siloed DAO tooling products.',
+    'A DAO creation & management platform that is reinventing society’s infrastructure by removing the friction of using multiple siloed DAO tooling products.',
   description2:
     'Societal is a highly specialized layer-1 blockchain that makes it possible for anyone to build their own DAO and benefit from a gas free, token agnostic environment.',
   description3:
@@ -147,8 +147,8 @@ export const team = {
       title: 'Max Kudinov',
       text: 'Technical Advisor',
       img: photoMaxKudinov,
-      twitter: 'https://twitter.com',
-      linkedin: ''
+      twitter: 'https://twitter.com/kudinov_max',
+      linkedin: 'https://www.linkedin.com/in/max-kudinov-395595152'
     }
   ]
 };

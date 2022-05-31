@@ -498,3 +498,20 @@
   display: flex;
   justify-content: center;
 }
+
+.infographic {
+  width: 100%;
+  max-width: 456px;
+
+  @include large-tablet {
+    max-width: 360px;
+  }
+
+  @include large-desktop {
+    max-width: 456px;
+  }
+
+  svg {
+    width: 100%;
+  }
+}

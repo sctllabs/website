@@ -45,12 +45,6 @@
       } @else {
         animation: float#{$i} #{$x * 5}s linear infinite;
       }
-
-      @if $disable-on-mobile == true {
-        @include mobile-only {
-          animation: none !important;
-        }
-      }
     }
   }
 }
@@ -124,12 +118,6 @@
 
   #{$selector} {
     animation: blink-line #{$duration}s linear infinite;
-
-    @if $disable-on-mobile == true {
-      @include mobile-only {
-        animation: none !important;
-      }
-    }
   }
 
   @for $i from $start-index through $last-index {

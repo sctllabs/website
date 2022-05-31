@@ -18,18 +18,18 @@ const BannerTitle = ({ titles, className }: BannerTitleProps) => {
 
     const handler = (e: any) => {
       if (e.animationName.indexOf('glitch-anim-2') !== -1) {
-        setActive(prevActive => (prevActive + 1) % (titles.length - 1));
+        setActive(prevActive => (prevActive + 1) % titles.length);
         node?.classList.remove(styles.glitch);
 
         setTimeout(() => {
           node?.classList.add(styles.glitch);
-        }, 1500);
+        }, 2000);
       }
     };
 
     setTimeout(() => {
       node?.classList.add(styles.glitch);
-    }, 1500);
+    }, 2000);
 
     node?.addEventListener('animationend', handler);
 

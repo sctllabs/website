@@ -41,8 +41,8 @@ const Home = () => {
               variant="paragraph1"
               className={styles.bannerDescription}
             >
-              Societal is a catalyst for a self-governed society building an
-              ecosystem of DAOs.
+              Empowering web3 communities to organize, collaborate, and build
+              the future of society.
             </Typography>
           </div>
         </section>
@@ -191,7 +191,7 @@ const Home = () => {
             {team.items.map(item => (
               <div className={styles.teamCard} key={item.title}>
                 <div className={styles.itemImage}>
-                  <Image src={item.img} alt={item.title} />
+                  <Image src={item.img} alt={item.title} unoptimized />
                 </div>
                 <Typography variant="title2" className={styles.teamCardTitle}>
                   {item.title}
