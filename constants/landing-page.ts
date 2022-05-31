@@ -1,7 +1,7 @@
 import photoTylerGellatly from 'public/images/team/tyler-gellatly.png';
 import photogReameFox from 'public/images/team/greame-fox.png';
 import photoKiimFournier from 'public/images/team/kiim-fournier.png';
-import photoMaxKudinov from 'public/images/team/max-kudinov.webp';
+import photoMaxKudinov from 'public/images/team/max-kudinov.png';
 
 import { ReactComponent as Member } from 'public/images/icons/member.svg';
 import { ReactComponent as Identity } from 'public/images/icons/identity-voting.svg';
