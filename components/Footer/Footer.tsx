@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
         <div className={styles.footerBottom}>
           <Typography variant="caption2" className={styles.copyright}>
-            © Societal. All rights reserved
+            © Societal Labs Ltd. All rights reserved
           </Typography>
           <ul className={styles.bottomLinks}>
             {footerBottomLinks.map(item => (
