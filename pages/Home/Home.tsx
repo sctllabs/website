@@ -73,9 +73,15 @@ const Home = () => {
               </li>
             ))}
           </ul>
+          <Typography
+            variant="body1"
+            className={classNames(styles.aboutText, styles.sectionDescription)}
+          >
+            {about.description3}
+          </Typography>
         </section>
 
-        <section id="features" className={styles.features}>
+        <section id="products" className={styles.features}>
           <Typography variant="h2" className={styles.sectionTitle} glitch>
             {features.title}
           </Typography>
@@ -137,7 +143,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section id="polkadot-benefits" className={styles.polkadot}>
+        <section id="marketplace" className={styles.polkadot}>
           <div className={styles.content}>
             <div className={styles.text}>
               <Typography
@@ -157,7 +163,17 @@ const Home = () => {
                   styles.sectionDescription
                 )}
               >
-                {polkadot.text}
+                {polkadot.text1}
+              </Typography>
+              <br />
+              <Typography
+                variant="body1"
+                className={classNames(
+                  styles.polkadotText,
+                  styles.sectionDescription
+                )}
+              >
+                {polkadot.text2}
               </Typography>
             </div>
             <div className={styles.infographic}>
