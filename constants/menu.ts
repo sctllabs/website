@@ -10,16 +10,16 @@ export const menuList = [
     name: 'About'
   },
   {
-    id: 'features',
-    name: 'Features'
+    id: 'products',
+    name: 'Products'
   },
   {
     id: 'governance',
     name: 'Governance'
   },
   {
-    id: 'polkadot-benefits',
-    name: 'PolkadotBenefits'
+    id: 'marketplace',
+    name: 'Marketplace'
   },
   {
     id: 'team',

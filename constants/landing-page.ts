@@ -26,6 +26,8 @@ export const about = {
     'A DAO creation & management platform that empowers communities to create, manage and collaborate in a trustless environment, removing the friction of using multiple siloed DAO tooling products.',
   description2:
     'Societal is a highly specialized layer-1 blockchain that makes it possible for anyone to build their own DAO and benefit from a gas free, token agnostic environment.',
+  description3:
+    'Societal is interconnected to application-specific DeFi, Privacy, Identity, and Social blockchains, and will vertically integrate their tech offerings into the core product via cross-chain communication.',
   items: [
     {
       icon: Bulb,
@@ -55,7 +57,7 @@ export const about = {
 };
 
 export const features = {
-  title: 'Key Platform Features',
+  title: 'A Streamlined Web3 Experience',
   list: [
     {
       title: 'Create',
@@ -77,7 +79,7 @@ export const features = {
 };
 
 export const governance = {
-  title: 'Governance',
+  title: 'Customizable Governance',
   description1:
     'There is no one-size-fits-all governance model. Societal offers the following standardized models for DAO creators, plus the flexibility to create your own utilizing the custom governance builder.',
   description2:
@@ -112,7 +114,9 @@ export const governance = {
 
 export const polkadot = {
   title: 'The Future is DAO',
-  text: 'Building within the Polkadot ecosystem, Societal will be interconnected to application-specific DeFi, Privacy, Identity, and Metaverse blockchains, and plans to vertically integrate their functionality into the core product offering.'
+  text1: 'Inter-DAO collaboration is the next step for the web3 industry.',
+  text2:
+    'By design, Societal will serve as the link between DAOs, Sub-DAOs, and Guilds. DAOs will gain access to an ecosystem of community-owned organizations, unlocking endless social interactions.'
 };
 
 export const team = {
