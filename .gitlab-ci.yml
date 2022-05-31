@@ -2,7 +2,7 @@
 
 include:
 - project: 'devops/gitlab-ci'
-  ref: main
+  ref: c59c17e205b97650923f2e875fc99ae5fba8a0bd
   file: '/workflows/devs/server-app.yml'
 
 docker:build-and-push:
