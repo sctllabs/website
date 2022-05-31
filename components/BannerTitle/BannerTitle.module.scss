@@ -47,13 +47,13 @@
     left: 3px;
     opacity: 0;
     text-shadow: -3px 0 2px #a8e063;
-    animation: glitch-anim-2 3s linear;
+    animation: glitch-anim-2 2s linear;
   }
 
   &::after {
     left: -3px;
     opacity: 0;
     text-shadow: -3px 0 2px #a88ffb;
-    animation: glitch-anim 2.5s linear; //  0s 1 alternate-reverse
+    animation: glitch-anim 1.5s linear;
   }
 }

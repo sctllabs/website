@@ -4,7 +4,7 @@ export const STATUS_COLORS = {
   success: '#27AE60'
 };
 
-const u = '375da0a534bee5c9f50a82382';
-const id = '4075512275';
+const u = '3566a906473fa0f190917e0e7';
+const id = 'd26a8289a2';
 
-export const POST_URL = `https://gmail.us6.list-manage.com/subscribe/post?u=${u}&id=${id}`;
+export const POST_URL = `https://xyz.us14.list-manage.com/subscribe/post?u=${u}&id=${id}`;
