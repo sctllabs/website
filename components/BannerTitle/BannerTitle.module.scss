@@ -1,46 +1,8 @@
-@use 'styles/typography';
-@use 'styles/mixins';
-@use 'styles/colors';
 @use 'styles/animations';
 
-.h1 {
-  @extend %heading-1;
-}
-
-.h2 {
-  @extend %heading-2;
-}
-
-.title1 {
-  @extend %title-1;
-}
-
-.title2 {
-  @extend %title-2;
-}
-
-.title3 {
-  @extend %title-3;
-}
-
-.body1 {
-  @extend %body-1;
-}
-
-.body2 {
-  @extend %body-2;
-}
-
-.paragraph1 {
-  @extend %paragraph-1;
-}
-
-.caption1 {
-  @extend %caption-1;
-}
-
-.caption2 {
-  @extend %caption-2;
+.text {
+  position: relative;
+  display: inline-block;
 }
 
 .gradient {
@@ -69,7 +31,7 @@
   display: inline-block;
 }
 
-.glitch:global(.start-animation) {
+.glitch {
   &::before,
   &::after {
     content: attr(data-text);
@@ -85,13 +47,13 @@
     left: 3px;
     opacity: 0;
     text-shadow: -3px 0 2px #a8e063;
-    animation: glitch-anim-2 3s 1 linear alternate-reverse;
+    animation: glitch-anim-2 3s linear;
   }
 
   &::after {
     left: -3px;
     opacity: 0;
     text-shadow: -3px 0 2px #a88ffb;
-    animation: glitch-anim 2.5s 1 linear alternate-reverse;
+    animation: glitch-anim 2.5s linear; //  0s 1 alternate-reverse
   }
 }

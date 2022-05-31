@@ -17,7 +17,7 @@ import { ReactComponent as Projects } from 'public/images/icons/projects.svg';
 import { ReactComponent as Guilds } from 'public/images/icons/guilds.svg';
 
 export const banner = {
-  titles: ['Organizations', 'Society', 'Work', 'Community', 'Reimagined']
+  titles: ['Organizations', 'Society', 'Work', 'Community']
 };
 
 export const about = {
