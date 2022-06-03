@@ -44,7 +44,7 @@ export const socialList = [
   },
   {
     icon: Discord,
-    link: 'https://discord.gg/pU7TVvRVdh'
+    link: 'https://discord.gg/u6fGdRVBF3'
   },
   {
     icon: Github,
