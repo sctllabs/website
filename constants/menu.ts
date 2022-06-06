@@ -23,17 +23,20 @@ export const menuList = [
   },
   {
     id: 'team',
-    name: 'Team'
+    name: 'Team',
+    href: 'https://docs.sctl.xyz/'
   },
   {
     id: 'docs',
     name: 'Docs',
-    href: 'https://docs.sctl.xyz/'
+    href: 'https://docs.sctl.xyz/',
+    external: true
   },
   {
     id: 'whitepaper',
     name: 'Whitepaper',
-    href: 'https://docsend.com/view/2gte2fd8wc4jp4rg'
+    href: 'https://docsend.com/view/2gte2fd8wc4jp4rg',
+    external: true
   }
 ];
 
