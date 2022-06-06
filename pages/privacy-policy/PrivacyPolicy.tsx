@@ -2,6 +2,8 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import { Header } from 'components/Header';
+import { Footer } from 'components/Footer';
 import styles from './PrivacyPolicy.module.scss';
 
 const PrivacyPolicy: NextPage = () => {
@@ -10,6 +12,8 @@ const PrivacyPolicy: NextPage = () => {
       <Head>
         <title>Societal</title>
       </Head>
+
+      <Header />
 
       <main className={styles.root}>
         <p style={{ textAlign: 'justify' }}>
@@ -540,6 +544,7 @@ const PrivacyPolicy: NextPage = () => {
           Effective Date: Friday, June 3rd, 2022
         </p>
       </main>
+      <Footer />
     </>
   );
 };

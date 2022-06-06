@@ -22,11 +22,16 @@ import { ReactComponent as ShapeBgSvg } from 'public/images/shape-bg.svg';
 import { ReactComponent as TwitterSvg } from 'public/images/icons/twitter.svg';
 import { ReactComponent as LinkedInSvg } from 'public/images/icons/linkedin.svg';
 
+import Head from 'next/head';
 import styles from './Home.module.scss';
 
 const Home = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Societal</title>
+      </Head>
+
       <Header />
 
       <div className={styles.content}>
