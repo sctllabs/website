@@ -56,7 +56,7 @@ const Header = () => {
           <ul className={styles.menuList}>
             {menuList.map(menu => (
               <li key={menu.id} className={styles.menuItem}>
-                {menu.href ? (
+                {menu.external ? (
                   <a
                     className={styles.menuItemLink}
                     href={menu.href}
@@ -75,7 +75,7 @@ const Header = () => {
                 ) : (
                   <LinkTo
                     className={styles.menuItemLink}
-                    to={`#${menu.id}`}
+                    to={`/#${menu.id}`}
                     onClick={() => setOpen(false)}
                   >
                     <Typography
