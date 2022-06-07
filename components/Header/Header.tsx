@@ -10,16 +10,29 @@ import logoAnimationData from 'animation/logo-header.json';
 
 import styles from './Header.module.scss';
 
-const Header = () => {
+type HeaderProps = {
+  scrollElementSelector?: string;
+};
+
+const Header: React.FC<HeaderProps> = ({ scrollElementSelector }) => {
   const [open, setOpen] = useState(false);
   const [fixedHeader, setFixedHeader] = useState(false);
 
-  const updateScrollPosition = () => {
-    setFixedHeader(window.pageYOffset > 400);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const updateScrollPosition = (e: any) => {
+    const YOffset = scrollElementSelector
+      ? e.currentTarget?.scrollTop
+      : window.pageYOffset;
+
+    setFixedHeader(YOffset > 400);
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', updateScrollPosition);
+    const node = scrollElementSelector
+      ? document.querySelector(`.${scrollElementSelector}`)
+      : window;
+
+    node?.addEventListener('scroll', updateScrollPosition);
   });
 
   return (

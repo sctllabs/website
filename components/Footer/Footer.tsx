@@ -38,7 +38,7 @@ const Footer = () => {
           <ul className={styles.menuList}>
             {menuList.map(menuItem => (
               <li className={styles.menuItem} key={menuItem.id}>
-                {menuItem.href ? (
+                {menuItem.external ? (
                   <a
                     href={menuItem.href}
                     target="_blank"
@@ -54,10 +54,7 @@ const Footer = () => {
                     </Typography>
                   </a>
                 ) : (
-                  <LinkTo
-                    to={menuItem.href || `#${menuItem.id}`}
-                    className={styles.link}
-                  >
+                  <LinkTo to={`/#${menuItem.id}`} className={styles.link}>
                     <Typography
                       variant="title3"
                       className={styles.linkText}
