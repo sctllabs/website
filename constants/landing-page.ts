@@ -137,13 +137,6 @@ export const team = {
       linkedin: 'https://www.linkedin.com/in/graemefox'
     },
     {
-      title: 'Kim Fournier',
-      text: 'Co-Founder',
-      img: photoKiimFournier,
-      twitter: 'https://twitter.com/kimfour01',
-      linkedin: 'https://www.linkedin.com/in/kimjfournier'
-    },
-    {
       title: 'Max Kudinov',
       text: 'Technical Advisor',
       img: photoMaxKudinov,
