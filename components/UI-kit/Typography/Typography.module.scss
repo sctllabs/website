@@ -47,6 +47,10 @@
   @extend %heading-xxl;
 }
 
+.display1 {
+  @extend %display-1;
+}
+
 .gradient {
   position: absolute;
   left: -1px;

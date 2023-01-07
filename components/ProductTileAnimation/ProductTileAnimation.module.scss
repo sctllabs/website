@@ -1,0 +1,22 @@
+@use 'styles/mixins';
+
+.root {
+  animation: appear 0.8s ease-in forwards;
+  box-shadow:  0px 0px 30px rgba(168, 143, 251, 0.3);
+  border-radius: 8px;
+  max-width: 400px;
+  @include mixins.desktop {
+    max-width: 614px;
+  }
+}
+
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
