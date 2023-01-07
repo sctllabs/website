@@ -3,40 +3,47 @@ import { ReactComponent as Discord } from 'public/images/icons/discord.svg';
 import { ReactComponent as Github } from 'public/images/icons/github.svg';
 import { ReactComponent as Medium } from 'public/images/icons/medium.svg';
 import { ReactComponent as Email } from 'public/images/icons/email.svg';
+import { ABOUT, BENEFITS, PRODUCT } from './paths';
 
 export const menuList = [
   {
+    id: 'product',
+    name: 'Product',
+    href: PRODUCT,
+    isExternal: false
+  },
+  {
+    id: 'benefits',
+    name: 'Benefits',
+    href: BENEFITS,
+    isExternal: false
+  },
+  {
     id: 'about',
-    name: 'About'
-  },
-  {
-    id: 'products',
-    name: 'Products'
-  },
-  {
-    id: 'governance',
-    name: 'Governance'
-  },
-  {
-    id: 'marketplace',
-    name: 'Marketplace'
-  },
-  {
-    id: 'team',
-    name: 'Team',
-    href: 'https://docs.sctl.xyz/'
-  },
-  {
-    id: 'docs',
-    name: 'Docs',
-    href: 'https://docs.sctl.xyz/',
-    external: true
-  },
+    name: 'About',
+    href: ABOUT,
+    isExternal: false
+  }
+];
+
+export const menuResources = [
   {
     id: 'whitepaper',
     name: 'Whitepaper',
     href: 'https://docsend.com/view/2gte2fd8wc4jp4rg',
-    external: true
+    isExternal: true
+  },
+  {
+    id: 'docs',
+    name: 'Docs',
+    href: 'https://docs.sctl.xyz/introduction/what-is-societal',
+    isExternal: true
+  },
+  {
+    id: 'github',
+    name: 'GitHub',
+    href: 'https://github.com/sctllabs',
+    isExternal: true
   }
 ];
 

@@ -32,7 +32,7 @@ const Home = () => {
         <title>Societal</title>
       </Head>
 
-      <Header scrollElementSelector={styles.layout} />
+      <Header />
 
       <div className={styles.content}>
         <section className={styles.banner}>
