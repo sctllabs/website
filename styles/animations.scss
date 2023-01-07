@@ -304,3 +304,18 @@
     clip: rect(63px, 9999px, 6px, 0);
   }
 }
+
+
+@keyframes scroll-chevron {
+  0% {
+    transform: translate(-50%, -70%);
+  }
+  50% {
+    transform: translate(-50%, 0);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translate(-50%, -70%);
+  }
+}

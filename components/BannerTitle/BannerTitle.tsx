@@ -39,7 +39,10 @@ const BannerTitle = ({ titles, className }: BannerTitleProps) => {
   }, [titles]);
 
   return (
-    <Typography variant="h1" className={classNames(className)}>
+    <Typography
+      variant="headingXxl"
+      className={classNames(styles.root, className)}
+    >
       <span
         className={classNames(styles.text)}
         ref={refEl}
@@ -47,11 +50,6 @@ const BannerTitle = ({ titles, className }: BannerTitleProps) => {
       >
         {titles[active]}
         <span className={styles.gradient}>{titles[active]}</span>
-      </span>
-      <br />
-      <span className={styles.text}>
-        Reimagined
-        <span className={styles.gradient}>Reimagined</span>
       </span>
     </Typography>
   );

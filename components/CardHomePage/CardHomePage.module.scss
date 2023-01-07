@@ -1,0 +1,38 @@
+@use 'styles/mixins' as *;
+
+.root {
+ display: flex;
+ flex-direction: column;
+ padding: 20px;
+ box-shadow: 0px 0px 21px rgba(226, 226, 226, 0.25);
+border-radius: 16px;
+text-decoration: none;
+max-width: 600px;
+ transition: box-shadow 0.3s ease-out;
+  @include small-tablet {
+    padding: 32px;  
+  }
+
+  @include desktop {
+    &:hover {
+      box-shadow: 0px 0px 30px rgba(168, 143, 251, 0.3);
+    }
+  }
+
+  &:active {
+    box-shadow: 0px 0px 30px rgba(168, 143, 251, 0.3);
+  }
+}
+
+.title {
+  @include mobile-only {
+    font-size: 20px;
+  }
+}
+
+.description {
+  @include mobile-only {
+    margin-bottom: 24px;
+  }
+  margin: 16px 0 54px;
+}

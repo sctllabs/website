@@ -38,7 +38,7 @@ const Footer = () => {
           <ul className={styles.menuList}>
             {menuList.map(menuItem => (
               <li className={styles.menuItem} key={menuItem.id}>
-                {menuItem.external ? (
+                {menuItem.isExternal ? (
                   <a
                     href={menuItem.href}
                     target="_blank"
