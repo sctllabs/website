@@ -21,7 +21,8 @@ type TypographyVariants =
   | 'body2'
   | 'caption1'
   | 'caption2'
-  | 'headingXxl';
+  | 'headingXxl'
+  | 'display1';
 
 export interface TypographyProps extends HTMLAttributes<HTMLOrSVGElement> {
   as?: ElementType;
@@ -40,7 +41,8 @@ const elementsByVariants: Record<TypographyVariants, ElementType> = {
   body2: 'div',
   caption1: 'span',
   caption2: 'span',
-  headingXxl: 'h1'
+  headingXxl: 'h1',
+  display1: 'h1'
 };
 
 export const Typography = forwardRef<HTMLElement, TypographyProps>(

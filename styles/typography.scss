@@ -92,6 +92,12 @@
   }
 }
 
+@mixin display-1 {
+  @include mixins.typography(54px, $font-weight: 500);
+
+  line-height: 74px;
+}
+
 %heading-1 {
   @include heading-1;
 }
@@ -139,4 +145,8 @@
 
 %heading-xxl {
   @include heading-xxl;
+}
+
+%display-1 {
+  @include display-1;
 }
