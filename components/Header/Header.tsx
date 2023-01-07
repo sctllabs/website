@@ -6,9 +6,7 @@ import Lottie from 'react-lottie';
 import { Typography } from 'components/UI-kit/Typography';
 import LinkTo from 'components/UI-kit/LinkTo';
 import { menuList, menuResources } from 'constants/menu';
-
 import logoAnimationData from 'animation/logo-header.json';
-
 import DropdownButton from 'components/UI-kit/DropdownButton';
 
 import styles from './Header.module.scss';
