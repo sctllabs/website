@@ -24,15 +24,9 @@
     gap: 108px;
   }
 }
-.mainHeading {
+.heading {
   position: relative;
-  text-align: center;
-  text-transform: uppercase;
-
-  @include large-tablet {
-    text-align: left;
-  }
-
+ 
   &::after {
     background: linear-gradient(
       270deg,
@@ -55,28 +49,39 @@
     transition: all 0.3s ease-in;
     z-index: -1;
   }
+
+  &.main {
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 613px;
+  
+    @include large-tablet {
+      text-align: left;
+    }
+  }
+
 }
 
 
-.stickyWrapper{
+.stickyWrapper {
   display: flex;
   position: relative;
   gap: 67px;
   padding-bottom: 240px;
   justify-content: center;
-  
+
   @include desktop {
     padding-bottom: 140px;
   }
 }
 
-.textBlocksWrapper{
+.textBlocksWrapper {
   display: flex;
   flex-direction: column;
   gap: 140px;
 }
 
-.tileWrapper{
+.tileWrapper {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -92,7 +97,7 @@
     max-width: 559px;
     align-items: flex-start;
 
-    *{
+    * {
       text-align: left;
     }
   }
@@ -120,26 +125,26 @@
   }
 }
 
-.appStoreSlide{
-display: flex;
-gap: 67px;
-align-items: center;
-justify-content: center;
-padding: 140px 0;
-flex-direction: column;
+.appStoreSlide {
+  display: flex;
+  gap: 67px;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 0;
+  flex-direction: column;
 
-@include desktop {
-  flex-direction: row;
+  @include desktop {
+    flex-direction: row;
+  }
 }
-}
-.lottieWrapper{
+.lottieWrapper {
   order: 1;
   max-width: 614px;
   @include desktop {
     order: 0;
   }
 }
-.appStoreWrapper{
+.appStoreWrapper {
   display: flex;
   flex-direction: column;
   gap: 24px;

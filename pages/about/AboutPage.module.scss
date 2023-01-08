@@ -1,0 +1,136 @@
+@use 'styles/mixins' as *;
+@use 'styles/animations';
+@use 'styles/colors';
+
+.layout {
+  @include container;
+  max-width: 1450px;
+  width: 100%;
+}
+
+.slide {
+  padding-top: 212px;
+  padding-bottom: 212px;
+}
+
+.heading {
+  position: relative;
+  width: 100%;
+
+
+  &::after {
+    background: linear-gradient(
+      270deg,
+      #ff3f3f -1.98%,
+      #feeb3c 20.51%,
+      #71ff3f 41.91%,
+      #3e8bff 63.31%,
+      #e43eff 83.61%,
+      #ff3e3e 101.71%
+    );
+    background-clip: text;
+    background-size: 100%;
+    content: attr(data-text);
+    left: -2px;
+    position: absolute;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+    top: 0;
+    z-index: -1;
+    width: inherit;
+  }
+
+
+  &.main {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto 24px;
+    max-width: 1123px;
+  }
+
+  &.sub {
+    margin: 0 auto;
+    text-align: center;
+
+    @include desktop {
+      margin: unset;
+      text-align: left;
+    }
+  }
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  padding: 80px 0;
+
+  @include desktop {
+    padding: 140px 0;
+  }
+
+  &:first-child {
+    padding-top: 40px;
+  }
+}
+
+.slide {
+  padding: 140px 0;
+}
+
+.cartographyBlock {
+  display: flex;
+  column-gap: 16px;
+  row-gap: 48px;
+  flex-wrap: wrap;
+  margin-top: 72px;
+  justify-content: center;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.teamBlock {
+  display: flex;
+  column-gap: 32px;
+  row-gap: 64px;
+  flex-wrap: wrap;
+  margin-top: 72px;
+  justify-content: center;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.advisorsBlock {
+  display: flex;
+  column-gap: 80px;
+  row-gap: 80px;
+  flex-wrap: wrap;
+  margin-top: 72px;
+  justify-content: center;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+
+.partnersBlock {
+  display: flex;
+  column-gap: 90px;
+  row-gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 72px;
+  justify-content: center;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
