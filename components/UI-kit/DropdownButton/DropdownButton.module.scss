@@ -97,4 +97,13 @@
     pointer-events: auto;
     transform: translateY(14px);
   }
+
+  &.top {
+    top: unset;
+    bottom: 50%;
+  }
+
+  &.open.top {
+    transform: translateY(-24px);
+  }
 }

@@ -1,11 +1,13 @@
 import React from 'react';
 import Lottie from 'react-lottie';
+import classNames from 'classnames';
 
 import LinkTo from 'components/UI-kit/LinkTo';
 import { Typography } from 'components/UI-kit/Typography';
-import { menuList, socialList } from 'constants/menu';
+import { menuList, menuResources, socialList } from 'constants/menu';
 
 import logoAnimationData from 'animation/logo-footer.json';
+import DropdownButton from 'components/UI-kit/DropdownButton';
 import footerBottomLinks from './constants';
 
 import styles from './Footer.module.scss';
@@ -36,8 +38,13 @@ const Footer = () => {
         </div>
         <div className={styles.menu}>
           <ul className={styles.menuList}>
-            {menuList.map(menuItem => (
-              <li className={styles.menuItem} key={menuItem.id}>
+            {[...menuList, ...menuResources].map(menuItem => (
+              <li
+                className={classNames(styles.menuItem, {
+                  [styles.mobileOnly]: menuItem.isExternal
+                })}
+                key={menuItem.id}
+              >
                 {menuItem.isExternal ? (
                   <a
                     href={menuItem.href}
@@ -54,7 +61,7 @@ const Footer = () => {
                     </Typography>
                   </a>
                 ) : (
-                  <LinkTo to={`/#${menuItem.id}`} className={styles.link}>
+                  <LinkTo to={menuItem.href} className={styles.link}>
                     <Typography
                       variant="title3"
                       className={styles.linkText}
@@ -66,6 +73,33 @@ const Footer = () => {
                 )}
               </li>
             ))}
+            <DropdownButton
+              buttonText="Resources"
+              className={classNames(styles.menuItem, styles.dropdownButton)}
+              textClassName={styles.linkText}
+              arrowClassName={styles.linkText}
+              openTop
+            >
+              <div className={styles.dropdownButtonMenu}>
+                {menuResources.map(el => (
+                  <a
+                    href={el.href}
+                    target="_blank"
+                    key={el.id}
+                    rel="noreferrer"
+                    className={styles.dropdownButtonItem}
+                  >
+                    <Typography
+                      className={styles.menuItemText}
+                      variant="title3"
+                      data-text={el.name}
+                    >
+                      {el.name}
+                    </Typography>
+                  </a>
+                ))}
+              </div>
+            </DropdownButton>
           </ul>
         </div>
         <div className={styles.footerBottom}>
@@ -74,7 +108,7 @@ const Footer = () => {
           </Typography>
           <ul className={styles.bottomLinks}>
             {footerBottomLinks.map(item => (
-              <li className={styles.bottomLinkItem} key={item.id}>
+              <li key={item.id}>
                 <LinkTo to={item.link} className={styles.bottomLinkText}>
                   {item.title}
                 </LinkTo>
