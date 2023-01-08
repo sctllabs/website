@@ -1,0 +1,79 @@
+@use 'styles/mixins' as *;
+
+.root {
+ display: flex;
+ align-items: center;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+gap: 60px;
+
+ @include desktop {
+  flex-wrap: nowrap;
+  gap: 120px;
+ }
+}
+
+.text {
+  max-width: 719px;
+  text-align: center;
+  flex-shrink: 2;
+
+  @include desktop {
+    &.left {
+      margin-left: auto;
+    }
+  
+    &.right {
+      margin-right: auto;
+      order: -1;
+    }
+  }
+
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+
+  @include mobile-only {
+    font-size: 40px;
+  }
+
+  @include desktop {
+   width: 100%;
+  }
+
+
+  &::after {
+    background: linear-gradient(
+      270deg,
+      #ff3f3f -1.98%,
+      #feeb3c 20.51%,
+      #71ff3f 41.91%,
+      #3e8bff 63.31%,
+      #e43eff 83.61%,
+      #ff3e3e 101.71%
+    );
+    background-clip: text;
+    background-size: 100%;
+    content: attr(data-text);
+    left: -2px;
+    position: absolute;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+    top: 0;
+    z-index: -1;
+    width: inherit;
+  }
+}
+
+.description {
+  margin-bottom: 16px;
+}

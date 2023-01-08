@@ -51,6 +51,10 @@
   @extend %display-1;
 }
 
+.button1 {
+  @extend %button-1;
+}
+
 .gradient {
   position: absolute;
   left: -1px;

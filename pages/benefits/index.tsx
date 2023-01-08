@@ -8,7 +8,7 @@ import {
   LOWER_MARQUEE_DATA,
   UPPER_MARQUEE_DATA
 } from 'constants/content-benefits-page';
-import CardBenefitsPage from 'components/CardBenefitsPage';
+import CardTextMedia from 'components/CardTextMedia';
 
 import styles from './BenefitsPage.module.scss';
 
@@ -61,11 +61,7 @@ const BenefitsPage = () => {
       </div>
       <div className={styles.cardsWrapper}>
         {BENEFITS_CARDS.map(card => (
-          <CardBenefitsPage
-            {...card}
-            className={styles.card}
-            key={card.title}
-          />
+          <CardTextMedia {...card} className={styles.card} key={card.title} />
         ))}
       </div>
     </MainLayout>

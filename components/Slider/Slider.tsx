@@ -9,10 +9,18 @@ import { SwiperSlide, Swiper } from 'swiper/react';
 import { EffectCoverflow, Autoplay, SwiperOptions } from 'swiper';
 import classNames from 'classnames';
 
-import { sliderItems } from 'constants/landing-page';
 import { Typography } from '../UI-kit/Typography';
 
 import styles from './Slider.module.scss';
+
+export const sliderItems = [
+  'Private Assets & Voting',
+  'Built-in MultiSig',
+  'Zero Gas Fees',
+  'Chain Agnostic',
+  'Cross-DAO Marketplace',
+  'Built-in Governance'
+];
 
 const Slider = () => {
   const [vertical, setVertical] = useState(false);

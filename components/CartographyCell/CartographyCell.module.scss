@@ -1,0 +1,54 @@
+@use 'styles/mixins' as *;
+@use 'styles/colors';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.head {
+  padding: 6px 20px;
+  background: colors.$grey-2;
+  border-radius: 64px;
+  width: 194px;
+  color: colors.$purple-dark;
+
+  @include mobile-only {
+    width: 90vw;
+  }
+}
+
+.stepsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 16px;
+}
+
+.mark {
+  width: 8px;
+  height: 8px;
+  background-color: colors.$purple-light;
+  border-radius: 50%;
+  position: relative;
+  overflow: visible;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background-color: colors.$grey-2;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+}
