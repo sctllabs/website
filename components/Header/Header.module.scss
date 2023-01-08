@@ -32,7 +32,6 @@
 
 .headerContainer {
   @include container;
-  max-width: unset;
   align-items: center;
   display: flex;
   height: inherit;
