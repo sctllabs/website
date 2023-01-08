@@ -1,0 +1,43 @@
+@use 'styles/mixins' as *;
+@use 'styles/colors';
+
+.root {
+  height: 248px;
+  width: 224px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 50%;
+  padding: 4px;
+  position: relative;
+  width: 204px;
+  height: 204px;
+  box-shadow: -26px 25px 31px rgba(102, 78, 200, 0.12);
+  background-color: colors.$white;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.position {
+  color: colors.$purple-dark;
+}
+
+.decoration {
+  position: absolute;
+  left: 0;
+  top: 10px;
+}

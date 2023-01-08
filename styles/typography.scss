@@ -7,12 +7,20 @@
 
   letter-spacing: 0.2em;
   line-height: 74px;
+
+  @include mixins.mobile-only {
+    font-size: 40px;
+  }
 }
 
 @mixin heading-2 {
   @include mixins.typography(48px, $font-weight: 500);
 
   line-height: 62px;
+
+  @include mixins.mobile-only {
+    font-size: 36px;
+  }
 }
 
 @mixin title-1 {
@@ -63,6 +71,7 @@
   line-height: 20px;
 }
 
+
 @mixin button-1 {
   @include mixins.typography(14px, $font-weight: 600);
 
@@ -94,8 +103,12 @@
 
 @mixin display-1 {
   @include mixins.typography(54px, $font-weight: 500);
-
+  letter-spacing: 0.2em;
   line-height: 74px;
+
+  @include mixins.mobile-only {
+    font-size: 40px;
+  }
 }
 
 %heading-1 {
@@ -135,7 +148,7 @@
 }
 
 %caption-2 {
-  @include caption-1;
+  @include caption-2;
 }
 
 %button-1 {
