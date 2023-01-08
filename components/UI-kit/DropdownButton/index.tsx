@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useRef, useState } from 'react';
-import cn from 'classnames';
+import classNames from 'classnames';
 
 import useOnClickOutside from 'hooks/useOnClickOutside';
 import { Icon } from '../Icon';
@@ -14,10 +14,13 @@ export interface DropdownButtonProps {
   children: React.ReactNode;
   showArrow?: boolean;
   disabled?: boolean;
+  openTop?: boolean;
   className?: string;
   buttonClassName?: string;
+  textClassName?: string;
   dropdownClassName?: string;
   buttonActiveClassName?: string;
+  arrowClassName?: string;
   onOpen?: (isOpen: boolean) => void;
 }
 
@@ -28,8 +31,11 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
   children,
   showArrow = true,
   disabled,
+  openTop = false,
   buttonClassName,
+  textClassName,
   dropdownClassName,
+  arrowClassName,
   buttonActiveClassName,
   onOpen
 }) => {
@@ -49,7 +55,7 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
   useOnClickOutside(dropdownRef, () => setIsOpen(false));
 
   return (
-    <div className={cn(styles.root, className)} ref={dropdownRef}>
+    <div className={classNames(styles.root, className)} ref={dropdownRef}>
       <button
         type="button"
         onClick={() => {
@@ -57,7 +63,7 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
           onOpen?.(!isOpen);
         }}
         disabled={disabled}
-        className={cn(
+        className={classNames(
           styles.button,
           buttonClassName,
           {
@@ -68,7 +74,7 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
       >
         {buttonText && (
           <Typography
-            className={styles.text}
+            className={classNames(styles.text, textClassName)}
             variant="title3"
             data-text={buttonText}
           >
@@ -78,13 +84,18 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
         {showArrow && (
           <Icon
             name="chevron-down"
-            className={cn(styles.arrow, { [styles.up]: isOpen })}
+            className={classNames(
+              styles.arrow,
+              { [styles.up]: isOpen },
+              arrowClassName
+            )}
           />
         )}
       </button>
       <div
-        className={cn(styles.dropdown, dropdownClassName, {
-          [styles.open]: isOpen
+        className={classNames(styles.dropdown, dropdownClassName, {
+          [styles.open]: isOpen,
+          [styles.top]: openTop
         })}
       >
         {childrenWithCloseOnClick}
