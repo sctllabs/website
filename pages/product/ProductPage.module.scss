@@ -4,7 +4,6 @@
 
 .layout {
   @include container;
-  max-width: unset;
 }
 
 .firstSlide {
@@ -28,6 +27,7 @@
 .mainHeading {
   position: relative;
   text-align: center;
+  text-transform: uppercase;
 
   @include large-tablet {
     text-align: left;
