@@ -49,6 +49,13 @@
   padding: 50px 0;
 }
 
+.marquee {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  --webkit-transform-style: preserve-3d;
+  --webkit-backface-visibility: hidden;
+}
+
 .chipsWrapper {
   display: flex;
   gap: 32px;
