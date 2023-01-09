@@ -11,13 +11,14 @@
   flex-direction: column;
   gap: 60px;
   width: 100%;
-  padding: 62px 0 141px;
+  padding: 70px 0 141px;
   justify-content: center;
   align-items: center;
   position: relative;
 
   @include large-tablet {
     flex-direction: row;
+    padding-top: 62px;
   }
 
   @include desktop {

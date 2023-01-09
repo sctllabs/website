@@ -6,6 +6,10 @@
   @include container;
   padding-top: 180px;
   padding-bottom: 60px;
+
+  @include mobile-only {
+    padding-top: 70px;
+  }
 }
 
 .mainHeading {

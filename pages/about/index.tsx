@@ -20,7 +20,7 @@ import styles from './AboutPage.module.scss';
 const AboutPage = () => {
   return (
     <MainLayout className={styles.layout} title="About | Societal">
-      <div className={styles.slide}>
+      <div className={styles.mainSlide}>
         <Typography
           variant="display1"
           className={classNames(styles.heading, styles.main)}
