@@ -1,6 +1,5 @@
 import { ReactComponent as Twitter } from 'public/images/icons/twitter.svg';
 import { ReactComponent as Discord } from 'public/images/icons/discord.svg';
-import { ReactComponent as Github } from 'public/images/icons/github.svg';
 import { ReactComponent as Medium } from 'public/images/icons/medium.svg';
 import { ReactComponent as Email } from 'public/images/icons/email.svg';
 import { ABOUT, BENEFITS, PRODUCT } from './paths';
@@ -55,10 +54,6 @@ export const socialList = [
   {
     icon: Discord,
     link: 'https://discord.gg/u6fGdRVBF3'
-  },
-  {
-    icon: Github,
-    link: 'https://github.com/sctllabs'
   },
   {
     icon: Medium,
