@@ -57,10 +57,6 @@ export const socialList = [
     link: 'https://discord.gg/u6fGdRVBF3'
   },
   {
-    icon: Github,
-    link: 'https://github.com/sctllabs'
-  },
-  {
     icon: Medium,
     link: 'https://medium.com/@societal.xyz'
   },
