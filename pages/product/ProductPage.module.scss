@@ -40,13 +40,15 @@
     background-clip: text;
     background-size: 100%;
     content: attr(data-text);
-    left: -2px;
     position: absolute;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     text-fill-color: transparent;
-    top: 0;
+    top: 50%;
     z-index: -1;
+    width: 100%;
+    left: calc(50% - 2px);
+    transform: translate(-50%, -50%);
   }
 
   &.main {
