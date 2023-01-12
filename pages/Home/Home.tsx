@@ -39,8 +39,10 @@ const Home = () => {
         <Image
           src="/images/home-page-illustration.png"
           layout="responsive"
-          height={1024}
-          width={1440}
+          width={2160}
+          height={1536}
+          quality={100}
+          objectFit="contain"
         />
         <div className={styles.contentContainer}>
           <Typography variant="title1" className={styles.title}>
