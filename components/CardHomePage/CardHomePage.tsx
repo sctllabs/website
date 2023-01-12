@@ -11,6 +11,7 @@ interface CardHomePageProps {
   description: string;
   img: string;
   href: string;
+  descriptionMaxWidth?: number;
   className?: string;
 }
 
@@ -19,6 +20,7 @@ const CardHomePage: React.FC<CardHomePageProps> = ({
   description,
   img,
   href,
+  descriptionMaxWidth,
   className
 }) => {
   return (
@@ -31,7 +33,11 @@ const CardHomePage: React.FC<CardHomePageProps> = ({
           <Typography variant="title2" className={styles.title}>
             {title}
           </Typography>
-          <Typography variant="body2landing" className={styles.description}>
+          <Typography
+            variant="body2landing"
+            className={styles.description}
+            style={{ maxWidth: `${descriptionMaxWidth}px` }}
+          >
             {description}
           </Typography>
         </div>
