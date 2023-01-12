@@ -104,12 +104,6 @@ const ProductPage = () => {
         Societal’s cross-chain infrastructure layer and modular OS unlock better
         coordination outcomes, built for a new age of organization: Society3.0
       </Typography>
-      <Image
-        src="/images/product-page-lower-image.png"
-        width={777}
-        height={200}
-        objectFit="contain"
-      />
     </MainLayout>
   );
 };
