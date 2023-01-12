@@ -25,7 +25,7 @@ const CardTextMedia: React.FC<CardTextMediaProps> = ({
 }) => {
   return (
     <div className={classNames(styles.root, className)}>
-      <Image src={img} width={400} height={400} />
+      <Image src={img} width={400} height={400} objectFit="contain" />
       <div className={classNames(styles.text, styles[imgPsn])}>
         <Typography variant="h2" className={styles.title} data-text={title}>
           {title}

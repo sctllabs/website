@@ -3,7 +3,7 @@ export const ABOUT_CARDS = [
     title: 'Society 3.0.',
     description:
       'Drawing inspiration from the solarpunk movement, we seek to align the masses on our core vision: to create a more open, self-sustainable, and fair society through technology: Society 3.0.',
-    img: '/images/product-page-hero-image.png',
+    img: '/images/about-page-society.png',
     imgPsn: 'right'
   },
   {
@@ -12,7 +12,7 @@ export const ABOUT_CARDS = [
       'Deeply aligned with the solarpunk ethos, we believe DAO frameworks should be seen as the end game for all those building the web3 paradigm.',
     descriptionSecondary:
       'We envision a new society of ever-evolving digital cities; progress made following a standard of collective intelligence and shared values.',
-    img: '/images/product-page-hero-image.png',
+    img: '/images/about-page-progress.png',
     imgPsn: 'left'
   }
 ];
