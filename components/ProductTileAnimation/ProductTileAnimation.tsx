@@ -19,22 +19,24 @@ const ProductTileAnimation: React.FC<ProductTileAnimationProps> = ({
     let src = '';
     switch (type) {
       case ProductPageAnimationType.create:
-        src = '/images/icons/bulb.svg';
+        src = '/images/product-create.png';
         break;
       case ProductPageAnimationType.transfer:
-        src = '/images/icons/defi.svg';
+        src = '/images/product-transfer.png';
         break;
       case ProductPageAnimationType.transition:
-        src = '/images/icons/guilds.svg';
+        src = '/images/product-transition.png';
         break;
       case ProductPageAnimationType.manage:
-        src = '/images/icons/investment.svg';
+        src = '/images/product-manage.png';
         break;
       default:
         src = '';
     }
 
-    return src ? <Image src={src} width={614} height={340} /> : null;
+    return src ? (
+      <Image src={src} width={614} height={340} quality={100} />
+    ) : null;
   };
   return (
     <div className={classNames(styles.root, className)}>{generateMedia()}</div>
