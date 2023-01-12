@@ -1,9 +1,9 @@
 import { ABOUT, BENEFITS, PRODUCT } from './paths';
 
 export const BANNER_TITLES = [
-  'Organizations',
-  'Work',
-  'Community',
+  'Organizations 3.0.',
+  'Work 3.0.',
+  'Community 3.0.',
   'Society 3.0.'
 ];
 
