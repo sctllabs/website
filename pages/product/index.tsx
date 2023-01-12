@@ -55,12 +55,10 @@ const ProductPage = () => {
                 {tile.title}
               </Typography>
               <Typography variant="body1">{tile.description}</Typography>
-              {activeAnimation === tile.id && (
-                <ProductTileAnimation
-                  type={activeAnimation}
-                  className={styles.tileAnimationMobile}
-                />
-              )}
+              <ProductTileAnimation
+                type={tile.id}
+                className={styles.tileAnimationMobile}
+              />
             </InView>
           ))}
         </div>
