@@ -19,6 +19,7 @@ type TypographyVariants =
   | 'paragraph1'
   | 'body1'
   | 'body2'
+  | 'body2landing'
   | 'caption1'
   | 'caption2'
   | 'headingXxl'
@@ -40,6 +41,7 @@ const elementsByVariants: Record<TypographyVariants, ElementType> = {
   paragraph1: 'p',
   body1: 'div',
   body2: 'div',
+  body2landing: 'div',
   caption1: 'span',
   caption2: 'span',
   headingXxl: 'h1',

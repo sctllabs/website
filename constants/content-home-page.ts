@@ -7,14 +7,13 @@ export const BANNER_TITLES = [
   'Society 3.0.'
 ];
 
-// TODO: set image urls
 export const CARDS_HOME_PAGE = [
   {
     title: 'On a solarpunk mission to build Society 3.0',
     description:
       'Our definition of progress is the realization of a more open, self-sustainable, and fair society.',
-    img: '/images/mock-card-img.png',
-    href: PRODUCT
+    img: '/images/home-card-1.png',
+    href: ABOUT
   },
   {
     title: 'Governance. On-chain. Gasless',
@@ -28,6 +27,6 @@ export const CARDS_HOME_PAGE = [
     description:
       'Societal’s web3-native operating system is streamlined, EVM-compatible, and modular - a powerful toolkit for the entire DAO lifecycle.',
     img: '/images/mock-card-img.png',
-    href: ABOUT
+    href: PRODUCT
   }
 ];

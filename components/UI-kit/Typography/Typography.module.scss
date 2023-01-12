@@ -31,6 +31,10 @@
   @extend %body-2;
 }
 
+.body2landing {
+  @extend %body-2-landing;
+}
+
 .paragraph1 {
   @extend %paragraph-1;
 }

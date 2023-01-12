@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import Image from 'next/image';
 
 import { Typography } from 'components/UI-kit/Typography';
 
@@ -24,13 +23,19 @@ const CardHomePage: React.FC<CardHomePageProps> = ({
 }) => {
   return (
     <LinkTo className={classNames(styles.root, className)} to={href}>
-      <Typography variant="title2" className={styles.title}>
-        {title}
-      </Typography>
-      <Typography variant="body2" className={styles.description}>
-        {description}
-      </Typography>
-      <Image src={img} layout="responsive" width={536} height={246} />
+      <div
+        className={styles.container}
+        style={{ backgroundImage: `url(${img})` }}
+      >
+        <div className={styles.content}>
+          <Typography variant="title2" className={styles.title}>
+            {title}
+          </Typography>
+          <Typography variant="body2landing" className={styles.description}>
+            {description}
+          </Typography>
+        </div>
+      </div>
     </LinkTo>
   );
 };
