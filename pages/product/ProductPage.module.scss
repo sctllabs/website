@@ -160,11 +160,12 @@
 
 .bottomTitle {
   max-width: 1038px;
-  margin: 140px auto 52px;
+  margin: 228px auto 228px;
   text-align: center;
 
   @include mobile-only {
     font-size: 30px;
     margin-top: 60px;
+    margin-bottom: 80px;
   }
 }
