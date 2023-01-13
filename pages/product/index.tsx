@@ -15,8 +15,12 @@ import appStoreAnimationData from 'animation/product-app-store.json';
 import styles from './ProductPage.module.scss';
 
 const ProductPage = () => {
-  const [activeAnimation, setActiveAnimation] =
-    useState<ProductPageAnimationType>();
+  const [slides, setSlides] = useState({
+    create: true,
+    transition: false,
+    transfer: false,
+    manage: false
+  });
 
   return (
     <MainLayout className={styles.layout} title="Product | Societal">
@@ -39,11 +43,21 @@ const ProductPage = () => {
         <div className={styles.textBlocksWrapper}>
           {TEXT_TILES_PRODUCT_PAGE.map(tile => (
             <InView
-              threshold={1}
+              threshold={0.5}
+              rootMargin="-90px"
               className={styles.tileWrapper}
               onChange={inView => {
                 if (inView) {
-                  setActiveAnimation(tile.id);
+                  const copy = Object.keys(slides).reduce(
+                    (accumulator, key) => {
+                      return { ...accumulator, [key]: false };
+                    },
+                    {} as typeof slides
+                  );
+
+                  setSlides({ ...copy, [tile.id]: true });
+                } else {
+                  setSlides({ ...slides, [tile.id]: false });
                 }
               }}
             >
@@ -57,16 +71,21 @@ const ProductPage = () => {
               <Typography variant="body1">{tile.description}</Typography>
               <ProductTileAnimation
                 type={tile.id}
+                isVisible
                 className={styles.tileAnimationMobile}
               />
             </InView>
           ))}
         </div>
-        <ProductTileAnimation
-          type={activeAnimation}
-          className={styles.stickyElement}
-          key={activeAnimation}
-        />
+        <div className={styles.stickyElement}>
+          {Object.keys(slides).map(el => (
+            <ProductTileAnimation
+              type={el as ProductPageAnimationType}
+              isVisible={slides[el as keyof typeof slides]}
+              className={styles.stickySlide}
+            />
+          ))}
+        </div>
       </div>
       <div className={styles.appStoreSlide}>
         <div className={styles.lottieWrapper}>

@@ -14,9 +14,9 @@ const TEXT_TILES_PRODUCT_PAGE = [
   },
   {
     id: ProductPageAnimationType.transition,
-    title: 'Transition',
+    title: 'Decentralize',
     description:
-      'Transform a protocol or DApp into a community-operated DAO. Progressive decentralization is a feature, not a bug.'
+      'Transition a protocol or DApp into a community-operated DAO. Progressive decentralization is a feature, not a bug.'
   },
   {
     id: ProductPageAnimationType.transfer,
