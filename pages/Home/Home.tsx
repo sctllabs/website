@@ -8,8 +8,9 @@ import BannerTitle from 'components/BannerTitle';
 import { Icon } from 'components/UI-kit/Icon';
 import { Typography } from 'components/UI-kit/Typography';
 import { BANNER_TITLES, CARDS_HOME_PAGE } from 'constants/content-home-page';
-
 import CardHomePage from 'components/CardHomePage';
+import { SubscribeSection } from 'components/SubscribeSection';
+
 import styles from './Home.module.scss';
 
 const Home = () => {
@@ -55,6 +56,7 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <SubscribeSection />
       </div>
     </MainLayout>
   );
