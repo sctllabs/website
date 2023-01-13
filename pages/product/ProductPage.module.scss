@@ -4,6 +4,11 @@
 
 .layout {
   @include container;
+  padding-bottom: 70px;
+
+  @include desktop {
+    padding-bottom: 140px;
+  }
 }
 
 .firstSlide {
@@ -22,7 +27,14 @@
   }
 
   @include desktop {
-    gap: 108px;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  span {
+    flex-shrink: 0.3;
   }
 }
 .heading {
@@ -48,7 +60,7 @@
     top: 50%;
     z-index: -1;
     width: 100%;
-    left: calc(50% - 2px);
+    left: calc(50% - 1px);
     transform: translate(-50%, -50%);
   }
 
@@ -75,7 +87,7 @@
   @include desktop {
     padding-bottom: 140px;
     justify-content: space-between;
-    max-width: 1900px;
+    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
   }
@@ -141,7 +153,7 @@
   }
 }
 
-.appStoreSlide {
+.slide {
   display: flex;
   gap: 67px;
   align-items: center;
@@ -151,35 +163,26 @@
 
   @include desktop {
     flex-direction: row;
+    max-width: 1400px;
+    justify-content: space-between;
+    margin: 0 auto;
   }
 }
 .lottieWrapper {
   order: 1;
-  max-width: 614px;
+  max-width: 848px;
   @include desktop {
     order: 0;
   }
 }
-.appStoreWrapper {
+.slideWrapper {
   display: flex;
   flex-direction: column;
   gap: 24px;
   text-align: center;
 
   @include desktop {
-    max-width: 1000px;
+    max-width: 485px;
     text-align: left;
-  }
-}
-
-.bottomTitle {
-  max-width: 1038px;
-  margin: 228px auto 228px;
-  text-align: center;
-
-  @include mobile-only {
-    font-size: 30px;
-    margin-top: 60px;
-    margin-bottom: 80px;
   }
 }

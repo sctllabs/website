@@ -1,5 +1,6 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
+import classNames from 'classnames';
 
 import MainLayout from 'components/MainLayout';
 import { Typography } from 'components/UI-kit/Typography';
@@ -15,10 +16,10 @@ import styles from './BenefitsPage.module.scss';
 const BenefitsPage = () => {
   return (
     <MainLayout title="Benefits | Societal">
-      <div className={styles.slide}>
+      <div className={styles.mainSlide}>
         <Typography
           variant="display1"
-          className={styles.mainHeading}
+          className={classNames(styles.heading, styles.main)}
           data-text="Bring on the Appchain Future."
         >
           Bring on the Appchain Future.
@@ -63,6 +64,17 @@ const BenefitsPage = () => {
         {BENEFITS_CARDS.map(card => (
           <CardTextMedia {...card} className={styles.card} key={card.title} />
         ))}
+      </div>
+      <div className={styles.slide}>
+        <Typography
+          variant="h2"
+          className={classNames(styles.heading, styles.bottomTitle)}
+          data-text="Societal’s cross-chain infrastructure layer and modular OS unlock better coordination outcomes, built for a new age of organization: Society3.0"
+        >
+          Societal’s cross-chain infrastructure layer and modular OS unlock
+          better coordination outcomes, built for a new age of organization:
+          Society3.0
+        </Typography>
       </div>
     </MainLayout>
   );
