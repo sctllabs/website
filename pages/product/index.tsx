@@ -87,17 +87,8 @@ const ProductPage = () => {
           ))}
         </div>
       </div>
-      <div className={styles.appStoreSlide}>
-        <div className={styles.lottieWrapper}>
-          <Lottie
-            options={{
-              autoplay: true,
-              loop: true,
-              animationData: appStoreAnimationData
-            }}
-          />
-        </div>
-        <div className={styles.appStoreWrapper}>
+      <div className={styles.slide}>
+        <div className={styles.slideWrapper}>
           <Typography
             variant="h2"
             className={styles.heading}
@@ -111,16 +102,40 @@ const ProductPage = () => {
             suits their needs.
           </Typography>
         </div>
+        <div className={styles.lottieWrapper}>
+          <Lottie
+            options={{
+              autoplay: true,
+              loop: true,
+              animationData: appStoreAnimationData
+            }}
+          />
+        </div>
       </div>
-      <Typography
-        variant="h2"
-        className={classNames(styles.heading, styles.bottomTitle)}
-        data-text="Societal’s cross-chain infrastructure layer and modular OS unlock better
-        coordination outcomes, built for a new age of organization: Society3.0"
-      >
-        Societal’s cross-chain infrastructure layer and modular OS unlock better
-        coordination outcomes, built for a new age of organization: Society3.0
-      </Typography>
+      <div className={styles.slide}>
+        <div className={styles.slideWrapper}>
+          <Typography
+            variant="h2"
+            className={styles.heading}
+            data-text="The Future is DAO"
+          >
+            The Future is DAO
+          </Typography>
+          <Typography variant="body1">
+            Stay up to date by finding, following, and joining existing DAOs on
+            the “Discover” page - all in one place.
+          </Typography>
+        </div>
+        <div className={styles.lottieWrapper}>
+          <Lottie
+            options={{
+              autoplay: true,
+              loop: true,
+              animationData: appStoreAnimationData
+            }}
+          />
+        </div>
+      </div>
     </MainLayout>
   );
 };
