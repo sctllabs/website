@@ -19,6 +19,13 @@
   line-height: 62px;
 }
 
+@mixin heading-3 {
+  @include mixins.typography(40px, $font-weight: 600);
+
+  line-height: 60px;
+}
+
+
 @mixin title-1 {
   @include mixins.typography(32px, $font-weight: 600);
 
@@ -82,7 +89,7 @@
 
 @mixin heading-xxl {
   text-transform: uppercase;
-  @include mixins.typography(40px, $font-weight: 500);
+  @include mixins.typography(48px, $font-weight: 500);
   line-height: 60px;
 
   @include mixins.small-tablet {
@@ -120,6 +127,15 @@
 %heading-2 {
   @include heading-2;
 }
+
+%heading-3 {
+  @include heading-3;
+
+  @include mixins.mobile-only {
+    font-size: 32px;
+  }
+}
+
 
 %title-1 {
   @include title-1;

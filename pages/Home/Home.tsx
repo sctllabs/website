@@ -45,7 +45,7 @@ const Home = () => {
           objectFit="contain"
         />
         <div className={styles.contentContainer}>
-          <Typography variant="title1" className={styles.title}>
+          <Typography variant="h3" className={styles.title}>
             Societal is an application-specific blockchain, designed for the
             creation and management of DAOs
           </Typography>
