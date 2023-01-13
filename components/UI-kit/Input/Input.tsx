@@ -22,7 +22,11 @@ const Input: React.FC<InputProps> = ({
     <div className={classNames(styles.root, className)}>
       <input className={styles.input} {...rest} />
       {helperText && (
-        <Typography variant="caption2" style={{ color: helperTextColor }}>
+        <Typography
+          variant="caption2"
+          style={{ color: helperTextColor }}
+          className={styles.helper}
+        >
           {helperText}
         </Typography>
       )}

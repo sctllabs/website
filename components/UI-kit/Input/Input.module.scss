@@ -28,3 +28,9 @@
     color: #666666;
   }
 }
+
+.helper {
+  position: absolute;
+  bottom: calc(0% - 14px);
+  transform: translateY(-50%);
+}

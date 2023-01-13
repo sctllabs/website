@@ -3,19 +3,19 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import { Typography } from 'components/UI-kit/Typography';
 import Button from 'components/UI-kit/Button';
-import { ReactComponent as ShapeBgSvg } from 'public/images/shape-bg.svg';
+// import { ReactComponent as ShapeBgSvg } from 'public/images/shape-bg.svg';
 import jsonp from 'jsonp';
 
 import { Input } from 'components/UI-kit/Input';
-import styles from './SubsctibeSection.module.scss';
+import styles from './SubscribeSection.module.scss';
 
 import { POST_URL, STATUS_COLORS } from './constants';
 
-type SubsctiptionStatus = 'sending' | 'error' | 'success' | null;
+type SubscriptionStatus = 'sending' | 'error' | 'success' | null;
 type ResponseData = { msg: string; result?: 'success' };
 
-const SubsctibeSection: React.FC = () => {
-  const [status, setStatus] = useState<SubsctiptionStatus>(null);
+const SubscribeSection: React.FC = () => {
+  const [status, setStatus] = useState<SubscriptionStatus>(null);
   const [message, setMessage] = useState<string>('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -68,37 +68,40 @@ const SubsctibeSection: React.FC = () => {
         >
           Connect with Societal
         </Typography>
-        <Typography
-          variant="body1"
-          className={classNames(styles.ctaText, styles.sectionDescription)}
-        >
-          Sign up for updates about the project launch and ecosystem
-        </Typography>
-        <form onSubmit={handleSubmit}>
-          <div className={styles.row}>
-            <Input
-              className={classNames(styles.input, styles.emailInput)}
-              type="email"
-              name="email"
-              required
-              placeholder="Enter your email address"
-              helperText={message}
-              helperTextColor={status ? STATUS_COLORS[status] : undefined}
-            />
-            <Button
-              type="submit"
-              variant="primary"
-              className={styles.ctaBtn}
-              disabled={status === 'sending'}
-            >
-              Join the list
-            </Button>
-          </div>
-        </form>
+        <div className={styles.wrapper}>
+          <Typography
+            variant="body1"
+            className={classNames(styles.ctaText, styles.sectionDescription)}
+          >
+            Sign up to stay updated on Societal’s progress and upcoming testnet
+            launch
+          </Typography>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.row}>
+              <Input
+                className={classNames(styles.input, styles.emailInput)}
+                type="email"
+                name="email"
+                required
+                placeholder="Enter your email address"
+                helperText={message}
+                helperTextColor={status ? STATUS_COLORS[status] : undefined}
+              />
+              <Button
+                type="submit"
+                variant="primary"
+                className={styles.ctaBtn}
+                disabled={status === 'sending'}
+              >
+                Join the list
+              </Button>
+            </div>
+          </form>
+        </div>
       </div>
-      <ShapeBgSvg className={styles.ctaBg} />
+      {/* <ShapeBgSvg className={styles.ctaBg} /> */}
     </section>
   );
 };
 
-export default SubsctibeSection;
+export default SubscribeSection;
