@@ -11,7 +11,7 @@ interface BannerTitleProps {
 
 const BannerTitle = ({ titles, className }: BannerTitleProps) => {
   const [active, setActive] = useState(0);
-  const refEl = useRef<HTMLSpanElement | null>(null);
+  const refEl = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const node = refEl.current;
@@ -39,19 +39,25 @@ const BannerTitle = ({ titles, className }: BannerTitleProps) => {
   }, [titles]);
 
   return (
-    <Typography
-      variant="headingXxl"
-      className={classNames(styles.root, className)}
-    >
-      <span
-        className={classNames(styles.text)}
-        ref={refEl}
-        data-text={titles[active]}
+    <div className={classNames(styles.root, className)}>
+      <Typography variant="headingXxl">
+        <div
+          className={classNames(styles.text)}
+          ref={refEl}
+          data-text={titles[active]}
+        >
+          {titles[active]}
+          <span className={styles.gradient}>{titles[active]}</span>
+        </div>
+      </Typography>
+      <Typography
+        variant="headingXxl"
+        data-text="3.0"
+        className={styles.subHeading}
       >
-        {titles[active]}
-        <span className={styles.gradient}>{titles[active]}</span>
-      </span>
-    </Typography>
+        3.0
+      </Typography>
+    </div>
   );
 };
 

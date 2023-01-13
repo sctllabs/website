@@ -1,10 +1,11 @@
 import { ABOUT, BENEFITS, PRODUCT } from './paths';
 
 export const BANNER_TITLES = [
-  'Organizations 3.0.',
-  'Work 3.0.',
-  'Community 3.0.',
-  'Society 3.0.'
+  'Web',
+  'Organizations',
+  'Work',
+  'Community',
+  'Society'
 ];
 
 export const CARDS_HOME_PAGE = [
