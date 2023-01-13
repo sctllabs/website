@@ -13,6 +13,7 @@ import styles from './Typography.module.scss';
 type TypographyVariants =
   | 'h1'
   | 'h2'
+  | 'h3'
   | 'title1'
   | 'title2'
   | 'title3'
@@ -35,6 +36,7 @@ export interface TypographyProps extends HTMLAttributes<HTMLOrSVGElement> {
 const elementsByVariants: Record<TypographyVariants, ElementType> = {
   h1: 'h1',
   h2: 'h2',
+  h3: 'h3',
   title1: 'h3',
   title2: 'h4',
   title3: 'h5',

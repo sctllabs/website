@@ -1,8 +1,8 @@
 export const ABOUT_CARDS = [
   {
-    title: 'Society 3.0.',
+    title: 'Society 3.0',
     description:
-      'Drawing inspiration from the solarpunk movement, we seek to align the masses on our core vision: to create a more open, self-sustainable, and fair society through technology: Society 3.0.',
+      'Drawing inspiration from the solarpunk movement, we seek to align the masses on our core vision: to create a more open, self-sustainable, and fair society through technology: Society 3.0',
     img: '/images/about-page-society.png',
     imgPsn: 'right'
   },

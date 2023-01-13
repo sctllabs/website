@@ -1,19 +1,21 @@
 import { ABOUT, BENEFITS, PRODUCT } from './paths';
 
 export const BANNER_TITLES = [
-  'Organizations 3.0.',
-  'Work 3.0.',
-  'Community 3.0.',
-  'Society 3.0.'
+  'Web',
+  'Organizations',
+  'Work',
+  'Community',
+  'Society'
 ];
 
 export const CARDS_HOME_PAGE = [
   {
-    title: 'On a solarpunk mission to build Society 3.0',
+    title: 'Technology for a new age of human coordination',
     description:
-      'Our definition of progress is the realization of a more open, self-sustainable, and fair society.',
-    img: '/images/home-card-1.png',
-    href: ABOUT
+      'Societal’s web3-native operating system is streamlined, EVM-compatible, and modular - a powerful toolkit for the entire DAO lifecycle.',
+    img: '/images/home-card-3.png',
+    descriptionMaxWidth: 333,
+    href: PRODUCT
   },
   {
     title: 'Governance. On-chain. Gasless',
@@ -24,11 +26,10 @@ export const CARDS_HOME_PAGE = [
     href: BENEFITS
   },
   {
-    title: 'Technology for a new age of human coordination',
+    title: 'On a solarpunk mission to build Society 3.0',
     description:
-      'Societal’s web3-native operating system is streamlined, EVM-compatible, and modular - a powerful toolkit for the entire DAO lifecycle.',
-    img: '/images/home-card-3.png',
-    descriptionMaxWidth: 355,
-    href: PRODUCT
+      'Our definition of progress is a more open, self-sustainable, and fairer society.',
+    img: '/images/home-card-1.png',
+    href: ABOUT
   }
 ];

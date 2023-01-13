@@ -2,19 +2,25 @@ import { ReactComponent as Twitter } from 'public/images/icons/twitter.svg';
 import { ReactComponent as Discord } from 'public/images/icons/discord.svg';
 import { ReactComponent as Medium } from 'public/images/icons/medium.svg';
 import { ReactComponent as Email } from 'public/images/icons/email.svg';
-import { ABOUT, BENEFITS, PRODUCT } from './paths';
+import { ABOUT, BENEFITS, HOME, PRODUCT } from './paths';
 
 export const menuList = [
   {
-    id: 'product',
-    name: 'Product',
-    href: PRODUCT,
+    id: 'home',
+    name: 'Home',
+    href: HOME,
     isExternal: false
   },
   {
     id: 'benefits',
     name: 'Benefits',
     href: BENEFITS,
+    isExternal: false
+  },
+  {
+    id: 'product',
+    name: 'Product',
+    href: PRODUCT,
     isExternal: false
   },
   {
