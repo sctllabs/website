@@ -1,6 +1,7 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 import classNames from 'classnames';
+import Image from 'next/image';
 
 import MainLayout from 'components/MainLayout';
 import { Typography } from 'components/UI-kit/Typography';
@@ -17,18 +18,27 @@ const BenefitsPage = () => {
   return (
     <MainLayout title="Benefits | Societal">
       <div className={styles.mainSlide}>
-        <Typography
-          variant="display1"
-          className={classNames(styles.heading, styles.main)}
-          data-text="Bring on the Appchain Future."
-        >
-          Bring on the Appchain Future.
-        </Typography>
-        <Typography variant="body1" className={styles.appchainDescription}>
-          Application-specific blockchains open up a world of new design space.
-          Societal is purpose-built to service DAO creation and management,
-          securely interconnected to many other web3 networks.
-        </Typography>
+        <div>
+          <Typography
+            variant="display1"
+            className={classNames(styles.heading, styles.main)}
+            data-text="Bring on the Appchain Future."
+          >
+            Bring on the Appchain Future.
+          </Typography>
+          <Typography variant="body1" className={styles.appchainDescription}>
+            Application-specific blockchains open up a world of new design
+            space. Societal is purpose-built to service DAO creation and
+            management, securely interconnected to many other web3 networks.
+          </Typography>
+        </div>
+
+        <Image
+          src="/images/benefits-page-hero.png"
+          width={400}
+          height={400}
+          objectFit="contain"
+        />
       </div>
       <div className={styles.marqueeWrapper}>
         <Marquee
@@ -51,7 +61,7 @@ const BenefitsPage = () => {
           pauseOnHover
           className={styles.marquee}
         >
-          <div className={styles.chipsWrapper}>
+          <div className={classNames(styles.chipsWrapper, styles.last)}>
             {LOWER_MARQUEE_DATA.map(el => (
               <div key={el} className={styles.chip}>
                 <Typography variant="title3">{el}</Typography>
