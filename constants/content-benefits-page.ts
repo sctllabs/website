@@ -35,14 +35,14 @@ export const BENEFITS_CARDS = [
   {
     title: 'Governance. On-chain.',
     description:
-      'Who said DAO decision-making needs to be executed off-chain? We’re bringing advanced governance systems - pioneered by Polkadot - to all DAOs.',
+      'Who said DAO decision-making needs to be executed off-chain? We are bringing advanced on-chain governance systems to all DAOs.',
     img: '/images/benefits-page-governance.png',
     imgPsn: 'left'
   },
   {
     title: 'Cross-chain by Default.',
     description:
-      'DAOs on Societal will benefit from trustless access to the best available DeFi, privacy, identity, and social primitives via Polkadot’s XCM protocol.',
+      'DAOs on Societal will benefit from trustless access to the best available DeFi, privacy, identity, and social primitives via cross-chain communication.',
     img: '/images/benefits-page-crosschain.png',
     imgPsn: 'right'
   },
