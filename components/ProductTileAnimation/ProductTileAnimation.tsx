@@ -8,11 +8,13 @@ import styles from './ProductTileAnimation.module.scss';
 
 interface ProductTileAnimationProps {
   type: ProductPageAnimationType | undefined;
+  isVisible: boolean;
   className?: string;
 }
 
 const ProductTileAnimation: React.FC<ProductTileAnimationProps> = ({
   type,
+  isVisible,
   className
 }) => {
   const generateMedia = () => {
@@ -22,10 +24,10 @@ const ProductTileAnimation: React.FC<ProductTileAnimationProps> = ({
         src = '/images/product-create.png';
         break;
       case ProductPageAnimationType.transfer:
-        src = '/images/product-transfer.png';
+        src = '/images/product-decentralize.png';
         break;
       case ProductPageAnimationType.transition:
-        src = '/images/product-transition.png';
+        src = '/images/product-transfer.png';
         break;
       case ProductPageAnimationType.manage:
         src = '/images/product-manage.png';
@@ -35,11 +37,18 @@ const ProductTileAnimation: React.FC<ProductTileAnimationProps> = ({
     }
 
     return src ? (
-      <Image src={src} width={614} height={340} quality={100} />
+      <Image src={src} width={890} height={526} quality={100} />
     ) : null;
   };
+
   return (
-    <div className={classNames(styles.root, className)}>{generateMedia()}</div>
+    <div
+      className={classNames(styles.root, className, {
+        [styles.isVisible]: isVisible
+      })}
+    >
+      {generateMedia()}
+    </div>
   );
 };
 
