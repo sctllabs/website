@@ -4,30 +4,22 @@
 
 .mainSlide {
   @include container;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 124px;
+  padding-bottom: 40px;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 56px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  @include large-tablet {
-    justify-content: space-between;
-    max-width: 1440px;
-    flex-direction: row;
-    margin: 0 auto;
-  }
-
-  span {
-    flex-shrink: 0.3;
+  @include mobile-only {
+    padding-top: 60px;
   }
 }
 
 .heading {
   position: relative;
-
 
   &::after {
     background: linear-gradient(
@@ -58,21 +50,10 @@
     text-transform: uppercase;
     max-width: 613px;
     margin: 0 auto;
-  
+
     @include large-tablet {
-      text-align: left;
       margin: 0;
     }
-  }
-}
-
-.appchainDescription {
-  max-width: 761px;
-  margin-top: 24px;
-  text-align: center;
-
-  @include large-tablet {
-    text-align: left;
   }
 }
 
@@ -98,10 +79,26 @@
 }
 
 .chip {
-padding: 16px 20px;
-background: colors.$white;
-box-shadow: 0px 14px 28px rgba(102, 78, 200, 0.12);
-border-radius: 16px;
+  padding: 16px 20px;
+  background: colors.$white;
+  box-shadow: 0px 14px 28px rgba(102, 78, 200, 0.12);
+  border-radius: 16px;
+}
+
+.descriptionWrapper {
+  @include container;
+  padding-top: 56px;
+  padding-bottom: 70px;
+
+  @include large-tablet {
+    padding-bottom: 140px;
+  }
+}
+
+.appchainDescription {
+  max-width: 971px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .cardsWrapper {
@@ -115,15 +112,14 @@ border-radius: 16px;
   padding: 80px 0;
 
   @include desktop {
-    padding: 100px 0;
+    padding: 140px 0;
   }
 }
 
 .slide {
   @include container;
-  padding-top: 100px;
+  padding-top: 140px;
   padding-bottom: 228px;
-
 
   @include mobile-only {
     font-size: 30px;
