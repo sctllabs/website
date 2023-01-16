@@ -23,7 +23,13 @@ const CardAdvisor: React.FC<CardTeamProps> = ({
 }) => {
   return (
     <div className={classNames(styles.root, className)}>
-      <Image src={img} width={120} height={120} objectFit="contain" />
+      <Image
+        src={img}
+        width={120}
+        height={120}
+        objectFit="contain"
+        className={styles.image}
+      />
       <div className={styles.content}>
         <Typography variant="title3">{name}</Typography>
         <Typography variant="caption1" className={styles.position}>

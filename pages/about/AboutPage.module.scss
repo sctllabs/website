@@ -9,7 +9,7 @@
 }
 
 .mainSlide {
-  padding-top: 212px;
+  padding-top: 220px;
   padding-bottom: 212px;
 
   @include mobile-only {
@@ -21,7 +21,6 @@
 .heading {
   position: relative;
   width: 100%;
-
 
   &::after {
     background: linear-gradient(
@@ -134,13 +133,18 @@
 
 .partnersBlock {
   display: flex;
-  column-gap: 87px;
-  row-gap: 50px;
+  column-gap: 100px;
+  row-gap: 60px;
   flex-wrap: wrap;
   margin-top: 72px;
   justify-content: center;
+  max-width: 1250px;
 
   @include desktop {
     justify-content: flex-start;
+  }
+
+  @include large-desktop {
+    column-gap: 171px;
   }
 }

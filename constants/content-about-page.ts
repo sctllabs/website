@@ -20,11 +20,7 @@ export const ABOUT_CARDS = [
 export const CARTOGRAPHY = [
   {
     head: '2022 Q3',
-    steps: [
-      'Blockchain Academy ',
-      'Web3 Foundation Grant',
-      'Pre-Seed Fundraise'
-    ]
+    steps: ['Blockchain Academy ', 'Web3 Foundation Grant', 'Pre-Seed A']
   },
   {
     head: '2022 Q4',
@@ -36,7 +32,7 @@ export const CARTOGRAPHY = [
   },
   {
     head: '2023 Q1',
-    steps: ['Seed Fundraise', 'Team Expansion', 'Swiss Foundation Formation']
+    steps: ['Pre-Seed B', 'Team Expansion', 'Swiss Foundation Formation']
   },
   {
     head: '2023 Q2',
@@ -121,5 +117,23 @@ export const ADVISORS = [
     position: 'Ecosystem/technical advisor',
     img: '/images/advisors/bruno-skvorc.png',
     logo: '/images/logos/rmrk.svg'
+  },
+  {
+    name: 'Lauren Selig',
+    position: 'Investment Advisor',
+    img: '/images/advisors/lauren-selig.png',
+    logo: '/images/logos/shake-and-bake.png'
+  },
+  {
+    name: 'Yoon Kim',
+    position: 'Product Advisor',
+    img: '/images/advisors/yoon-kim.png',
+    logo: '/images/logos/trgc.png'
+  },
+  {
+    name: 'Tannr Allard',
+    position: 'DAO/Technical Advisor',
+    img: '/images/advisors/tannr-allard.png',
+    logo: '/images/logos/tannr-allard-company.png'
   }
 ];
