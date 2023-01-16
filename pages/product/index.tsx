@@ -62,7 +62,7 @@ const ProductPage = () => {
               }}
             >
               <Typography
-                variant="h1"
+                variant="h2"
                 className={styles.heading}
                 data-text={tile.title}
               >

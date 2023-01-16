@@ -24,10 +24,10 @@ const AboutPage = () => {
         <Typography
           variant="display1"
           className={classNames(styles.heading, styles.main)}
-          data-text="Societal is a mission to harness the power of blockchain to improve human coordination systems"
+          data-text="SOCIETAL IS A MISSION TO HARNESS THE POWER OF BLOCKCHAINS TO IMPROVE HUMAN COORDINATION SYSTEMS"
         >
-          Societal is a mission to harness the power of blockchain to improve
-          human coordination systems
+          SOCIETAL IS A MISSION TO HARNESS THE POWER OF BLOCKCHAINS TO IMPROVE
+          HUMAN COORDINATION SYSTEMS
         </Typography>
       </div>
       <div className={styles.cardsWrapper}>
@@ -37,11 +37,11 @@ const AboutPage = () => {
       </div>
       <div className={styles.slide}>
         <Typography
-          variant="h1"
-          data-text="Cartography"
+          variant="h2"
+          data-text="We Don’t Need Roads"
           className={classNames(styles.heading, styles.sub)}
         >
-          Cartography
+          We Don’t Need Roads
         </Typography>
         <div className={styles.cartographyBlock}>
           {CARTOGRAPHY.map(el => (
@@ -51,7 +51,7 @@ const AboutPage = () => {
       </div>
       <div className={styles.slide}>
         <Typography
-          variant="h1"
+          variant="h2"
           data-text="Team"
           className={classNames(styles.heading, styles.sub)}
         >
@@ -65,7 +65,7 @@ const AboutPage = () => {
       </div>
       <div className={styles.slide}>
         <Typography
-          variant="h1"
+          variant="h2"
           data-text="Advisors"
           className={classNames(styles.heading, styles.sub)}
         >
@@ -79,7 +79,7 @@ const AboutPage = () => {
       </div>
       <div className={styles.slide}>
         <Typography
-          variant="h1"
+          variant="h2"
           data-text="Partners"
           className={classNames(styles.heading, styles.sub)}
         >
@@ -91,14 +91,12 @@ const AboutPage = () => {
             height={90}
             width={272}
           />
-          <Image src="/images/logos/substrate.svg" height={90} width={170} />
+          <Image src="/images/logos/kusama-dia.png" height={90} width={310} />
           <Image
-            src="/images/logos/web3-foundation.svg"
+            src="/images/logos/web-3-foundation.png"
             height={90}
-            width={122}
+            width={210}
           />
-          <Image src="/images/logos/onfinality.svg" height={90} width={176} />
-          <Image src="/images/logos/subquery.svg" height={90} width={149} />
         </div>
       </div>
     </MainLayout>
