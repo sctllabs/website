@@ -23,10 +23,10 @@ const ProductTileAnimation: React.FC<ProductTileAnimationProps> = ({
       case ProductPageAnimationType.create:
         src = '/images/product-create.png';
         break;
-      case ProductPageAnimationType.transfer:
+      case ProductPageAnimationType.decentralize:
         src = '/images/product-decentralize.png';
         break;
-      case ProductPageAnimationType.transition:
+      case ProductPageAnimationType.transfer:
         src = '/images/product-transfer.png';
         break;
       case ProductPageAnimationType.manage:

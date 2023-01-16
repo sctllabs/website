@@ -17,7 +17,7 @@ import styles from './ProductPage.module.scss';
 const ProductPage = () => {
   const [slides, setSlides] = useState({
     create: true,
-    transition: false,
+    decentralize: false,
     transfer: false,
     manage: false
   });
