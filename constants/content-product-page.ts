@@ -1,6 +1,6 @@
 export enum ProductPageAnimationType {
   create = 'create',
-  transition = 'transition',
+  decentralize = 'decentralize',
   transfer = 'transfer',
   manage = 'manage'
 }
@@ -13,7 +13,7 @@ const TEXT_TILES_PRODUCT_PAGE = [
       'Build a specialized DAO in minutes. No coding experience required.'
   },
   {
-    id: ProductPageAnimationType.transition,
+    id: ProductPageAnimationType.decentralize,
     title: 'Decentralize',
     description:
       'Transition a protocol or DApp into a community-operated DAO. Progressive decentralization is a feature, not a bug.'
