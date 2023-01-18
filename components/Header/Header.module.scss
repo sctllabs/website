@@ -17,6 +17,7 @@
   }
 
   &.active {
+    z-index: 999999;
     .headerContainer {
       background-color: colors.$white;
       transition: background-color ease 0.3s;
