@@ -1,31 +1,31 @@
 /* eslint-disable import/prefer-default-export */
 export const BENEFITS_CARDS = [
   {
-    title: 'Governance. On-chain.',
+    title: 'Code is law',
     description:
-      'Who said DAO decision-making needs to be executed off-chain? We are bringing advanced on-chain governance systems to all DAOs.',
+      'Who said decisions need to be executed off-chain? Societal brings advanced governance systems on chain - no more blindly trusting power figures to do the right thing',
     img: '/images/benefits-page-governance.png',
     imgPsn: 'left'
   },
   {
-    title: 'Cross-chain by Default.',
+    title: 'Cross-Chain By Default',
     description:
-      'DAOs on Societal will benefit from trustless access to the best available DeFi, privacy, identity, and social primitives via cross-chain communication.',
+      'DAOs shouldn’t be siloed. Societal unlocks trustless access to the best DeFi, privacy, and social primitives via secure cross-chain communication.',
     img: '/images/benefits-page-cross-chain.png',
     imgPsn: 'right'
   },
   {
-    title: 'Streamlined Experiences.',
+    title: 'Gas-Free Transactions',
     description:
-      'We hate paying per transaction as much as anyone. Societal is a SaaS productivity platform, paid by the DAO treasury. All member transactions are gas free.',
+      'Societal is a SaaS productivity platform, paid for by DAO treasuries. All member transactions are gas free - no more low voting turnouts.',
     img: '/images/benefits-page-gas-free.png',
     imgPsn: 'left'
   },
   {
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Streamlined Experiences',
     description:
-      'Lorem ipsum dolor sit amet consectetur. Ut sed nunc orci ante pellentesque suscipit placerat. Aliquam eget tincidunt et velit nulla. Quisque dolor semper sed orci pellentesque. Justo dui quam ut mollis.',
-    img: '/images/benefits-page-temp.png',
+      'DAO members shouldn’t have to switch through countless tools. Societal is the one-stop shop for all organizational needs.',
+    img: '/images/benefits-page-streamlined.png',
     imgPsn: 'right'
   }
 ];
