@@ -1,15 +1,10 @@
 import React from 'react';
-import Marquee from 'react-fast-marquee';
 import classNames from 'classnames';
 import Image from 'next/image';
 
 import MainLayout from 'components/MainLayout';
 import { Typography } from 'components/UI-kit/Typography';
-import {
-  BENEFITS_CARDS,
-  LOWER_MARQUEE_DATA,
-  UPPER_MARQUEE_DATA
-} from 'constants/content-benefits-page';
+import { BENEFITS_CARDS } from 'constants/content-benefits-page';
 import CardTextMedia from 'components/CardTextMedia';
 
 import styles from './BenefitsPage.module.scss';
@@ -31,36 +26,6 @@ const BenefitsPage = () => {
           height={400}
           objectFit="contain"
         />
-      </div>
-      <div className={styles.marqueeWrapper}>
-        <Marquee
-          className={styles.marquee}
-          gradient={false}
-          direction="right"
-          pauseOnHover
-        >
-          <div className={styles.chipsWrapper}>
-            {UPPER_MARQUEE_DATA.map(el => (
-              <div key={el} className={styles.chip}>
-                <Typography variant="title3">{el}</Typography>
-              </div>
-            ))}
-          </div>
-        </Marquee>
-        <Marquee
-          gradient={false}
-          direction="right"
-          pauseOnHover
-          className={styles.marquee}
-        >
-          <div className={classNames(styles.chipsWrapper, styles.last)}>
-            {LOWER_MARQUEE_DATA.map(el => (
-              <div key={el} className={styles.chip}>
-                <Typography variant="title3">{el}</Typography>
-              </div>
-            ))}
-          </div>
-        </Marquee>
       </div>
       <div className={styles.descriptionWrapper}>
         <Typography variant="title1" className={styles.appchainDescription}>

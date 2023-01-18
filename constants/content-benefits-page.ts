@@ -1,36 +1,4 @@
-export const UPPER_MARQUEE_DATA = [
-  'On-chain Governance',
-  'SaaS pricing',
-  'DAO Creation',
-  'Treasury Management',
-  'Branched Multisig Wallets',
-  'Token Gated Community',
-  'ERC-20 Contract Import',
-  'Legal Entity Creation',
-  'Cross-chain Integrations',
-  'Advanced Governance Systems',
-  'Explore Page',
-  'DAO DApp Store',
-  'Reputation Systems',
-  'Token Creation'
-];
-export const LOWER_MARQUEE_DATA = [
-  'Legal Entity Creation',
-  'Cross-chain Integrations',
-  'Advanced Governance Systems',
-  'Explore Page',
-  'DAO DApp Store',
-  'Reputation Systems',
-  'Token Creation',
-  'On-chain Governance',
-  'SaaS pricing',
-  'DAO Creation',
-  'Treasury Management',
-  'Branched Multisig Wallets',
-  'Token Gated Community',
-  'ERC-20 Contract Import'
-];
-
+/* eslint-disable import/prefer-default-export */
 export const BENEFITS_CARDS = [
   {
     title: 'Governance. On-chain.',

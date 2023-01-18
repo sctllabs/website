@@ -18,6 +18,7 @@
   flex-shrink: 2;
   max-width: 719px;
   text-align: center;
+  flex-shrink: 1;
 
   @include desktop {
     &.left {
@@ -76,4 +77,15 @@
 
 .description {
   margin-bottom: 16px;
+}
+
+
+.productPage {
+
+  @include desktop {
+    gap: 48px;
+  }
+  .text {
+    max-width: 502px;
+  }
 }

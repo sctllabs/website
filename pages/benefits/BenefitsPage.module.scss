@@ -58,35 +58,6 @@
   }
 }
 
-.marqueeWrapper {
-  padding-top: 40px;
-}
-
-.marquee {
-  --webkit-transform-style: preserve-3d;
-  --webkit-backface-visibility: hidden;
-
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-.chipsWrapper {
-  display: flex;
-  gap: 32px;
-  padding: 0 32px 32px 0;
-
-  &.last {
-    padding-bottom: 40px;
-  }
-}
-
-.chip {
-  background: colors.$white;
-  border-radius: 16px;
-  box-shadow: 0 14px 28px rgb(102 78 200 / 12%);
-  padding: 16px 20px;
-}
-
 .descriptionWrapper {
   @include container;
 
