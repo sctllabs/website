@@ -34,21 +34,24 @@ const Footer = () => {
             objectFit="contain"
           />
         </div>
-
-        <Image
-          src="/images/footer-mountain.png"
-          width={507}
-          height={144}
-          objectFit="contain"
-          objectPosition="bottom"
-          className={styles.mountain}
-        />
       </div>
       <div className={styles.footer}>
+        <div className={styles.mountain}>
+          <Image
+            src="/images/footer-mountain.png"
+            width={507}
+            height={144}
+            objectFit="contain"
+            layout="responsive"
+            objectPosition="center bottom"
+          />
+        </div>
         <div className={styles.container}>
           <div className={styles.footerTop}>
-            <LinkTo className={styles.logo} to="/">
+            <LinkTo className={classNames(styles.logo, styles.mobile)} to="/">
               <Lottie
+                height={52}
+                width={140}
                 options={{
                   autoplay: true,
                   loop: true,
@@ -67,6 +70,19 @@ const Footer = () => {
             </ul>
           </div>
           <div className={styles.menu}>
+            <div className={classNames(styles.logo, styles.desktop)}>
+              <LinkTo to="/">
+                <Lottie
+                  height={52}
+                  width={140}
+                  options={{
+                    autoplay: true,
+                    loop: true,
+                    animationData: logoAnimationData
+                  }}
+                />
+              </LinkTo>
+            </div>
             <ul className={styles.menuList}>
               {[...menuList, ...menuResources].map(menuItem => (
                 <li

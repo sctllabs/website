@@ -4,8 +4,6 @@
 
 .layout {
   @include container;
-
-  max-width: 1450px;
   width: 100%;
 }
 
@@ -45,6 +43,7 @@
     transform: translate(-50%, -50%);
     width: 100%;
     z-index: -1;
+    clip-path: inset(1px);
   }
 
   &.main {

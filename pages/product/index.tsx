@@ -25,9 +25,9 @@ const ProductPage = () => {
         <Typography
           variant="display1"
           className={classNames(styles.heading, styles.main)}
-          data-text="The Operating System for DAOs."
+          data-text="The Operating System for DAOs"
         >
-          The Operating System for DAOs.
+          The Operating System for DAOs
         </Typography>
         <Image
           src="/images/product-page-hero-image.png"

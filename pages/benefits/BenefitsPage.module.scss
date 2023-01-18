@@ -27,10 +27,11 @@
       #71ff3f 41.91%,
       #3e8bff 63.31%,
       #e43eff 83.61%,
-      #ff3e3e 101.71%
+      #ff3e3e 101.71%,
     );
+    clip-path: inset(1px);
     background-clip: text;
-    background-size: 100%;
+    // background-size: 100%;
     content: attr(data-text);
     left: calc(50% - 1px);
     position: absolute;
