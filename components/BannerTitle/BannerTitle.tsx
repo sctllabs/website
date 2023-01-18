@@ -40,6 +40,7 @@ const BannerTitle = ({ titles, className }: BannerTitleProps) => {
 
   return (
     <div className={classNames(styles.root, className)}>
+      <div className={styles.shadow} />
       <Typography variant="headingXxl">
         <div
           className={classNames(styles.text)}

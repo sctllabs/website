@@ -2,14 +2,14 @@
 @use 'styles/colors';
 
 .root {
-  display: flex;
-  box-shadow: -26px 25px 31px rgba(102, 78, 200, 0.12);
-  border-radius: 60px;
+  align-items: center;
   background-color: colors.$white;
+  border-radius: 60px;
+  box-shadow: -26px 25px 31px rgb(102 78 200 / 12%);
+  display: flex;
   gap: 24px;
   max-width: 360px;
   width: 100%;
-  align-items: center;
 }
 
 .image {

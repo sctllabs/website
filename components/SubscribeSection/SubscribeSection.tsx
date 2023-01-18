@@ -1,15 +1,14 @@
 /* eslint-disable react/no-danger */
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import { Typography } from 'components/UI-kit/Typography';
-import Button from 'components/UI-kit/Button';
-// import { ReactComponent as ShapeBgSvg } from 'public/images/shape-bg.svg';
 import jsonp from 'jsonp';
 
+import { Typography } from 'components/UI-kit/Typography';
+import Button from 'components/UI-kit/Button';
 import { Input } from 'components/UI-kit/Input';
-import styles from './SubscribeSection.module.scss';
-
 import { POST_URL, STATUS_COLORS } from './constants';
+
+import styles from './SubscribeSection.module.scss';
 
 type SubscriptionStatus = 'sending' | 'error' | 'success' | null;
 type ResponseData = { msg: string; result?: 'success' };
@@ -59,47 +58,34 @@ const SubscribeSection: React.FC = () => {
   };
 
   return (
-    <section className={styles.cta}>
-      <div className={styles.ctaContainer}>
-        <Typography
-          variant="h2"
-          className={classNames(styles.ctaTitle, styles.sectionTitle)}
-          glitch
-        >
-          Connect with Societal
-        </Typography>
-        <div className={styles.wrapper}>
-          <Typography
-            variant="body1"
-            className={classNames(styles.ctaText, styles.sectionDescription)}
+    <section className={styles.root}>
+      <Typography variant="h2" glitch>
+        Ready to join Society3.0?
+      </Typography>
+      <Typography variant="body1" className={styles.description}>
+        Connect with Societal
+      </Typography>
+      <form onSubmit={handleSubmit}>
+        <div className={styles.row}>
+          <Input
+            className={classNames(styles.input, styles.emailInput)}
+            type="email"
+            name="email"
+            required
+            placeholder="Enter your email address"
+            helperText={message}
+            helperTextColor={status ? STATUS_COLORS[status] : undefined}
+          />
+          <Button
+            type="submit"
+            variant="primary"
+            className={styles.ctaBtn}
+            disabled={status === 'sending'}
           >
-            Sign up to stay updated on Societal’s progress and upcoming testnet
-            launch
-          </Typography>
-          <form onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <Input
-                className={classNames(styles.input, styles.emailInput)}
-                type="email"
-                name="email"
-                required
-                placeholder="Enter your email address"
-                helperText={message}
-                helperTextColor={status ? STATUS_COLORS[status] : undefined}
-              />
-              <Button
-                type="submit"
-                variant="primary"
-                className={styles.ctaBtn}
-                disabled={status === 'sending'}
-              >
-                Join the list
-              </Button>
-            </div>
-          </form>
+            Join the list
+          </Button>
         </div>
-      </div>
-      {/* <ShapeBgSvg className={styles.ctaBg} /> */}
+      </form>
     </section>
   );
 };

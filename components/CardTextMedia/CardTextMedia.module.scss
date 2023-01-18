@@ -1,29 +1,29 @@
 @use 'styles/mixins' as *;
 
 .root {
- display: flex;
- align-items: center;
- flex-direction: row;
- flex-wrap: wrap;
- justify-content: center;
-gap: 60px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
 
- @include desktop {
-  flex-wrap: nowrap;
-  gap: 120px;
- }
+  @include desktop {
+    flex-wrap: nowrap;
+    gap: 120px;
+  }
 }
 
 .text {
+  flex-shrink: 2;
   max-width: 719px;
   text-align: center;
-  flex-shrink: 2;
 
   @include desktop {
     &.left {
       margin-left: auto;
     }
-  
+
     &.right {
       margin-right: auto;
       order: -1;
@@ -36,19 +36,18 @@ gap: 60px;
 }
 
 .title {
+  margin: auto;
   margin-bottom: 24px;
   position: relative;
   width: fit-content;
-  margin: auto;
 
   @include mobile-only {
     font-size: 40px;
   }
 
   @include desktop {
-   width: 100%;
+    width: 100%;
   }
-
 
   &::after {
     background: linear-gradient(
@@ -63,15 +62,15 @@ gap: 60px;
     background-clip: text;
     background-size: 100%;
     content: attr(data-text);
+    left: calc(50% - 1px);
     position: absolute;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     text-fill-color: transparent;
     top: 50%;
-    z-index: -1;
-    width: 100%;
-    left: calc(50% - 1px);
     transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: -1;
   }
 }
 

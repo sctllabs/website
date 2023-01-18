@@ -15,8 +15,8 @@
   display: flex;
   gap: 6px;
   height: 100%;
-  width: 100%;
   position: relative;
+  width: 100%;
 
   @include desktop {
     &:hover .text::after {
@@ -37,8 +37,8 @@
 
 .text {
   overflow: hidden;
-  white-space: nowrap;
   position: relative;
+  white-space: nowrap;
 
   &::after {
     background: linear-gradient(
@@ -99,8 +99,8 @@
   }
 
   &.top {
-    top: unset;
     bottom: 50%;
+    top: unset;
   }
 
   &.open.top {

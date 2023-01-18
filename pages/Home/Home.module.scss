@@ -5,92 +5,45 @@
 .layout {
   padding-bottom: 140px;
 }
-.fixedWrapper {
-  position: sticky;
-  display: flex;
-  flex-direction: column;
-  top: 60px;
-  height: calc(100vh - 118px);
-  background-color: colors.$grey-1;
+
+.bannerTitle {
+  padding-top: 80px;
+}
+
+.heroImage {
+  margin-top: 170px;
+  z-index: -1;
 
   @include small-tablet {
-    height: calc(100vh - 138px); 
+    margin-top: 10px;
   }
 
   @include large-tablet {
-    height: calc(100vh - 160px); 
+    margin-top: -60px;
   }
 
   @include desktop {
-    gap: 58px;
-    top: 80px;
-  }
-}
-.bannerTitle {
-  margin-top: 160px;
-  margin-bottom: auto;
-
-  @include large-tablet  {
-    margin-top: 112px;
-  }
-}
-
-.mainWrapper {
-
-background-color: colors.$white;
-z-index: 1;
-position: relative;
-width: 100%;
-}
-
-.scrollBlock {
-  position: relative;
-  height: 80px;
-  width: 100%;
-  background-color: colors.$white;
-  border-radius: 16px 16px 0px 0px;
-
-  @include mobile-only {
-    height: 60px;
-  }
-}
-
-.scrollIcon {
-  animation: scroll-chevron ease-in-out 1.5s infinite;
-  position: absolute;
-  color: colors.$black-1;
-  width: 24px;
-  height: 24px;
-
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  &.upper {
-    top: calc(50% - 4px);
-  }
-
-  &.lower {
-    top: calc(50% + 4px);
-    animation-delay: 1.45s;
+    margin-top: -80px;
   }
 }
 
 .contentContainer {
   @include container;
-  display: flex;
+
   align-items: center;
+  display: flex;
   flex-direction: column;
 }
 
 .title {
+  margin: 140px 0 72px;
+  max-width: 1098px;
   text-align: center;
-  max-width: 955px;
-  margin: 72px 0 92px;
 }
 
 .cardsContainer {
   display: flex;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 40px;
   justify-content: center;
 }

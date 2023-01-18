@@ -2,33 +2,33 @@
 @use 'styles/colors';
 
 .root {
-  height: 248px;
-  width: 224px;
-  position: relative;
-  display: flex;
   align-items: flex-end;
+  display: flex;
+  height: 248px;
   justify-content: flex-end;
+  position: relative;
+  width: 224px;
 }
 
 .content {
+  align-items: center;
+  background-color: colors.$white;
+  border-radius: 50%;
+  box-shadow: -26px 25px 31px rgb(102 78 200 / 12%);
   display: flex;
   flex-direction: column;
   gap: 8px;
-  border-radius: 50%;
+  height: 204px;
+  justify-content: center;
   padding: 4px;
   position: relative;
   width: 204px;
-  height: 204px;
-  box-shadow: -26px 25px 31px rgba(102, 78, 200, 0.12);
-  background-color: colors.$white;
-  align-items: center;
-  justify-content: center;
 }
 
 .photo {
+  left: 50%;
   position: absolute;
   top: 0;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -37,7 +37,7 @@
 }
 
 .decoration {
-  position: absolute;
   left: 0;
+  position: absolute;
   top: 10px;
 }

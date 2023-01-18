@@ -2,13 +2,14 @@
 @use 'styles/animations' as *;
 @use 'styles/colors';
 
-.cta {
-  position: relative;
-  padding-bottom: 0px;
-  padding-top: 90px;
-  max-width: 1540px;
+.root {
+  @include container;
+
   margin: 0 auto;
-  width: 100%;
+  padding-bottom: 0;
+  padding-top: 90px;
+  position: relative;
+  width: fit-content;
 
   @include small-tablet {
     padding-top: 110px;
@@ -17,60 +18,20 @@
   @include large-tablet {
     padding-top: 140px;
   }
-
 }
 
-.ctaContainer {
-  @include container;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @include large-desktop {
-    align-items: flex-start;
-  }
-}
-
-.ctaTitle {
-  margin-bottom: 50px;
-}
-
-.ctaText {
+.description {
+  margin: 32px auto 40px;
   text-align: center;
-
-  @include large-desktop {
-    text-align: left;
-  }
 }
 
 .ctaBtn {
-  width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+  width: 100%;
 
   @include small-tablet {
     max-width: 108px;
-  }
-}
-
-.ctaBg {
-  position: absolute;
-  bottom: -13%;
-  right: 0;
-  transform: scaleX(-1);
-
-  @include small-tablet {
-    bottom: 5%;
-    max-width: 90%;
-  }
-
-  :global(.shape-paths) {
-    @include animation-lines(7, 7);
-  }
-
-  :global(.shape-circles) {
-    @include animation-circles(9, 25);
   }
 }
 
@@ -88,25 +49,8 @@
 
 .row {
   display: flex;
+  flex-grow: 100%;
   flex-wrap: wrap;
   gap: 30px 8px;
-  margin-bottom: 20px;
-  flex-grow: 100%;
   justify-content: center;
-
-  @include large-desktop {
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-  }
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 40px;
-
-  @include large-desktop {
-    flex-direction: row;
-  }
 }

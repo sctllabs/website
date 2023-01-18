@@ -4,17 +4,18 @@
 
 .layout {
   @include container;
+
   max-width: 1450px;
   width: 100%;
 }
 
 .mainSlide {
-  padding-top: 220px;
   padding-bottom: 212px;
+  padding-top: 220px;
 
   @include mobile-only {
-    padding-top: 70px;
     padding-bottom: 105px;
+    padding-top: 70px;
   }
 }
 
@@ -35,23 +36,22 @@
     background-clip: text;
     background-size: 100%;
     content: attr(data-text);
+    left: calc(50% - 1px);
     position: absolute;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     text-fill-color: transparent;
     top: 50%;
-    z-index: -1;
-    width: 100%;
-    left: calc(50% - 1px);
     transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: -1;
   }
 
-
   &.main {
-    text-transform: uppercase;
-    text-align: center;
     margin: 0 auto 24px;
     max-width: 1123px;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   &.sub {
@@ -66,9 +66,9 @@
 }
 
 .cardsWrapper {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .card {
@@ -92,12 +92,12 @@
 }
 
 .cartographyBlock {
-  display: flex;
   column-gap: 16px;
-  row-gap: 48px;
+  display: flex;
   flex-wrap: wrap;
-  margin-top: 72px;
   justify-content: center;
+  margin-top: 72px;
+  row-gap: 48px;
 
   @include desktop {
     justify-content: flex-start;
@@ -105,12 +105,12 @@
 }
 
 .teamBlock {
-  display: flex;
   column-gap: 30px;
-  row-gap: 64px;
+  display: flex;
   flex-wrap: wrap;
-  margin-top: 72px;
   justify-content: center;
+  margin-top: 72px;
+  row-gap: 64px;
 
   @include desktop {
     justify-content: flex-start;
@@ -118,27 +118,26 @@
 }
 
 .advisorsBlock {
-  display: flex;
   column-gap: 80px;
-  row-gap: 80px;
+  display: flex;
   flex-wrap: wrap;
-  margin-top: 72px;
   justify-content: center;
+  margin-top: 72px;
+  row-gap: 80px;
 
   @include desktop {
     justify-content: flex-start;
   }
 }
 
-
 .partnersBlock {
-  display: flex;
   column-gap: 100px;
-  row-gap: 60px;
+  display: flex;
   flex-wrap: wrap;
-  margin-top: 72px;
   justify-content: center;
+  margin-top: 72px;
   max-width: 1250px;
+  row-gap: 60px;
 
   @include desktop {
     justify-content: flex-start;
