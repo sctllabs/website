@@ -11,8 +11,9 @@
 }
 
 .heroImage {
-  margin-top: 270px;
+  margin-top: 50px;
   z-index: -1;
+  position: relative;
 
   @include small-tablet {
     margin-top: 10px;
@@ -24,6 +25,22 @@
 
   @include desktop {
     margin-top: -80px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.29175420168067223) 31%,
+      rgba(255, 255, 255, 0.5410539215686274) 45%,
+      colors.$white 100%
+    );
+    // background-color: red;
   }
 }
 

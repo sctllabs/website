@@ -69,7 +69,11 @@
 }
 
 .menu {
-  margin: 25px 0 50px;
+  margin: 25px 0 30px;
+
+  @include large-tablet {
+    margin: 25px 0 40px;
+  }
 
   @include desktop {
     display: flex;
@@ -81,7 +85,7 @@
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  margin: 70px 0;
+  margin: 35px 0;
 
   @include large-tablet {
     margin: 0;
@@ -141,7 +145,7 @@
   }
 
   @include small-tablet {
-    width: 35%;
+    width: 200px;
   }
 
   @include large-tablet {
