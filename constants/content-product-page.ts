@@ -1,34 +1,64 @@
-export enum ProductPageAnimationType {
-  create = 'create',
-  decentralize = 'decentralize',
-  transfer = 'transfer',
-  manage = 'manage'
-}
+export const UPPER_MARQUEE_DATA = [
+  'On-chain Governance',
+  'SaaS pricing',
+  'DAO Creation',
+  'Treasury Management',
+  'Branched Multisig Wallets',
+  'Token Gated Community',
+  'ERC-20 Contract Import',
+  'Legal Entity Creation',
+  'Cross-chain Integrations',
+  'Advanced Governance Systems',
+  'Explore Page',
+  'DAO DApp Store',
+  'Reputation Systems',
+  'Token Creation'
+];
+export const LOWER_MARQUEE_DATA = [
+  'Legal Entity Creation',
+  'Cross-chain Integrations',
+  'Advanced Governance Systems',
+  'Explore Page',
+  'DAO DApp Store',
+  'Reputation Systems',
+  'Token Creation',
+  'On-chain Governance',
+  'SaaS pricing',
+  'DAO Creation',
+  'Treasury Management',
+  'Branched Multisig Wallets',
+  'Token Gated Community',
+  'ERC-20 Contract Import'
+];
 
-const TEXT_TILES_PRODUCT_PAGE = [
+export const TEXT_TILES_PRODUCT_PAGE = [
   {
-    id: ProductPageAnimationType.create,
     title: 'Create',
     description:
-      'Build a specialized DAO in minutes. No coding experience required.'
+      'Build a specialized DAO in minutes. No coding experience required.',
+    img: '/images/product-create.png',
+    imgPsn: 'right'
   },
   {
-    id: ProductPageAnimationType.decentralize,
     title: 'Decentralize',
     description:
-      'Transition a protocol or DApp into a community-operated DAO. Progressive decentralization is a feature, not a bug.'
+      'Transition a protocol or DApp into a community-operated DAO. Progressive decentralization is a feature, not a bug.',
+    img: '/images/product-decentralize.png',
+    imgPsn: 'left'
   },
   {
-    id: ProductPageAnimationType.transfer,
     title: 'Transfer',
     description:
-      'Port an existing DAO the Societal network. Better coordination on a blockchain designed for this.'
+      'Port an existing DAO to the Societal network. Enable better coordination on a blockchain designed to run digital organizations..',
+    img: '/images/product-transfer.png',
+    imgPsn: 'right'
   },
   {
-    id: ProductPageAnimationType.manage,
     title: 'Manage',
     description:
-      'Seamlessly manage every DAO operation in one dashboard. Web and mobile friendly.'
+      'Seamlessly manage every DAO operation in one dashboard. Web and mobile friendly.',
+    img: '/images/product-manage.png',
+    imgPsn: 'left'
   }
 ];
 

@@ -3,8 +3,6 @@
 @use 'styles/colors';
 
 .layout {
-  @include container;
-
   padding-bottom: 70px;
 
   @include desktop {
@@ -13,34 +11,25 @@
 }
 
 .firstSlide {
+  @include container;
   align-items: center;
   display: flex;
   flex-direction: column;
   gap: 60px;
   justify-content: center;
-  padding: 70px 0 141px;
+  padding-top: 80px;
+  padding-bottom: 72px;
   position: relative;
   width: 100%;
 
   @include large-tablet {
-    flex-direction: row;
-    padding-top: 62px;
-  }
-
-  @include desktop {
-    gap: 40px;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1400px;
-  }
-
-  span {
-    flex-shrink: 0.3;
+    gap: 90px;
   }
 }
 
 .heading {
   position: relative;
+  text-align: center;
 
   &::after {
     background: linear-gradient(
@@ -70,121 +59,76 @@
     max-width: 613px;
     text-align: center;
     text-transform: uppercase;
+  }
 
-    @include large-tablet {
-      text-align: left;
-    }
+  &.futureDao {
+    margin-top: 140px;
   }
 }
 
-.stickyWrapper {
+
+.marqueeWrapper {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.marquee {
+  --webkit-transform-style: preserve-3d;
+  --webkit-backface-visibility: hidden;
+
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.chipsWrapper {
   display: flex;
-  gap: 67px;
-  justify-content: center;
-  padding-bottom: 240px;
-  position: relative;
+  gap: 32px;
+  padding: 0 32px 32px 0;
 
-  @include desktop {
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1400px;
-    padding-bottom: 140px;
-    width: 100%;
+  &.last {
+    padding-bottom: 40px;
   }
 }
 
-.textBlocksWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 240px;
-
-  @media (min-width: 2000px) {
-    gap: 350px;
-  }
+.chip {
+  background: colors.$white;
+  border-radius: 16px;
+  box-shadow: 0 14px 28px rgb(102 78 200 / 12%);
+  padding: 16px 20px;
 }
 
-.tileWrapper {
+
+.cardsWrapper {
+  @include container;
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 91px 0;
-  position: relative;
+  gap: 140px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 
   @include desktop {
-    align-items: flex-start;
-    max-width: 800px;
-
-    * {
-      text-align: left;
-    }
-  }
-
-  * {
-    text-align: center;
-  }
-}
-
-.stickyElement {
-  display: none;
-  position: sticky;
-  top: calc(25%);
-
-  @include desktop {
-    display: block;
-    height: 300px;
-    max-width: 890px;
-    width: 100%;
-  }
-}
-
-.stickySlide {
-  max-width: 100%;
-  position: absolute;
-}
-
-.tileAnimationMobile {
-  position: absolute;
-  top: calc(100% + 44px);
-  transform: translateY(-50%);
-
-  @include desktop {
-    display: none;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    gap: 280px;
   }
 }
 
 .slide {
+  @include container;
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 67px;
   justify-content: center;
-  padding: 140px 0;
+  padding-top: 140px;
+}
 
-  @include desktop {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1400px;
-  }
+.slideDescription {
+  margin: 24px 0 40px;
+  max-width: 871px;
+  text-align: center;
 }
 
 .lottieWrapper {
-  max-width: 848px;
-  order: 1;
-  @include desktop {
-    order: 0;
-  }
-}
-
-.slideWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  text-align: center;
-
-  @include desktop {
-    max-width: 485px;
-    text-align: left;
-  }
+  max-width: 900px;
 }

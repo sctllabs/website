@@ -12,6 +12,7 @@ interface CardTextMediaProps {
   descriptionSecondary?: string;
   img: string;
   imgPsn: string;
+  isProductPage?: boolean;
   className?: string;
 }
 
@@ -21,11 +22,19 @@ const CardTextMedia: React.FC<CardTextMediaProps> = ({
   descriptionSecondary,
   img,
   imgPsn,
+  isProductPage = false,
   className
 }) => {
+  const imgWidth = !isProductPage ? 400 : 690;
   return (
-    <div className={classNames(styles.root, className)}>
-      <Image src={img} width={400} height={400} objectFit="contain" />
+    <div
+      className={classNames(
+        styles.root,
+        { [styles.productPage]: isProductPage },
+        className
+      )}
+    >
+      <Image src={img} width={imgWidth} height={400} objectFit="contain" />
       <div className={classNames(styles.text, styles[imgPsn])}>
         <Typography variant="h2" className={styles.title} data-text={title}>
           {title}
