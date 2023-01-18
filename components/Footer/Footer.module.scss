@@ -23,6 +23,16 @@
     bottom: 0;
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: colors.$black;
+    top: 0;
+    z-index: 1;
+  }
+
   &.mobile {
     @include desktop {
       display: none;

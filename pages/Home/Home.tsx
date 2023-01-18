@@ -23,6 +23,7 @@ const Home = () => {
           height={1143}
           quality={100}
           objectFit="contain"
+          priority
         />
       </div>
       <div className={styles.contentContainer}>
