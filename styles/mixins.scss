@@ -77,6 +77,7 @@
   position: relative;
   width: 100%;
   z-index: 2;
+  max-width: 1440px;
 
   @include mobile-only {
     --global-padding: 24px;
