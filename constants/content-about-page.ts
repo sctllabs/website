@@ -128,12 +128,12 @@ export const ADVISORS = [
     name: 'Yoon Kim',
     position: 'Product Advisor',
     img: '/images/advisors/yoon-kim.png',
-    logo: '/images/logos/trgc.png'
+    logo: '/images/logos/spacewalk-ventures.png'
   },
   {
-    name: 'Tannr Allard',
-    position: 'DAO/Technical Advisor',
-    img: '/images/advisors/tannr-allard.png',
-    logo: '/images/logos/tannr-allard-company.png'
+    name: 'Paul Claudius',
+    position: 'DAO/Ecosystem Advisor',
+    img: '/images/advisors/paul-claudius.png',
+    logo: '/images/logos/dia.png'
   }
 ];

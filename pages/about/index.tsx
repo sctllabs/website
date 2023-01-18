@@ -88,14 +88,27 @@ const AboutPage = () => {
         <div className={styles.partnersBlock}>
           <Image
             src="/images/logos/ventures-polka.svg"
-            height={90}
+            height={94}
             width={272}
+            objectFit="contain"
           />
-          <Image src="/images/logos/kusama-dia.png" height={90} width={310} />
+          <Image
+            src="/images/logos/kusama-kingdom.png"
+            height={94}
+            width={109}
+            objectFit="contain"
+          />
+          <Image
+            src="/images/logos/dia.png"
+            height={94}
+            width={152}
+            objectFit="contain"
+          />
           <Image
             src="/images/logos/web-3-foundation.png"
-            height={90}
-            width={210}
+            height={94}
+            width={212}
+            objectFit="contain"
           />
         </div>
       </div>
