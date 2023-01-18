@@ -4,6 +4,7 @@
 
 .layout {
   @include container;
+
   padding-bottom: 70px;
 
   @include desktop {
@@ -12,14 +13,14 @@
 }
 
 .firstSlide {
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 60px;
-  width: 100%;
-  padding: 70px 0 141px;
   justify-content: center;
-  align-items: center;
+  padding: 70px 0 141px;
   position: relative;
+  width: 100%;
 
   @include large-tablet {
     flex-direction: row;
@@ -29,17 +30,18 @@
   @include desktop {
     gap: 40px;
     justify-content: space-between;
-    max-width: 1400px;
     margin: 0 auto;
+    max-width: 1400px;
   }
 
   span {
     flex-shrink: 0.3;
   }
 }
+
 .heading {
   position: relative;
- 
+
   &::after {
     background: linear-gradient(
       270deg,
@@ -53,43 +55,41 @@
     background-clip: text;
     background-size: 100%;
     content: attr(data-text);
+    left: calc(50% - 1px);
     position: absolute;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     text-fill-color: transparent;
     top: 50%;
-    z-index: -1;
-    width: 100%;
-    left: calc(50% - 1px);
     transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: -1;
   }
 
   &.main {
+    max-width: 613px;
     text-align: center;
     text-transform: uppercase;
-    max-width: 613px;
-  
+
     @include large-tablet {
       text-align: left;
     }
   }
-
 }
-
 
 .stickyWrapper {
   display: flex;
-  position: relative;
   gap: 67px;
-  padding-bottom: 240px;
   justify-content: center;
+  padding-bottom: 240px;
+  position: relative;
 
   @include desktop {
-    padding-bottom: 140px;
     justify-content: space-between;
-    max-width: 1400px;
-    width: 100%;
     margin: 0 auto;
+    max-width: 1400px;
+    padding-bottom: 140px;
+    width: 100%;
   }
 }
 
@@ -104,43 +104,43 @@
 }
 
 .tileWrapper {
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 91px 0;
   position: relative;
-  align-items: center;
-
-  * {
-    text-align: center;
-  }
 
   @include desktop {
-    max-width: 800px;
     align-items: flex-start;
+    max-width: 800px;
 
     * {
       text-align: left;
     }
   }
+
+  * {
+    text-align: center;
+  }
 }
 
 .stickyElement {
+  display: none;
   position: sticky;
   top: calc(25%);
-  display: none;
 
   @include desktop {
     display: block;
-    width: 100%;
-    max-width: 890px;
     height: 300px;
+    max-width: 890px;
+    width: 100%;
   }
 }
 
 .stickySlide {
-  position: absolute;
   max-width: 100%;
+  position: absolute;
 }
 
 .tileAnimationMobile {
@@ -154,27 +154,29 @@
 }
 
 .slide {
-  display: flex;
-  gap: 67px;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 67px;
   justify-content: center;
   padding: 140px 0;
-  flex-direction: column;
 
   @include desktop {
     flex-direction: row;
-    max-width: 1400px;
     justify-content: space-between;
     margin: 0 auto;
+    max-width: 1400px;
   }
 }
+
 .lottieWrapper {
-  order: 1;
   max-width: 848px;
+  order: 1;
   @include desktop {
     order: 0;
   }
 }
+
 .slideWrapper {
   display: flex;
   flex-direction: column;
