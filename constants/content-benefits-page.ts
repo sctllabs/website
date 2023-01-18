@@ -3,7 +3,7 @@ export const BENEFITS_CARDS = [
   {
     title: 'Code is law',
     description:
-      'Who said decisions need to be executed off-chain? Societal brings advanced governance systems on chain - no more blindly trusting power figures to do the right thing',
+      'Who said decisions need to be executed off-chain? Societal brings advanced governance systems on-chain - no more blindly trusting power figures to do the right thing.',
     img: '/images/benefits-page-governance.png',
     imgPsn: 'left'
   },
