@@ -5,6 +5,7 @@
 .footer {
   background-color: colors.$black;
   padding: 56px 0 36px;
+  z-index: 999;
 }
 
 .logo {
@@ -271,7 +272,7 @@
   overflow: visible;
   position: relative;
   width: 100%;
-  z-index: 22;
+  z-index: 1000;
 
   span {
     overflow: visible !important;

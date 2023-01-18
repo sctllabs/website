@@ -4,18 +4,15 @@
 
 .mainSlide {
   @include container;
-
-  align-items: center;
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 56px;
   justify-content: center;
-  padding-bottom: 40px;
-  padding-top: 124px;
+  padding-bottom: 140px;
+  padding-top: 80px;
 
   @include mobile-only {
-    padding-top: 60px;
+    padding-bottom: 70px;
   }
 }
 
@@ -47,37 +44,22 @@
   }
 
   &.main {
-    margin: 0 auto;
     max-width: 613px;
     text-align: center;
+    margin-bottom: 40px;
     text-transform: uppercase;
-
-    @include large-tablet {
-      margin: 0;
-    }
   }
 }
 
-.descriptionWrapper {
-  @include container;
-
-  padding-bottom: 70px;
-  padding-top: 56px;
-
-  @include large-tablet {
-    padding-bottom: 140px;
-  }
-}
-
-.appchainDescription {
-  margin: 0 auto;
-  max-width: 971px;
+.heroDescription {
+  max-width: 551px;
+  margin-top: 54px;
   text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .cardsWrapper {
   @include container;
-
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -93,14 +75,12 @@
 
 .slide {
   @include container;
-
-  padding-bottom: 228px;
+  padding-bottom: 140px;
   padding-top: 140px;
 
   @include mobile-only {
-    font-size: 30px;
     padding-bottom: 80px;
-    padding-top: 60px;
+    padding-top: 80px;
   }
 }
 
