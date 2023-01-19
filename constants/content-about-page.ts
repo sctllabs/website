@@ -63,7 +63,7 @@ export const TEAM = [
   },
   {
     name: 'Oleh Kalenyk',
-    position: 'Lead Blockchain Engineer',
+    position: 'CTO',
     img: '/images/team/oleh-kalenyk.png',
     dotAngle: -20
   },

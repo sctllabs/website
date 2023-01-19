@@ -120,17 +120,6 @@ const ProductPage = () => {
           />
         </div>
       </div>
-      <div className={styles.slide}>
-        <Typography
-          variant="h2"
-          className={classNames(styles.heading, styles.bottomTitle)}
-          data-text="Societal’s cross-chain infrastructure layer and modular OS unlock better coordination outcomes, built for a new age of organization: Society3.0"
-        >
-          Societal’s cross-chain infrastructure layer and modular OS unlock
-          better coordination outcomes, built for a new age of organization:
-          Society3.0
-        </Typography>
-      </div>
     </MainLayout>
   );
 };
