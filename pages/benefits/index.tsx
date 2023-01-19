@@ -39,10 +39,10 @@ const BenefitsPage = () => {
         <Typography
           variant="h2"
           className={classNames(styles.heading, styles.bottomTitle)}
-          data-text="Societal unlocks better coordination outcomes, built for a new age of organization: Society3.0"
+          data-text="Societal’s cross-chain infrastructure and modular operating system is designed for a new age of coordination: Society3.0"
         >
-          Societal unlocks better coordination outcomes, built for a new age of
-          organization: Society3.0
+          Societal’s cross-chain infrastructure and modular operating system is
+          designed for a new age of coordination: Society3.0
         </Typography>
       </div>
     </MainLayout>
