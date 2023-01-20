@@ -114,7 +114,7 @@ export const ADVISORS = [
   },
   {
     name: 'Bruno Skvorc',
-    position: 'Ecosystem/technical advisor',
+    position: 'Ecosystem/Technical Advisor',
     img: '/images/advisors/bruno-skvorc.png',
     logo: '/images/logos/rmrk.svg'
   },
