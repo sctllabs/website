@@ -19,8 +19,8 @@ const Home = () => {
         <Image
           src="/images/home-page-illustration.png"
           layout="responsive"
-          width={1440}
-          height={1143}
+          width={2880}
+          height={2286}
           quality={100}
           objectFit="contain"
           priority

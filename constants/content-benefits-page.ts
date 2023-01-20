@@ -4,14 +4,14 @@ export const BENEFITS_CARDS = [
     title: 'Code is law',
     description:
       'Who said decisions need to be executed off-chain? Societal brings advanced governance systems on-chain - no more blindly trusting power figures to do the right thing.',
-    img: '/images/benefits-page-governance.png',
+    img: '/images/benefits-page-code.png',
     imgPsn: 'left'
   },
   {
     title: 'Cross-Chain By Default',
     description:
       'DAOs shouldn’t be siloed. Societal unlocks trustless access to the best DeFi, privacy, and social primitives via secure cross-chain communication.',
-    img: '/images/benefits-page-cross-chain.png',
+    img: '/images/benefits-page-crosschain.png',
     imgPsn: 'right'
   },
   {
