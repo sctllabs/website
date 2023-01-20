@@ -49,7 +49,7 @@ export const TEXT_TILES_PRODUCT_PAGE = [
   {
     title: 'Transfer',
     description:
-      'Port an existing DAO to the Societal network. Enable better coordination on a blockchain designed to run digital organizations..',
+      'Port an existing DAO to the Societal network. Enable better coordination on a blockchain designed to run digital organizations.',
     img: '/images/product-transfer.png',
     imgPsn: 'right'
   },
