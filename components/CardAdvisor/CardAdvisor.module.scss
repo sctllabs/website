@@ -1,0 +1,28 @@
+@use 'styles/mixins' as *;
+@use 'styles/colors';
+
+.root {
+  align-items: center;
+  background-color: colors.$white;
+  border-radius: 60px;
+  box-shadow: -26px 25px 31px rgb(102 78 200 / 12%);
+  display: flex;
+  gap: 24px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.position {
+  color: colors.$purple-dark;
+  margin-bottom: 16px;
+}

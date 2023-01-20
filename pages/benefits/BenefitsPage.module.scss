@@ -1,0 +1,92 @@
+@use 'styles/mixins' as *;
+@use 'styles/animations';
+@use 'styles/colors';
+
+.mainSlide {
+  @include container;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 140px;
+  padding-top: 80px;
+
+  @include mobile-only {
+    padding-bottom: 70px;
+  }
+}
+
+.heading {
+  position: relative;
+
+  &::after {
+    background: linear-gradient(
+      270deg,
+      #ff3f3f -1.98%,
+      #feeb3c 20.51%,
+      #71ff3f 41.91%,
+      #3e8bff 63.31%,
+      #e43eff 83.61%,
+      #ff3e3e 101.71%,
+    );
+    clip-path: inset(1px);
+    background-clip: text;
+    // background-size: 100%;
+    content: attr(data-text);
+    left: calc(50% - 1px);
+    position: absolute;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: -1;
+  }
+
+  &.main {
+    max-width: 613px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+}
+
+.heroDescription {
+  max-width: 551px;
+  margin-top: 54px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.cardsWrapper {
+  @include container;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  padding: 80px 0;
+
+  @include desktop {
+    padding: 140px 0;
+  }
+}
+
+.slide {
+  @include container;
+  padding-bottom: 140px;
+  padding-top: 140px;
+
+  @include mobile-only {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+}
+
+.bottomTitle {
+  margin: 0 auto;
+  max-width: 1038px;
+  text-align: center;
+}

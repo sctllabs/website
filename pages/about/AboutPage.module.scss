@@ -1,0 +1,148 @@
+@use 'styles/mixins' as *;
+@use 'styles/animations';
+@use 'styles/colors';
+
+.layout {
+  @include container;
+  width: 100%;
+}
+
+.mainSlide {
+  padding-bottom: 212px;
+  padding-top: 220px;
+
+  @include mobile-only {
+    padding-bottom: 105px;
+    padding-top: 70px;
+  }
+}
+
+.heading {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    background: linear-gradient(
+      270deg,
+      #ff3f3f -1.98%,
+      #feeb3c 20.51%,
+      #71ff3f 41.91%,
+      #3e8bff 63.31%,
+      #e43eff 83.61%,
+      #ff3e3e 101.71%
+    );
+    background-clip: text;
+    background-size: 100%;
+    content: attr(data-text);
+    left: calc(50% - 1px);
+    position: absolute;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: -1;
+    clip-path: inset(1px);
+  }
+
+  &.main {
+    margin: 0 auto 24px;
+    max-width: 1123px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &.sub {
+    margin: 0 auto;
+    text-align: center;
+
+    @include desktop {
+      margin: unset;
+      text-align: left;
+    }
+  }
+}
+
+.cardsWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  padding: 70px 0;
+
+  @include desktop {
+    padding: 140px 0;
+  }
+
+  &:first-child {
+    padding-top: 40px;
+  }
+}
+
+.slide {
+  padding: 140px 0;
+
+  @include mobile-only {
+    padding: 70px 0;
+  }
+}
+
+.cartographyBlock {
+  column-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 72px;
+  row-gap: 48px;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.teamBlock {
+  column-gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 72px;
+  row-gap: 64px;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.advisorsBlock {
+  column-gap: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 72px;
+  row-gap: 80px;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.partnersBlock {
+  column-gap: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 72px;
+  max-width: 1250px;
+  row-gap: 60px;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+
+  @include large-desktop {
+    column-gap: 131px;
+  }
+}

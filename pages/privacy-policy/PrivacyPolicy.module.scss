@@ -1,0 +1,30 @@
+@use 'styles/mixins' as *;
+
+.root {
+  @include container;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 826px;
+  padding-bottom: 80px;
+  padding-left: var(--global-padding);
+  padding-right: var(--global-padding);
+  padding-top: 120px;
+  position: relative;
+  width: 100%;
+
+  p {
+    margin: 1em 0;
+  }
+
+  ul {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: disc;
+    margin: 1em 0;
+    padding-left: 40px;
+  }
+
+  li {
+  }
+}

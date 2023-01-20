@@ -3,31 +3,21 @@
 @use 'styles/mixins' as *;
 
 .header {
+  background-color: rgb(255 255 255);
+  box-shadow: 0 -5px 31px rgb(102 78 200 / 20%);
   height: 58px;
   left: 0;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 3;
-  background-color: rgb(255, 255, 255);
 
   @include large-tablet {
-    height: 80px;
-  }
-
-  @include desktop {
-    background-color: transparent;
-  }
-
-  &.fixed {
-    background-color: rgb(255, 255, 255);
-
-    .headerContainer {
-      background-color: rgb(255, 255, 255);
-    }
+    height: 72px;
   }
 
   &.active {
+    z-index: 999999;
     .headerContainer {
       background-color: colors.$white;
       transition: background-color ease 0.3s;
@@ -35,27 +25,27 @@
     }
 
     .headerMenu {
-      top: 100%;
-      transition: top ease 0.5s;
+      opacity: 1;
+      transform: translateY(58px);
+      transition: transform ease 0.5s, opacity 0.5s ease-out;
     }
   }
 }
 
 .headerContainer {
   @include container;
-  height: inherit;
-
-  transition: background-color ease 0.3s;
-  transition-delay: 0.1s;
 
   align-items: center;
   display: flex;
+  height: inherit;
   justify-content: space-between;
   padding-bottom: 6px;
   padding-top: 6px;
+  transition: background-color ease 0.3s;
+  transition-delay: 0.1s;
   z-index: 2;
 
-  @include large-tablet {
+  @include desktop {
     padding-bottom: 10px;
     padding-top: 10px;
   }
@@ -63,12 +53,12 @@
 
 .logo {
   display: block;
-  width: 128px;
   height: 44px;
+  width: 128px;
 
   @include large-tablet {
-    width: 160px;
     height: 50px;
+    width: 140px;
   }
 }
 
@@ -77,6 +67,10 @@
   position: relative;
   transition-duration: 0.5s;
   width: 26px;
+
+  @include desktop {
+    display: none;
+  }
 
   .icon {
     height: 100%;
@@ -104,26 +98,6 @@
     }
   }
 
-  @include large-tablet {
-    height: 32px;
-    width: 36px;
-
-    .icon {
-      &::before,
-      &::after {
-        width: 30px;
-      }
-
-      &::before {
-        top: 10px;
-      }
-
-      &::after {
-        bottom: 10px;
-      }
-    }
-  }
-
   &:hover {
     cursor: pointer;
   }
@@ -144,23 +118,29 @@
 .headerMenu {
   background-color: colors.$white;
   left: 0;
+  opacity: 0;
   position: absolute;
-  top: -1000px;
-  transition: top ease-in 0.5s;
+  top: 0;
+  transform: translateY(-100%);
+  transition: transform ease-in 0.5s, opacity ease-out 0.5s;
   width: 100%;
 
+  @include desktop {
+    display: none;
+  }
+
   &::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    top: 100%;
-    height: 100px;
-    width: 90%;
-    background: rgba(168, 143, 251, 0.3);
-    filter: blur(57px);
+    background: rgb(168 143 251 / 30%);
     border-radius: 60%;
+    content: '';
+    filter: blur(57px);
+    height: 100px;
+    left: 50%;
+    position: absolute;
+    top: 100%;
     transform: translate(-50%, -80%);
+    width: 90%;
+    z-index: -1;
   }
 }
 
@@ -186,24 +166,20 @@
   margin: 0;
   padding: 0;
   width: 100%;
-
-  @include large-tablet {
-    align-items: center;
-    flex-direction: row;
-  }
 }
 
 .menuItem {
   margin-bottom: 42px;
-  padding-right: 30px;
   position: relative;
+  text-align: right;
+  text-decoration: none;
 
-  @include large-tablet {
+  @include desktop {
     margin: 0;
     padding-right: 0;
   }
 
-  &::after {
+  &.active::after {
     background-color: colors.$black;
     border-radius: 50%;
     content: '';
@@ -221,26 +197,16 @@
       transform: translate(-50%, 100%);
     }
   }
-}
 
-.menuItemLink {
-  text-align: right;
-  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
 }
 
 .menuItemText {
   position: relative;
 
   &::after {
-    top: 0;
-    left: 0;
-    z-index: -1;
-    position: absolute;
-    content: attr(data-text);
-    opacity: 0;
-    transition: all 0.3s ease-in;
-
-    background-size: 100%;
     background: linear-gradient(
       270deg,
       #ff3f3f -1.98%,
@@ -250,17 +216,58 @@
       #e43eff 83.61%,
       #ff3e3e 101.71%
     );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
     background-clip: text;
+    background-size: 100%;
+    content: attr(data-text);
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
     text-fill-color: transparent;
+    top: 0;
+    transition: all 0.3s ease-in;
+    z-index: -1;
   }
 
   &:hover::after {
     left: -1px;
     opacity: 1;
+  }
+}
+
+.menuDesktop {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    gap: 54px;
+  }
+}
+
+.dropdownButtonMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+  padding: 12px 0 4px;
+}
+
+.dropdownButtonItem {
+  display: block;
+  padding: 12px 77px 12px 43px;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    background-color: colors.$black;
+    border-radius: 50%;
+    content: '';
+    height: 6px;
+    left: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
   }
 }

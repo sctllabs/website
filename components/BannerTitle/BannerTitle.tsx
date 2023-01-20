@@ -11,25 +11,25 @@ interface BannerTitleProps {
 
 const BannerTitle = ({ titles, className }: BannerTitleProps) => {
   const [active, setActive] = useState(0);
-  const refEl = useRef<HTMLSpanElement | null>(null);
+  const refEl = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const node = refEl.current;
 
     const handler = (e: any) => {
       if (e.animationName.indexOf('glitch-anim-2') !== -1) {
-        setActive(prevActive => (prevActive + 1) % (titles.length - 1));
+        setActive(prevActive => (prevActive + 1) % titles.length);
         node?.classList.remove(styles.glitch);
 
         setTimeout(() => {
           node?.classList.add(styles.glitch);
-        }, 1500);
+        }, 2000);
       }
     };
 
     setTimeout(() => {
       node?.classList.add(styles.glitch);
-    }, 1500);
+    }, 2000);
 
     node?.addEventListener('animationend', handler);
 
@@ -39,21 +39,26 @@ const BannerTitle = ({ titles, className }: BannerTitleProps) => {
   }, [titles]);
 
   return (
-    <Typography variant="h1" className={classNames(className)}>
-      <span
-        className={classNames(styles.text)}
-        ref={refEl}
-        data-text={titles[active]}
+    <div className={classNames(styles.root, className)}>
+      <div className={styles.shadow} />
+      <Typography variant="headingXxl">
+        <div
+          className={classNames(styles.text)}
+          ref={refEl}
+          data-text={titles[active]}
+        >
+          {titles[active]}
+          <span className={styles.gradient}>{titles[active]}</span>
+        </div>
+      </Typography>
+      <Typography
+        variant="headingXxl"
+        data-text="3.0"
+        className={styles.subHeading}
       >
-        {titles[active]}
-        <span className={styles.gradient}>{titles[active]}</span>
-      </span>
-      <br />
-      <span className={styles.text}>
-        Reimagined
-        <span className={styles.gradient}>Reimagined</span>
-      </span>
-    </Typography>
+        3.0
+      </Typography>
+    </div>
   );
 };
 

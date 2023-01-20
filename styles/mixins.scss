@@ -72,12 +72,12 @@
 
   margin-left: auto;
   margin-right: auto;
-  max-width: #{breakpoints.$screen-lg}px;
   padding-left: var(--global-padding);
   padding-right: var(--global-padding);
   position: relative;
   width: 100%;
   z-index: 2;
+  max-width: 1440px;
 
   @include mobile-only {
     --global-padding: 24px;
@@ -92,6 +92,6 @@
   }
 
   @include desktop {
-    --global-padding: 140px;
+    --global-padding: 100px;
   }
 }

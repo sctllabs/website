@@ -1,0 +1,56 @@
+@use 'styles/mixins' as *;
+@use 'styles/animations' as *;
+@use 'styles/colors';
+
+.root {
+  @include container;
+
+  margin: 0 auto;
+  padding-bottom: 0;
+  padding-top: 90px;
+  position: relative;
+  width: fit-content;
+
+  @include small-tablet {
+    padding-top: 110px;
+  }
+
+  @include large-tablet {
+    padding-top: 140px;
+  }
+}
+
+.description {
+  margin: 32px auto 40px;
+  text-align: center;
+}
+
+.ctaBtn {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+
+  @include small-tablet {
+    max-width: 108px;
+  }
+}
+
+.emailInput {
+  width: 100%;
+
+  @include small-tablet {
+    max-width: 336px;
+  }
+
+  @include large-desktop {
+    width: 336px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-grow: 100%;
+  flex-wrap: wrap;
+  gap: 30px 8px;
+  justify-content: center;
+}

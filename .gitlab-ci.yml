@@ -1,9 +1,9 @@
 # Include Common Template
 
 include:
-- project: 'devops/gitlab-ci'
-  ref: main
-  file: '/workflows/devs/server-app.yml'
+  - project: 'devops/gitlab-ci'
+    ref: v1.2.0
+    file: '/workflows/devs/server-app.yml'
 
 docker:build-and-push:
   extends: .docker:build-and-push

@@ -1,39 +1,54 @@
 import { ReactComponent as Twitter } from 'public/images/icons/twitter.svg';
 import { ReactComponent as Discord } from 'public/images/icons/discord.svg';
-import { ReactComponent as Github } from 'public/images/icons/github.svg';
 import { ReactComponent as Medium } from 'public/images/icons/medium.svg';
 import { ReactComponent as Email } from 'public/images/icons/email.svg';
+import { ABOUT, BENEFITS, HOME, PRODUCT } from './paths';
 
 export const menuList = [
   {
+    id: 'home',
+    name: 'Home',
+    href: HOME,
+    isExternal: false
+  },
+  {
+    id: 'benefits',
+    name: 'Benefits',
+    href: BENEFITS,
+    isExternal: false
+  },
+  {
+    id: 'product',
+    name: 'Product',
+    href: PRODUCT,
+    isExternal: false
+  },
+  {
     id: 'about',
-    name: 'About'
-  },
+    name: 'About',
+    href: ABOUT,
+    isExternal: false
+  }
+];
+
+export const menuResources = [
   {
-    id: 'products',
-    name: 'Products'
-  },
-  {
-    id: 'governance',
-    name: 'Governance'
-  },
-  {
-    id: 'marketplace',
-    name: 'Marketplace'
-  },
-  {
-    id: 'team',
-    name: 'Team'
+    id: 'whitepaper',
+    name: 'Whitepaper',
+    href: 'https://docsend.com/view/2gte2fd8wc4jp4rg',
+    isExternal: true
   },
   {
     id: 'docs',
     name: 'Docs',
-    href: 'https://docs.sctl.xyz/'
+    href: 'https://docs.sctl.xyz/introduction/what-is-societal',
+    isExternal: true
   },
   {
-    id: 'whitepaper',
-    name: 'Whitepaper',
-    href: 'https://docsend.com/view/2gte2fd8wc4jp4rg'
+    id: 'github',
+    name: 'GitHub',
+    href: 'https://github.com/sctllabs',
+    isExternal: true
   }
 ];
 
@@ -44,11 +59,7 @@ export const socialList = [
   },
   {
     icon: Discord,
-    link: 'https://discord.gg/pU7TVvRVdh'
-  },
-  {
-    icon: Github,
-    link: 'https://github.com/sctllabs'
+    link: 'https://discord.gg/u6fGdRVBF3'
   },
   {
     icon: Medium,

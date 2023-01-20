@@ -1,0 +1,91 @@
+@use 'styles/mixins' as *;
+@use 'styles/colors';
+
+.root {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+
+  @include desktop {
+    flex-wrap: nowrap;
+    gap: 120px;
+  }
+}
+
+.text {
+  flex-shrink: 2;
+  max-width: 719px;
+  text-align: center;
+  flex-shrink: 1;
+
+  @include desktop {
+    &.left {
+      margin-left: auto;
+    }
+
+    &.right {
+      margin-right: auto;
+      order: -1;
+    }
+  }
+
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.title {
+  margin: auto;
+  margin-bottom: 24px;
+  position: relative;
+  width: fit-content;
+
+  @include mobile-only {
+    font-size: 40px;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
+
+  &::after {
+    background: linear-gradient(
+      270deg,
+      #ff3f3f -1.98%,
+      #feeb3c 20.51%,
+      #71ff3f 41.91%,
+      #3e8bff 63.31%,
+      #e43eff 83.61%,
+      #ff3e3e 101.71%
+    );
+    background-clip: text;
+    background-size: 100%;
+    content: attr(data-text);
+    left: calc(50% - 1px);
+    position: absolute;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    clip-path: inset(1px);
+    z-index: -1;
+  }
+}
+
+.description {
+  margin-bottom: 16px;
+}
+
+.productPage {
+  @include desktop {
+    gap: 48px;
+  }
+  .text {
+    max-width: 502px;
+  }
+}
