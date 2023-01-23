@@ -106,12 +106,12 @@
   width: 100%;
 
   @include small-tablet {
-    box-shadow: 0 0 80px 180px #fafafa;
-    height: 180px;
+    box-shadow: 0 0 80px 190px #fafafa;
+    height: 135px;
   }
 
   @include large-tablet {
     box-shadow: 0 0 100px 160px #fafafa;
-    height: 290px;
+    height: 250px;
   }
 }
