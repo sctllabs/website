@@ -101,11 +101,11 @@
   }
 
   @include mixins.large-tablet {
-    font-size: 84px;
-    line-height: 120px;
+    font-size: 74px;
+    line-height: 110px;
   }
 
-  @include mixins.large-tablet {
+  @include mixins.large-desktop {
     font-size: 100px;
     letter-spacing: 0.12em;
     line-height: 150px;
