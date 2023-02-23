@@ -80,9 +80,9 @@ const ProductPage = () => {
         <Typography
           variant="h2"
           className={styles.heading}
-          data-text="The “Shopify App Store” for On-Chain Communities"
+          data-text='The "Shopify App Store" for Web3'
         >
-          The “Shopify App Store” for On-Chain Communities
+          The &quot;Shopify App Store&quot; for Web3
         </Typography>
         <Typography variant="body1" className={styles.slideDescription}>
           On-chain management tooling can deploy on Societal’s EVM-compatible
