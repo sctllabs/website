@@ -3,7 +3,7 @@ export const BENEFITS_CARDS = [
   {
     title: 'Code is law',
     description:
-      'Who said decisions need to be voted on off-chain? Societal removes the need to blindly trust power figures to do the right thing - bringing community governance systems on-chain.',
+      'Who said decisions need to be voted on off-chain? Societal removes the need to blindly trust those in power to do the right thing - we’re bringing community governance systems to the blockchain.',
     img: '/images/benefits-page-code.png',
     imgPsn: 'left'
   },
@@ -17,14 +17,14 @@ export const BENEFITS_CARDS = [
   {
     title: 'Gas-Free Transactions',
     description:
-      'Societal is a productivity platform, paid for by on-chain community treasuries. All member transactions are gas free - no more voter apathy.',
+      'Societal is an on-chain productivity platform paid for by community treasuries. All participant transactions are gas free - no more voter apathy.',
     img: '/images/benefits-page-gas-free.png',
     imgPsn: 'left'
   },
   {
     title: 'Streamlined Experiences',
     description:
-      'On-chain community members shouldn’t have to switch through countless organizational tools to get involved. Societal is the one-stop shop to get everyone involved.',
+      'On-chain community members shouldn’t have to switch through countless organizational tools to get involved. Societal is the one-stop shop to bring your group to the next level.',
     img: '/images/benefits-page-streamlined.png',
     imgPsn: 'right'
   }
