@@ -38,13 +38,14 @@ const BenefitsPage = () => {
       </div>
       <div className={styles.slide}>
         <Typography
-          variant="h2"
+          variant="h4"
           className={classNames(styles.heading, styles.bottomTitle)}
-          data-text="Societal’s composable infrastructure and customizable solution is the ideal fit for all on-chain communities: the creator economy, protocols, social clubs, gaming, DAOs, and more."
+          data-text="Societal’s composable and customizable solution is the ideal fit for all on-chain communities: 
+          the creator economy, protocols, social clubs, gaming, DAOs, and more."
         >
-          Societal’s composable infrastructure and customizable solution is the
-          ideal fit for all on-chain communities: the creator economy,
-          protocols, social clubs, gaming, DAOs, and more.
+          Societal’s composable and customizable solution is the ideal fit for
+          all on-chain communities: the creator economy, protocols, social
+          clubs, gaming, DAOs, and more.
         </Typography>
       </div>
     </MainLayout>

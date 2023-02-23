@@ -49,7 +49,7 @@ export const TEXT_TILES_PRODUCT_PAGE = [
   {
     title: 'Transfer',
     description:
-      'Port an existing token contract to the Societal network. Benefit from a blockchain designed solely to run and grow on-chain communities.',
+      'Port an existing token contract to the Societal network. Unlock better coordination on a blockchain designed for on-chain communities.',
     img: '/images/product-transfer.png',
     imgPsn: 'right'
   },

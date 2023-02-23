@@ -142,7 +142,7 @@ export const PARTNERS = [
   {
     id: 'outlier-ventures',
     image: '/images/logos/outlier-ventures.png',
-    widthHeight: [375, 91]
+    widthHeight: [300, 84]
   },
   {
     id: 'web-3-foundation',
@@ -152,41 +152,41 @@ export const PARTNERS = [
   {
     id: 'partner-polkadot',
     image: '/images/logos/partner-polkadot.png',
-    widthHeight: [370, 94]
+    widthHeight: [300, 94]
   },
   {
     id: 'partner-polkadot-relayers',
     image: '/images/logos/partner-polkadot-relayers.png',
-    widthHeight: [187, 145]
+    widthHeight: [180, 125]
   },
   {
     id: 'kusama-kingdom',
     image: '/images/logos/kusama-kingdom.png',
-    widthHeight: [159, 144]
+    widthHeight: [149, 124]
   },
   {
     id: 'dia',
     image: '/images/logos/dia.png',
-    widthHeight: [152, 94]
+    widthHeight: [150, 94]
   },
   {
     id: 'rmrk',
     image: '/images/logos/partner-rmrk.png',
-    widthHeight: [267, 87]
+    widthHeight: [204, 70]
   },
   {
     id: 'talisman',
     image: '/images/logos/partner-talisman.png',
-    widthHeight: [336, 68]
+    widthHeight: [240, 68]
   },
   {
     id: 'subsquid',
     image: '/images/logos/partner-subsquid.png',
-    widthHeight: [288, 65]
+    widthHeight: [240, 65]
   },
   {
     id: 'subwallet',
     image: '/images/logos/partner-subwallet.png',
-    widthHeight: [270, 94]
+    widthHeight: [230, 90]
   }
 ];

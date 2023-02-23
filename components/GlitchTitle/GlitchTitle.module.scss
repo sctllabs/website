@@ -32,7 +32,7 @@
   background: linear-gradient(180deg, #fafafa 0%, rgb(255 255 255 / 0%) 100%);
   background-color: #fafafac9;
   box-shadow: 0 0 60px 160px #fafafa;
-  height: 85%;
+  height: 80%;
   position: absolute;
   top: 0;
   max-width: 100vw;
@@ -40,6 +40,6 @@
 
   @include large-tablet {
     box-shadow: 0 0 100px 190px #fafafa;
-    height: 80%;
+    height: 50%;
   }
 }

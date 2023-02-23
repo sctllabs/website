@@ -5,15 +5,15 @@ export const CARDS_HOME_PAGE = [
   {
     title: 'Infrastructure for the next generation of on-chain communities',
     description:
-      'Community engagement is the backbone of web3. Societal is building a trustless, inclusive, and interconnected network to trigger rapid innovation.',
+      'Community is the backbone of web3. Societal is a trustless, interconnected network designed to trigger rapid innovation.',
     img: '/images/home-card-2.png',
-    descriptionMaxWidth: 300,
+    descriptionMaxWidth: 308,
     href: BENEFITS
   },
   {
     title: 'Technology for a new age of human coordination',
     description:
-      'Change to “Societal’s web3-native operating system is streamlined, EVM-compatible, and modular - a powerful toolkit forall communities, at every stage.',
+      'Societal’s web3-native operating system is streamlined, EVM-compatible, and modular - a powerful toolkit for communities at every stage.',
     img: '/images/home-card-3.png',
     descriptionMaxWidth: 333,
     href: PRODUCT

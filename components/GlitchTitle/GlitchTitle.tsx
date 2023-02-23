@@ -14,10 +14,7 @@ const GlitchTitle = ({ className }: GlitchTitleProps) => {
       <div className={styles.shadow} />
       <div className={styles.titles}>
         <Typography variant="headingXxl" glitch>
-          HOMEBASE
-        </Typography>
-        <Typography variant="headingXxl" glitch>
-          FOR
+          HOMEBASE FOR
         </Typography>
         <Typography variant="headingXxl" glitch>
           EVERY WEB3 COMMUNITY
