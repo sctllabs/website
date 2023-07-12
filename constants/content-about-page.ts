@@ -188,5 +188,10 @@ export const PARTNERS = [
     id: 'subwallet',
     image: '/images/logos/partner-subwallet.png',
     widthHeight: [230, 90]
+  },
+  {
+    id: 'sbpm1',
+    image: '/images/logos/sbp-m1.png',
+    widthHeight: [240, 80]
   }
 ];
