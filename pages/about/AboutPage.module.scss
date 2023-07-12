@@ -130,7 +130,7 @@
 }
 
 .partnersBlock {
-  column-gap: 100px;
+  column-gap: 90px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -149,7 +149,7 @@
   }
 
   @include large-desktop {
-    column-gap: 100px;
+    column-gap: 90px;
     row-gap: 80px;
     justify-content: space-between;
     align-items: center;
