@@ -190,8 +190,8 @@ export const PARTNERS = [
     widthHeight: [230, 90]
   },
   {
-    id: 'sbpm1',
-    image: '/images/logos/sbp-m1.png',
+    id: 'sbpm2',
+    image: '/images/logos/sbp-m2.png',
     widthHeight: [240, 80]
   }
 ];
