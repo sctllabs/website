@@ -16,7 +16,7 @@ const BannerTitle = ({ titles, className }: BannerTitleProps) => {
   useEffect(() => {
     const node = refEl.current;
 
-    const handler = (e: any) => {
+    const handler = (e: unknown) => {
       if (e.animationName.indexOf('glitch-anim-2') !== -1) {
         setActive(prevActive => (prevActive + 1) % titles.length);
         node?.classList.remove(styles.glitch);
