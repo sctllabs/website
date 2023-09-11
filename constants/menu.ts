@@ -33,12 +33,7 @@ export const menuList = [
 ];
 
 export const menuResources = [
-  {
-    id: 'whitepaper',
-    name: 'Whitepaper',
-    href: 'https://docsend.com/view/2gte2fd8wc4jp4rg',
-    isExternal: true
-  },
+  
   {
     id: 'docs',
     name: 'Docs',
